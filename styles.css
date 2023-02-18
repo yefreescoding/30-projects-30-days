@@ -11,13 +11,11 @@ body {
   margin: 0;
   padding: 1%;
   background-color: rgb(247, 241, 232);
-
 }
 /*Navigation var styles*/
 .header {
   height: 20vh;
   padding: 1.5rem;
-  
 }
 .top-var {
   display: flex;
@@ -25,12 +23,8 @@ body {
   top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
-  
+  padding: 1%; 
 }
-
-
-
 .logo-nav-div {
   flex: 1;
   display: flex;
@@ -120,10 +114,11 @@ body {
 
 /*Main styles*/
 .main-cont-container {
+
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 2%;
-  height: 100%;
+  margin: 8%;
+  height: 60%;
 }
 /*info section*/
 .info-section {
@@ -213,13 +208,14 @@ body {
 
 /*Section image*/
 .img-section {
-  min-height: 100vh;
+  height: 100%;
   display: grid;
   place-items: center;
 }
 
 .parent-ima {
   width: 60%;
+  height: ;
   position: relative;
   top: 0;
   left: 0;
