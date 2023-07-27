@@ -21,15 +21,20 @@
           <img class="header__img" src="Assets/Logo.svg" alt="" />
           <a class="header__hiring" href="/">Hosterr is hiring!</a>
         </div>
-        <nav class="header__nav flex">
-          <a href="/">Plans</a>
-          <a href="/">Find Domains</a>
-          <a href="/">Why Hosterr</a>
+        <nav class="header__nav flex" aria-expanded="false">
+          <div class="header__links flex items-center gap-4">
+            <a class="header__link" href="/">Plans</a>
+            <a class="header__link" href="/">Find Domains</a>
+            <a class="header__link" href="/">Why Hosterr</a>
+          </div>
+          <div class="header__call flex">
+            <a class="header__sign" href="index.html">Sign In</a>
+            <a class="header__join" href="index.html">Join Waitlist!</a>
+          </div>
         </nav>
-        <div class="header__call flex">
-          <a class="header__sign" href="index.html">Sign In</a>
-          <a class="header__join" href="index.html">Join Waitlist!</a>
-        </div>
+        <button class="header__toggle" type="button">
+          <img src="./Assets/menu.avif" alt="" />
+        </button>
       </header>
       <!--Main content-->
       <main class="main-cont-container">
