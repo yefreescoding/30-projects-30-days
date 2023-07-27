@@ -37,35 +37,31 @@
         </button>
       </header>
       <!--Main content-->
-      <main class="main-cont-container">
-        <!--Inside the main tag there are 2 sections.-->
-        <!--Section 1-->
-        <section class="info-section">
+      <main class="main flex gap-4" aria-label="cover">
+        <article class="main__article flex flex-col gap-4">
           <!--Inside the first div of the section. The 1 div.-->
-          <div>
-            <h1>Host your website in less than 5 minutes!</h1>
-            <p>
+          <div class="main__text flex flex-col gap-4">
+            <h1 class="main__h1">Host your website in less than 5 minutes.</h1>
+            <p class="main__p">
               With Hosterr, get your website up and running in no less than 5
               minutes with the most competitive pricing package available
               online.
             </p>
           </div>
           <!--Inside the first div of the section. The 2 div.-->
-          <div class="form-mail">
-            <form action="">
-              <input type="mail" placeholder="Enter your e-mail address" />
-              <button type="submit">Join Wait List</button>
-            </form>
-          </div>
+          <form class="main__form flex gap-4" action="">
+            <input type="mail" placeholder="Enter your e-mail address" />
+            <button type="submit">Join Wait List</button>
+          </form>
           <!--Inside the first div of the section. The 3 div.-->
-          <div class="no-spam-info">
-            <img src="Assets/Checkmark.svg" alt="" width="30" height="30" />
-            <span>No span, ever. Unsubscribe any time</span>
-          </div>
-        </section>
+          <p class="main__msg flex gap-4">
+            <img src="Assets/Checkmark.svg" alt="" />
+            <span>No span, ever. Unsubscribe any time.</span>
+          </p>
+        </article>
         <!--Section 2-->
-        <section class="img-section">
-          <div class="parent-ima">
+        <picture class="main__imagess grid">
+          <div class="main__imgs_container">
             <img class="azul" src="Assets/Blue Shape.svg" alt="" />
             <img class="rojo" src="Assets/Pink Shape.svg" alt="" />
             <img class="morado" src="Assets/Purple Shape.svg" alt="" />
@@ -75,20 +71,18 @@
               alt="Hero image model."
             />
           </div>
-        </section>
+        </picture>
       </main>
       <!--Bottom of the webpage.-->
-      <footer class="footer-main-page">
-        <section class="footer-links">
-          <a href="">Instagram</a>
-          <a href="">Twitter</a>
-          <a href="">Facebook</a>
-        </section>
-        <section class="help-foot-sect">
-          <div>
-            <img src="Assets/Help Avatar.svg" alt="" />
-          </div>
-          <div>
+      <footer class="footer flex items-center">
+        <div class="footer__links flex gap-4 items-center">
+          <a href="index.html">Instagram</a>
+          <a href="index.html">Twitter</a>
+          <a href="index.html">Facebook</a>
+        </div>
+        <section class="footer__help flex items-center gap-4">
+          <img src="Assets/Help Avatar.svg" alt="Avatar profile image" />
+          <div class="flex flex-col items-center">
             <p>Have any question?</p>
             <span>Talk to an specialist</span>
           </div>

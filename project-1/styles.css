@@ -5,6 +5,7 @@
 :root {
   --clr-bg: hsl(36, 48%, 94%);
   --clr-text-1: hsl(0, 0%, 40%);
+  --clr-click: hsla(207, 100%, 50%);
 }
 
 /* ====== */
@@ -72,7 +73,7 @@ a:active {
   width: min(100% - 2rem, 80rem);
   margin-inline: auto;
   gap: 2rem;
-  padding-block: 1rem;
+  padding: 1rem;
   overflow-x: hidden;
 }
 
@@ -81,7 +82,6 @@ a:active {
 /* ====== */
 
 .header {
-  /* justify-content: space-between; */
   gap: 1rem;
   align-items: center;
   position: relative;
@@ -190,13 +190,12 @@ a:active {
 }
 
 .header__sign:hover {
-  /* background-color: rgb(252, 224, 179); */
-  box-shadow: 6px 3px 1rem hsla(41, 8%, 40%, 0.7);
+  outline: solid var(--clr-click);
   transform: translate(-1px, -1px);
 }
 
 .header__join {
-  background-color: rgba(0, 94, 255, 0.842);
+  background-color: var(--clr-click);
   color: var(--clr-bg);
   font-weight: bold;
 }
@@ -227,123 +226,105 @@ a:active {
   }
 }
 
-/*Main styles*/
-.main-cont-container {
-  display: grid;
-  grid-template-columns: flex;
+/* ==== */
+/* Main */
+/* ==== */
+
+.main {
+  --col-size: 20em;
   flex-wrap: wrap-reverse;
-  z-index: 1;
-}
-/*info section*/
-.info-section {
-  /* width: 100%; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* padding-right: 20px; */
+  margin-block: 10vh;
 }
 
-.info-section h1 {
+.main__article {
+  flex-basis: var(--col-size);
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.main__h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 60px;
+  font-size: clamp(2.3rem, calc(2rem + 5vw), 4rem);
   font-weight: 900;
-  line-height: 55px;
-  margin: 0;
+  line-height: 1.25;
 }
 
-.info-section p {
-  color: rgb(83, 83, 83);
-  font-size: 22px;
-  padding-right: 7%;
-  line-height: 35px;
+.main__p {
+  color: var(--clr-text-1);
+  font-size: 1.4rem;
+  line-height: 1.45;
 }
 
-.form-mail {
-  display: flex;
-  justify-content: center;
-  padding-right: 15%;
-  margin-bottom: 14px;
+.main__form {
+  /* margin-top: 14px; */
 }
 
-.form-mail form {
-  display: flex;
-  justify-content: space-between;
-  gap: 0px 20px;
-  width: 100%;
-}
-
-.form-mail input {
+.main__form input {
   flex: 1;
-  width: 100%;
-  padding: 0px 20px;
-  margin: 0px 0;
-  border: none;
+  padding: 1.3rem;
+  border: solid 1px transparent;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 1.1rem;
   transition: all 0.25s;
-  outline: none;
 }
 
-.form-mail input:focus {
-  background-color: rgb(247, 233, 233);
-  box-shadow: 1px 1px 16px rgb(174, 174, 174);
+.main__form input:focus {
+  background-color: rgb(233, 247, 245);
+  outline: solid rgb(156, 230, 240);
 }
 
-.form-mail button {
-  padding: 18px 30px;
-  font-size: 16px;
+.main__form button {
+  padding: 0 1rem;
+  font-size: 1rem;
   font-weight: 600;
-  background-color: rgba(0, 94, 255, 0.842);
-  color: azure;
+  background-color: var(--clr-click);
+  color: var(--clr-bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.25s;
 }
 
-.form-mail button:hover {
+.main__form button:hover {
   transform: translate(-1px, -1px);
   box-shadow: 6px 3px 16px rgb(174, 174, 174);
   background-color: rgba(0, 140, 255, 0.842);
 }
 
-.no-spam-info {
-  display: flex;
+.main__msg {
+  /* display: flex; */
   align-items: center;
 }
-.no-spam-info img {
-  margin-right: 8px;
+.main__msg img {
+  width: 2rem;
 }
 
-.no-spam-info span {
-  color: rgb(121, 121, 121);
-  font-size: 22px;
+.main__msg span {
+  color: var(--clr-text-1);
+  font-size: 1.3rem;
 }
 
-/*Section image*/
-.img-section {
-  height: 100%;
-  display: grid;
+.main__imagess {
+  flex-basis: var(--col-size);
+  flex-grow: 1;
   place-items: center;
 }
 
-.parent-ima {
-  width: 60%;
-  /* height: ; */
+.main__imgs_container {
   position: relative;
-  top: 0;
-  left: 0;
+  width: fit-content;
 }
 
-.parent-ima img {
+.main__imgs_container img {
   width: 100%;
+  max-width: 100%;
+  inset: 0;
 }
 
 .rojo,
 .azul {
   position: absolute;
-  top: 0;
-  left: 30px;
+  inset: 0;
 }
 
 .azul {
@@ -356,51 +337,38 @@ a:active {
 
 .morado {
   position: relative;
-  top: 0;
-  left: 30px;
   transform: rotate(-0.04turn);
 }
 
 .girl-1 {
   position: absolute;
-  top: 0;
-  left: 30px;
 }
 
 /*Footer Section Styles*/
-.footer-main-page {
-  display: flex;
+.footer {
   justify-content: space-between;
-  align-items: center;
-  padding: 0px 3%;
 }
 
-.footer-main-page section {
-  display: flex;
+.footer__links {
   align-items: center;
 }
 
-.footer-main-page section a {
-  margin: 0px 10px;
-  color: rgb(83, 83, 83);
-  font-size: 18px;
-  text-decoration: none;
+.footer__links a {
+  color: var(--clr-text-1);
+  font-size: 1.2rem;
 }
 
-.help-foot-sect {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 7px;
+.footer__help img {
+  width: 3rem;
 }
 
-.help-foot-sect p {
+.footer__help p {
   font-family: 'Playfair Display', serif;
   margin: 0;
   color: rgb(55, 55, 55);
 }
 
-.help-foot-sect span {
+.footer__help span {
   font-weight: bold;
   color: rgb(43, 43, 43);
 }
