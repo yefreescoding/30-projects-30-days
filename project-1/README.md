@@ -22,28 +22,28 @@ How to find it:
 How I did the overlay effect images:
 
 ```html
-iv class="main__imagess">
-<img
-  class="main__img main__img-color azul"
-  src="Assets/Blue Shape.svg"
-  alt=""
-/>
-<img
-  class="main__img main__img-color rojo"
-  src="Assets/Pink Shape.svg"
-  alt=""
-/>
-<img
-  class="main__img main__img-color morado"
-  src="Assets/Purple Shape.svg"
-  alt=""
-/>
-<img
-  class="main__img girl-1"
-  src="Assets/Hero Image (Model).png"
-  alt="Hero image model."
-  style="position: relative"
-/>
+<div class="main__imagess">
+  <img
+    class="main__img main__img-color azul"
+    src="Assets/Blue Shape.svg"
+    alt=""
+  />
+  <img
+    class="main__img main__img-color rojo"
+    src="Assets/Pink Shape.svg"
+    alt=""
+  />
+  <img
+    class="main__img main__img-color morado"
+    src="Assets/Purple Shape.svg"
+    alt=""
+  />
+  <img
+    class="main__img girl-1"
+    src="Assets/Hero Image (Model).png"
+    alt="Hero image model."
+    style="position: relative"
+  />
 </div>
 ```
 
