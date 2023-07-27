@@ -14,11 +14,3 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
-
-# ignore files templates
-README-template.md
-
-# ignore .vscode settings
-/.vscode
-/project-1/Design
-
