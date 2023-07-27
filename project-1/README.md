@@ -17,44 +17,81 @@ How to find it:
 
 ### There's two problems I've got to resolve.
 
-- 1. Cover image width:
+- 1 Cover image width:
 
-The first one being the image that is in the cover. Can't not make it take the full space available without cousin overflow.
+How I did the overlay effect images:
 
 ```html
-<picture class="main__imagess grid">
-  <div class="main__imgs_container">
-    <img class="azul" src="Assets/Blue Shape.svg" alt="" />
-    <img class="rojo" src="Assets/Pink Shape.svg" alt="" />
-    <img class="morado" src="Assets/Purple Shape.svg" alt="" />
-    <img
-      class="girl-1"
-      src="Assets/Hero Image (Model).png"
-      alt="Hero image model."
-    />
-  </div>
-</picture>
+iv class="main__imagess">
+<img
+  class="main__img main__img-color azul"
+  src="Assets/Blue Shape.svg"
+  alt=""
+/>
+<img
+  class="main__img main__img-color rojo"
+  src="Assets/Pink Shape.svg"
+  alt=""
+/>
+<img
+  class="main__img main__img-color morado"
+  src="Assets/Purple Shape.svg"
+  alt=""
+/>
+<img
+  class="main__img girl-1"
+  src="Assets/Hero Image (Model).png"
+  alt="Hero image model."
+  style="position: relative"
+/>
+</div>
 ```
 
 ```css
 .main__imagess {
+  --rotate-val: -0.038turn;
+  position: relative;
   flex-basis: var(--col-size);
   flex-grow: 1;
-  place-items: center;
+  display: flex;
+  justify-content: end;
 }
 
-.main__imgs_container {
-  position: relative;
-  width: fit-content;
+.main__img {
+  width: 30em;
 }
 
-.main__imgs_container img {
-  width: 100%;
-  max-width: 100%;
-  inset: 0;
+@media (width < 40em) {
+  .main__imagess {
+    justify-content: center;
+  }
+  .main__img {
+    width: 20em;
+  }
+}
+
+.main__img-color {
+  position: absolute;
+  z-index: -1;
+}
+
+.azul {
+  transform: rotate(calc(2 * var(--rotate-val)));
+}
+
+.rojo {
+  transform: rotate(calc(1.5 * var(--rotate-val)));
+}
+
+.morado {
+  transform: rotate(var(--rotate-val));
 }
 ```
 
-- 2. Mobile navbar toggle:
+- 2 Mobile navbar toggle:
+
+```js
+console.log('working on it...');
+```
 
 Gotta write a script to make the nav bar appear on user command in mobile, and tablet devices.
