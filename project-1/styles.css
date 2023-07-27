@@ -1,112 +1,154 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+/* ========= */
+/* variables */
+/* ========= */
+
+:root {
+  --clr-bg: hsl(36, 48%, 94%);
+  --clr-text-1: hsl(0, 0%, 40%);
 }
-html{
+
+/* ====== */
+/* resets */
+/* ====== */
+
+*,
+*::after,
+*::before {
+  font-family: 'Lato', sans-serif;
+  box-sizing: inherit;
+  border: 0;
+  margin: 0;
+}
+html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  color-scheme: dark light;
 }
 
 body {
-  border: 0;
-  margin: 0;
-  padding: 1%;
-  background-color: rgb(247, 241, 232);
-}
-/*Navigation var styles*/
-.header {
-  height: 20vh;
-  padding: 1.5rem;
-}
-.top-var {
-  display: flex;
-  width: 100%;
-  top: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%; 
-}
-.logo-nav-div {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 10px;
-  padding-left: 14px;
+  background-color: var(--clr-bg);
+  font-family: 'Lato', sans-serif;
 }
 
-.logo-nav-div img {
+img,
+svg {
+  display: block;
+  width: 100%;
+}
+
+a,
+a:active {
+  text-decoration: none;
+}
+/* =============== */
+/* Utility classes */
+/* =============== */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.wrapper {
+  width: min(100%, 80rem);
+  margin-inline: auto;
+  gap: 2rem;
+  padding-block: 1rem;
+}
+
+/* ====== */
+/* Header */
+/* ====== */
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  flex: 1;
+  align-items: center;
+  column-gap: 0.7rem;
+}
+
+.header__img {
   width: 35%;
 }
 
-.logo-nav-div span {
-  color: white;
-  background-image: linear-gradient(to right, rgba(255, 187, 0, 0.731) , rgba(255, 21, 0, 0.731));
-  font-size: 12px;
+.header__hiring {
+  color: var(--clr-bg);
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 187, 0, 0.731),
+    hsla(0, 100%, 38%, 0.731)
+  );
+  font-size: 0.8rem;
   font-weight: bold;
-  padding: 5px 13px;
+  padding: 7px 13px;
   border: none;
-  border-radius: 15px;
+  border-radius: 1rem;
   cursor: pointer;
+  transition: all 0.24s;
 }
 
-.links-nav {
+.header__hiring:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.header__nav {
   flex: 2;
-  display: flex;
+  gap: 1rem;
   justify-content: center;
 }
 
-.links-nav a {
-  margin: 0px 10px;
-  color: rgb(64, 64, 64);
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 400;
+.header__nav a {
+  color: var(--clr-text-1);
+  font-size: 1rem;
+  transition: all 0.23s;
 }
 
-.links-nav a:hover {
+.header__nav a:hover {
   text-decoration: underline;
   transform: scale(1.05, 1.05);
 }
 
-.button-nav {
+.header__call {
   flex: 1;
-  display: flex;
   justify-content: end;
   align-items: center;
-  column-gap: 13px;
+  gap: 1rem;
 }
 
-.button-nav a {
+.header__call a {
   padding: 17px 27px;
-  margin: 0px 10px;
-  color: rgb(64, 64, 64);
   font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 400;
   border-radius: 5px;
   transition: all 0.3s;
 }
 
-.button-nav a:hover {
-  background-color: rgb(252, 224, 179);
-  box-shadow: 4px 3px 16px goldenrod;
+.header__sign {
+  color: var(--clr-text-1);
+}
+
+.header__sign:hover {
+  /* background-color: rgb(252, 224, 179); */
+  box-shadow: 6px 3px 1rem hsla(41, 8%, 40%, 0.7);
   transform: translate(-1px, -1px);
 }
 
-.button-nav button {
+.header__join {
   background-color: rgba(0, 94, 255, 0.842);
-  color: aliceblue;
-  font-size: 16px;
+  color: var(--clr-bg);
   font-weight: bold;
-  padding: 17px 27px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-.button-nav button:hover {
+.header__join:hover {
   transform: translate(-1px, -1px);
   box-shadow: 6px 3px 16px rgb(174, 174, 174);
   background-color: rgba(0, 140, 255, 0.842);
@@ -114,11 +156,10 @@ body {
 
 /*Main styles*/
 .main-cont-container {
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 8%;
-  height: 60%;
+  /* margin: 8%; */
+  /* height: 60%; */
 }
 /*info section*/
 .info-section {
@@ -225,7 +266,8 @@ body {
   width: 100%;
 }
 
-.rojo, .azul {
+.rojo,
+.azul {
   position: absolute;
   top: 0;
   left: 30px;
@@ -265,7 +307,7 @@ body {
   align-items: center;
 }
 
-.footer-main-page section a{
+.footer-main-page section a {
   margin: 0px 10px;
   color: rgb(83, 83, 83);
   font-size: 18px;
@@ -289,4 +331,3 @@ body {
   font-weight: bold;
   color: rgb(43, 43, 43);
 }
-
