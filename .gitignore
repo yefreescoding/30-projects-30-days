@@ -1,1 +1,8 @@
+# ignore files templates
 README-template.md
+
+# ignore .vscode settings
+./.vscode
+
+./.gitignore
+
