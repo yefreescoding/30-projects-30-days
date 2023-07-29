@@ -24,4 +24,14 @@ Most of these challenges will focus on front-end development. As a result, the m
 ## Project 1:
 
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-1)
-- [Live Site](https://www.netlify.com/)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-1/index.html)
+
+## Project 2:
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-2)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-2/index.html)
+
+## Project 3:
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-3)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-3/index.html)
