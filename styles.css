@@ -22,7 +22,7 @@ body {
 main {
   width: min(100%, 90ch);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 h1,
