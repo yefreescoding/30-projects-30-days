@@ -149,6 +149,7 @@ a {
   }
   .header__toggle {
     display: block;
+    position: relative;
     width: 2rem;
     aspect-ratio: 1;
     background: transparent;
@@ -167,6 +168,7 @@ a {
 
 .read-only {
   visibility: hidden;
+  position: absolute;
 }
 /* ==== */
 /* main */
