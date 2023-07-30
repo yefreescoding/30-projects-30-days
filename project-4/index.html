@@ -47,13 +47,18 @@
           <div class="main__btns flex">
             <button id="btn-prev" class="main__btn">
               <img src="./images/icon-angle-left.svg" alt="" />
+              <span class="read-only">Prev button</span>
             </button>
             <button id="btn-next" class="main__btn">
               <img src="./images/icon-angle-right.svg" alt="" />
+              <span class="read-only">Next button</span>
             </button>
           </div>
         </div>
-        <section class="main__section flex gap-4 flex-col">
+        <section
+          class="main__section flex gap-4 flex-col"
+          aria-label="Company description"
+        >
           <article class="main__article flex flex-col gap-4">
             <h1 id="heading">Discover innovative ways to decorate</h1>
             <p id="paragraph">
@@ -73,7 +78,7 @@
           </article>
         </section>
       </main>
-      <section class="section flex">
+      <section class="section flex" aria-label="About the company">
         <img
           src="./images/image-about-dark.jpg"
           alt="product images"
@@ -97,22 +102,6 @@
         />
       </section>
     </div>
-    <!-- <h1>We are available all across the globe</h1>
-    <p>
-      With stores all over the world, it's easy for you to find furniture for
-      your home or place of business. Locally, we’re in most major cities
-      throughout the country. Find the branch nearest you using our store
-      locator. Any questions? Don't hesitate to contact us today.
-    </p>
-    <h1>Manufactured with the best materials</h1>
-    <p>
-      Our modern furniture store provide a high level of quality. Our company
-      has invested in advanced technology to ensure that every product is made
-      as perfect and as consistent as possible. With three decades of experience
-      in this industry, we understand what customers want for their home and
-      office. Shop now
-    </p> -->
-
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

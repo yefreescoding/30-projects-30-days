@@ -163,11 +163,11 @@ a {
     background-size: cover;
     z-index: 9999;
   }
-  .header__toggle span {
-    visibility: hidden;
-  }
 }
 
+.read-only {
+  visibility: hidden;
+}
 /* ==== */
 /* main */
 /* ==== */
