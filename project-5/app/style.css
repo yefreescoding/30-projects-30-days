@@ -1,0 +1,68 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Primary */
+
+  --clr-Cyan: hsl(179, 62%, 43%);
+  --clr-Bright-Yellow: hsl(71, 73%, 54%);
+
+  --clr-Light-Gray: hsl(204, 43%, 93%);
+  --clr-Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-Cyan: hsl(179, 62%, 43%);
+    --clr-Bright-Yellow: hsl(71, 73%, 54%);
+
+    --clr-Light-Gray: hsl(204, 43%, 93%);
+    --clr-Grayish-Blue: hsl(218, 22%, 67%);
+  }
+}
+
+html {
+  color-scheme: light dark;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+body {
+  line-height: 1.5;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  line-height: 1.1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
