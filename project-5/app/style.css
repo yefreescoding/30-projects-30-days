@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap');
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,6 +59,33 @@ body {
 
 h1 {
   line-height: 1.1;
+}
+/* =============== */
+/* Utility classes */
+/* =============== */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.main_content {
+  min-width: 100dvh;
+  place-items: center;
+}
+
+.card {
 }
 
 .attribution {
