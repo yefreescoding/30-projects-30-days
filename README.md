@@ -46,7 +46,14 @@ Most of these challenges will focus on front-end development. As a result, the m
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-5)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-5/app/dist/index.html)
 
-## Project 6:
+## Project 5:
+
+## Currently building...
 
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
-- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-5/app/dist/index.html)
+- [Live Site]()
+
+## Project 7:
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/tic-tac-toe/dist/index.html)
