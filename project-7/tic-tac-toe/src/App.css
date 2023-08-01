@@ -94,7 +94,8 @@
   color: #772266;
 }
 .main__handler {
-  height: 25em;
+  /* height: 25em; */
+  padding: 1rem 0;
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -186,7 +187,7 @@
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  border-top: solid 2px #f3f1eb;
+  border-left: solid 2px #f3f1eb;
   border-bottom: solid 2px #7d2b61;
   transition: all 0.3s;
 }
