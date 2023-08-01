@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 // import components
 import ButtonXo from './ButtonXo.jsx';
+import Carcasa from './Carcasa.jsx';
 
 // import functions
 import calculateWinnerBoard from '../../functions.js';
@@ -34,9 +35,13 @@ export default function Board() {
   } else {
     status = `Next player: ${xIsNext ? 'X' : 'O'}`;
   }
-
+  const resetGame = () => {
+    setSquares(Array(9).fill(null));
+    // setXIsNext('X');
+    // setWinner(null);
+  };
   return (
-    <>
+    <Carcasa resetGame={resetGame}>
       <div className="board__game_status">{status}</div>
       <div className="board">
         <ButtonXo value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -49,6 +54,6 @@ export default function Board() {
         <ButtonXo value={squares[7]} onSquareClick={() => handleClick(7)} />
         <ButtonXo value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </Carcasa>
   );
 }

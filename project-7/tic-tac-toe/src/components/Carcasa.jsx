@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
-export default function Carcasa({ children }) {
+export default function Carcasa({ children, resetGame }) {
   return (
     <main className="main" aria-label="Game boy cover">
       <div className="main__screen" aria-label="Game Boy screen">
@@ -25,7 +25,7 @@ export default function Carcasa({ children }) {
           </div>
         </div>
         <div className="main__switches">
-          <button className="main__switches-btn"></button>
+          <button onClick={resetGame} className="main__switches-btn"></button>
           <button className="main__switches-btn"></button>
         </div>
       </section>
