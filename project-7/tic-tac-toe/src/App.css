@@ -6,7 +6,8 @@
 
 .main {
   position: relative;
-  width: min(100%, 25em);
+  width: min(100%, 23em);
+  height: 38em;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -30,21 +31,32 @@
 }
 
 .board {
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
   border: var(--border) #2f0e2f;
 }
 
+.board__game_status {
+  background-color: #91d9f7;
+  color: #1c4fa2;
+  margin-bottom: 0.5rem;
+  padding: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: var(--border) #2e0427;
+}
+
 .btn_tic-tac {
-  /* width: 4rem; */
   border: none;
-  outline: solid;
+  outline: solid #1c4fa2;
   aspect-ratio: 1;
   transition: all 0.2s ease;
   font-size: 3rem;
   text-align: center;
   background-color: #91d9f7;
+  color: #1c4fa2;
 }
 
 .btn_tic-tac:hover {
@@ -56,8 +68,8 @@
 
 .main__screen {
   position: relative;
-  flex-basis: 10em;
-  padding: 2rem 3rem;
+  height: fit-content;
+  padding: 1.2rem 3rem;
   background-color: #33bfbb;
   border-radius: 1rem 1rem 3rem 1rem;
   border: var(--border) #772266;
@@ -76,8 +88,13 @@
   border-top: 6px solid #d61f67;
   border-left: 6px solid #d61f67;
 }
+
+.main__h1 {
+  padding-left: 1rem;
+  color: #772266;
+}
 .main__handler {
-  flex-basis: 15em;
+  height: 25em;
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -171,6 +188,11 @@
   border-radius: inherit;
   border-top: solid 2px #f3f1eb;
   border-bottom: solid 2px #7d2b61;
+  transition: all 0.3s;
+}
+
+.main__act_key button:hover {
+  background-color: #b1930c;
 }
 .main__switches {
   display: flex;
@@ -196,4 +218,8 @@
   border-left: solid 3px #d61c65;
   border-right: solid 3px #f1b4d2;
   border-bottom: solid 3px #f1b4d2;
+}
+
+.main__switches-btn:hover {
+  background-color: #b1930c;
 }

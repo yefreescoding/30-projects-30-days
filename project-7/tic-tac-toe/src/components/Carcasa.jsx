@@ -2,9 +2,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 export default function Carcasa({ children }) {
   return (
-    <main className="main">
-      <div className="main__screen">{children}</div>
-      <div className="main__handler">
+    <main className="main" aria-label="Game boy cover">
+      <div className="main__screen" aria-label="Game Boy screen">
+        {children}
+      </div>
+      <section className="main__handler">
+        <h1 className="main__h1">Tic-Tac-Toe</h1>
         <div className="main__controls">
           <div className="main__dir_key">
             <div className="main__dir_key-div">
@@ -25,7 +28,7 @@ export default function Carcasa({ children }) {
           <button className="main__switches-btn"></button>
           <button className="main__switches-btn"></button>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
