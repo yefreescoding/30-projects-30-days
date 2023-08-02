@@ -6,40 +6,250 @@
   color: hsl(228, 45%, 44%);
 }
 
+/* ======= Theme ======= 1 */
+
+/* .theme_A */
+
+:root.theme_A {
+  /* Backgrounds */
+
+  /* (main background): */
+  --clr-bg-main-background: hsl(222, 26%, 31%);
+  /* (toggle background, keypad background): */
+  --clr-bg-toggle-background: hsl(223, 31%, 20%);
+  /* (screen background): */
+  --clr-bg-screen-background: hsl(224, 36%, 15%);
+
+  /* Keys */
+  --clr-key-background-blue: hsl(225, 21%, 49%);
+  --clr-key-shadow-blue: hsl(224, 28%, 35%);
+
+  --clr-key-background-accent: hsl(6, 63%, 50%);
+  --clr-key-shadow-accent: hsl(6, 70%, 34%);
+
+  --clr-key-background-white: hsl(30, 25%, 89%);
+  --clr-key-shadow-white: hsl(28, 16%, 65%);
+
+  /* Text */
+  --clr-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+:root.theme_B {
+  /* Backgrounds */
+
+  /* (main background): */
+  --clr-bg-main-background: hsl(0, 0%, 90%);
+  /* (toggle background, keypad background): */
+  --clr-bg-toggle-background: hsl(0, 5%, 81%);
+  /* (screen background): */
+  --clr-bg-screen-background: hsl(0, 0%, 93%);
+
+  /* Keys */
+  --clr-key-background-blue: hsl(185, 42%, 37%);
+  --clr-key-shadow-blue: hsl(185, 58%, 25%);
+
+  --clr-key-background-accent: hsl(25, 98%, 40%);
+  --clr-key-shadow-accent: hsl(25, 99%, 27%);
+
+  --clr-key-background-white: hsl(45, 7%, 89%);
+  --clr-key-shadow-white: hsl(35, 11%, 61%);
+
+  /* Text */
+  --clr-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --clr-white: hsl(60, 10%, 19%);
+}
+:root.theme_C {
+  /* Backgrounds */
+
+  /* (main background): */
+  --clr-bg-main-background: hsl(268, 75%, 9%);
+  /* (toggle background, keypad background): */
+  --clr-bg-toggle-background: hsl(268, 71%, 12%);
+  /* (screen background): */
+  --clr-bg-screen-background: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --clr-key-background-blue: hsl(281, 89%, 26%);
+  --clr-key-shadow-blue: hsl(285, 91%, 52%);
+
+  --clr-key-background-accent: hsl(176, 100%, 44%);
+  --clr-key-shadow-accent: hsl(177, 92%, 70%);
+
+  --clr-key-background-white: hsl(268, 47%, 21%);
+  --clr-key-shadow-white: hsl(290, 70%, 36%);
+
+  /* Text */
+  --clr-very-dark-grayish-blue: hsl(52, 100%, 62%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 button {
   background-color: transparent;
   cursor: pointer;
 }
 
 .wrapper {
-  height: 100dvh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
+  background-color: #ffae00;
 }
 
 .main {
-  width: min(100%, 40em);
+  --brd-radius: 0.6rem;
+  width: min(100%, 35em);
   margin: auto;
-  border: 5px solid red;
+  border: 5px solid var(--clr-bg-screen-background);
+  background-color: var(--clr-bg-main-background);
+  padding: 1rem;
+  border-radius: var(--brd-radius) var(--brd-radius) 3rem var(--brd-radius);
 }
 .main__header {
+  margin-bottom: 1rem;
 }
 .main__header_top {
-}
-.main__header_input {
-}
-
-.main__cont_btn {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--clr-white);
 }
 
-.main__cont_btn button {
-  width: 100%;
-  padding: 1rem;
+.main__header_top span {
+  font-weight: 700;
   font-size: 1.1rem;
 }
 
+.main__theme_cont {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+
+.main__theme_nums {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.main__theme_cont span {
+  font-size: 12px;
+}
+
+.main__theme_inputs {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.main__theme_inputs div:has(input) {
+  background-color: var(--clr-bg-toggle-background);
+  border-radius: 1rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+input[type='radio'] {
+  appearance: none;
+  background-color: var(--clr-bg-toggle-background);
+  margin: 0;
+  font: inherit;
+  /* color: currentColor; */
+  width: 1em;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type='radio']:checked {
+  background-color: var(--clr-key-background-accent);
+}
+
+.main__header_input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+  background-color: var(--clr-bg-screen-background);
+  border: var(--clr-very-dark-grayish-blue) 3px solid;
+  border-radius: var(--brd-radius);
+  color: var(--clr-white);
+}
+
+.main__cont_btn {
+  --gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 1.3rem;
+  background-color: var(--clr-bg-toggle-background);
+  border-radius: var(--brd-radius);
+}
+
+.main__cont_btn-content {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(4, 1fr);
+}
+.main__cont_btn-bottom {
+  display: flex;
+  gap: var(--gap);
+}
+
+.main__cont_btn button {
+  /* color: inherit; */
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-radius: var(--brd-radius);
+  border: transparent 1px solid;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
 .main__cont_btn-white {
-  background-color: gray;
+  background-color: var(--clr-key-background-white);
+  box-shadow: 0 3px 0 var(--clr-key-shadow-white);
+  color: var(--clr-very-dark-grayish-blue);
+}
+
+.main__cont_btn-blue {
+  background-color: var(--clr-key-background-blue);
+  box-shadow: 0 3px 0 var(--clr-key-shadow-blue);
+  color: white;
+}
+
+.main__cont_btn-accent {
+  background-color: var(--clr-key-background-accent);
+  box-shadow: 0 3px 0 var(--clr-key-shadow-accent);
+}
+
+.main__cont_btn button:hover {
+  opacity: 0.8;
+  transform: translateY(3px);
+  box-shadow: 0 0 0;
 }
