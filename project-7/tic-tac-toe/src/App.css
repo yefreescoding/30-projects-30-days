@@ -33,6 +33,7 @@
 
 .board {
   /* height: 100%; */
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
@@ -52,13 +53,19 @@
 .btn_tic-tac {
   border: none;
   outline: solid #1c4fa2;
-  width: 100%;
+  width: min(70px, 100%);
   aspect-ratio: 1;
   transition: all 0.2s ease;
   font-size: 3rem;
   text-align: center;
   background-color: #91d9f7;
   color: #1c4fa2;
+}
+
+@media (width > 40em) {
+  .btn_tic-tac {
+    width: 100%;
+  }
 }
 
 .btn_tic-tac:hover {
@@ -70,7 +77,7 @@
 
 .main__screen {
   position: relative;
-  height: fit-content;
+  /* height: fit-content; */
   padding: 1.2rem 3rem;
   background-color: #33bfbb;
   border-radius: 1rem 1rem 3rem 1rem;
@@ -96,7 +103,6 @@
   color: #772266;
 }
 .main__handler {
-  /* height: 25em; */
   padding: 1rem 0;
   display: flex;
   gap: 2rem;
