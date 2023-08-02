@@ -46,12 +46,12 @@ Most of these challenges will focus on front-end development. As a result, the m
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-5)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-5/app/dist/index.html)
 
-## Project 5:
+## Project 6:
 
-## Currently building...
+## Calculator App
 
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
-- [Live Site]()
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-6/index.html)
 
 ## Project 7:
 
