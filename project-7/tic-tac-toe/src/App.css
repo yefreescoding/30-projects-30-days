@@ -1,13 +1,14 @@
 .wrapper {
   min-height: 100dvh;
+  padding: 1rem;
   display: grid;
   background-color: #22effd;
 }
 
 .main {
   position: relative;
-  width: min(100%, 23em);
-  height: 38em;
+  width: min(100%, 25em);
+  height: fit-content;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -31,7 +32,7 @@
 }
 
 .board {
-  height: fit-content;
+  /* height: 100%; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
@@ -51,6 +52,7 @@
 .btn_tic-tac {
   border: none;
   outline: solid #1c4fa2;
+  width: 100%;
   aspect-ratio: 1;
   transition: all 0.2s ease;
   font-size: 3rem;
