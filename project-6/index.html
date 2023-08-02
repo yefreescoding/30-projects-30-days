@@ -1,26 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <header class="main__header">
+          <div class="main__header_top">
+            <span>calc</span>
+            <input type="radio" checked />
+          </div>
+          <input class="main__header_input" type="text" id="result" readonly />
+        </header>
+        <div class="main__cont_btn">
+          <!-- first row -->
+          <button class="main__cont_btn-white" onclick="appendToScreen('7')">
+            7
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('8')">
+            8
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('9')">
+            9
+          </button>
+          <button class="main__cont_btn-blue" onclick="clearScreen()">
+            DEL
+          </button>
+          <!-- Second row -->
+          <button class="main__cont_btn-white" onclick="appendToScreen('4')">
+            4
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('5')">
+            5
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('6')">
+            6
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('+')">
+            +
+          </button>
+          <!-- Third row -->
+          <button class="main__cont_btn-white" onclick="appendToScreen('4')">
+            1
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('5')">
+            2
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('6')">
+            3
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('-')">
+            -
+          </button>
+          <!-- Four row -->
+          <button class="main__cont_btn-white" onclick="appendToScreen('.')">
+            .
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('5')">
+            0
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('/')">
+            /
+          </button>
+          <button class="main__cont_btn-white" onclick="appendToScreen('*')">
+            x
+          </button>
+          <!-- Five row -->
+          <button class="main__cont_btn-white-blue" onclick="clearScreen('')">
+            RESET
+          </button>
+          <button class="main__cont_btn-white-accent" onclick="calculate('=')">
+            =
+          </button>
+        </div>
+      </main>
+    </div>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,45 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.wrapper {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+.main {
+  width: min(100%, 40em);
+  margin: auto;
+  border: 5px solid red;
+}
+.main__header {
+}
+.main__header_top {
+}
+.main__header_input {
+}
+
+.main__cont_btn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10em), 1fr));
+}
+
+.main__cont_btn button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.main__cont_btn-white {
+  background-color: gray;
+}
