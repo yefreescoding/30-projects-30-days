@@ -1,10 +1,18 @@
 :root {
+  --clr-text-h: hsl(0, 0%, 87%);
+  --clr-text-span: hsl(0, 0%, 77%);
   --clr-accent: #1fe0e0;
+  --clr-bg-card: hsl(0, 0%, 10%);
+  --clr-bg-body: hsl(0, 0%, 7%);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --clr-text-h: #111;
+    --clr-text-span: #111;
     --clr-accent: rgb(120, 220, 247);
+    --clr-bg-card: hsl(0, 0%, 70%);
+    --clr-bg-body: #111;
   }
 }
 
@@ -19,6 +27,7 @@ html {
   /* margin: 0; */
   /* padding: 0; */
   box-sizing: inherit;
+  /* transition: all 0.24s; */
 }
 
 body {
@@ -27,31 +36,35 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
-  color: hsl(0, 0%, 45%);
+  color: var(--clr-text-span);
+  background-color: var(--clr-bg-card);
+  line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-  text-decoration: underline;
-  color: hsl(0, 0%, 10%);
+  /* text-decoration: underline; */
+  color: var(--clr-text-h);
 }
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 a:hover {
   color: var(--clr-accent);
 }
 
 p {
-  color: hsl(0, 0%, 40%);
+  color: var(--clr-text-span);
 }
 
 h1 {
   font-size: clamp(2rem, calc(2rem + 4vw), 4.5rem);
   text-align: center;
   text-transform: uppercase;
+  text-decoration: underline;
   text-decoration-color: var(--clr-accent);
   text-decoration-thickness: 2px;
 }
@@ -67,21 +80,62 @@ h1 {
   color: var(--clr-accent);
 }
 
+.header__nav {
+  display: flex;
+  gap: 1rem;
+  text-transform: capitalize;
+}
+
+.header__nav a:hover {
+  color: var(--clr-accent);
+  text-decoration: underline;
+}
+
 .main {
   width: min(100%, 90ch);
   margin: 0 auto;
   padding: 1rem;
+  position: relative;
+}
+
+.main section > header {
+  position: sticky;
+  top: 0;
+  z-index: -1;
 }
 
 .projects_container {
   display: grid;
+  background-color: var(--clr-bg-body);
+  padding: 1rem;
+  border-radius: 10px;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
 }
 
 .projects_container article {
   padding: 1rem;
-  border: 0.5px solid hsl(0, 0%, 70%);
+  box-shadow: 0 0 1px hsl(0, 0%, 70%);
   border-radius: 0.5rem;
-  box-shadow: 3px 8px 1rem hsla(0, 0%, 64%, 0.6);
+  background-color: var(--clr-bg-card);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects_container article p {
+  margin: 1rem 0 0 0;
+}
+
+.projects_container article ul {
+  margin: 0 0 1rem 0;
+}
+
+.projects_container article h3 {
+  margin-bottom: 0;
+}
+
+.projects_container article span {
+  font-size: 0.8rem;
 }
