@@ -10,9 +10,9 @@
   :root {
     --clr-text-h: #111;
     --clr-text-span: #111;
-    --clr-accent: rgb(120, 220, 247);
-    --clr-bg-card: hsl(0, 0%, 70%);
-    --clr-bg-body: #111;
+    --clr-accent: hsl(193, 100%, 42%);
+    --clr-bg-card: hsl(0, 0%, 97%);
+    --clr-bg-body: hsl(0, 0%, 85%);
   }
 }
 
