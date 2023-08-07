@@ -1,14 +1,25 @@
 :root {
-  --clr-bg: hsl(0, 0%, 95%);
-  --clr-1: hsl(300, 43%, 22%);
-  --clr-2: hsl(333, 80%, 67%);
-  --clr-3: hsl(303, 10%, 53%);
-  --clr-4: hsl(300, 23%, 86%);
+  --clr-bg: hsl(0, 0%, 10%);
+  --clr-1: hsl(300, 43%, 62%);
+  --clr-2: hsl(333, 80%, 97%);
+  --clr-3: hsl(303, 10%, 63%);
+  --clr-4: hsl(300, 23%, 96%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-bg: hsl(0, 0%, 95%);
+    --clr-1: hsl(300, 43%, 22%);
+    --clr-2: hsl(333, 80%, 67%);
+    --clr-3: hsl(303, 10%, 53%);
+    --clr-4: hsl(300, 23%, 86%);
+  }
 }
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  color-scheme: dark light;
 }
 *,
 *::before,
