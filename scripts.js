@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
               <h3>${item.text}</h3>
               <span>${item.date}</span>
             </header>
-            <p>The technologies I used:</p>
+            <p><b>Tools I used: </b></p>
             <ul>
               ${toolsList}
             </ul>
