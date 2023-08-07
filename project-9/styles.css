@@ -71,7 +71,7 @@ h6 {
   z-index: 9999;
   /* ============= */
   position: relative;
-  background-color: hsl(190, 18%, 97%);
+  background-color: hsl(190, 18%, 67%);
 }
 
 .main__article::after,
@@ -79,18 +79,13 @@ h6 {
   content: '';
   position: absolute;
   inset: -5px;
-  /* background: linear-gradient(0deg, hsl(180, 100%, 99%), hsla(0, 0%, 90%, 0.9)); */
+  background: linear-gradient(0deg, hsl(180, 100%, 99%), hsla(0, 0%, 90%, 0.9));
   border-radius: inherit;
   z-index: -1;
 }
 
 .main__article::after {
-  background: linear-gradient(
-    0deg,
-    hsl(180, 100%, 95%),
-    hsla(197, 67%, 79%, 0.9)
-  );
-  filter: blur(2rem);
+  filter: blur(3rem);
 }
 
 .main__header img {
