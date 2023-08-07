@@ -1,18 +1,18 @@
 # 30 Days, 30 Challenges
 
-This repository is where I will track my new challenge. Practice, dedication, and consistency lead to improvement, not just in programming but also in all aspects of life.
+This repository serves as a record of my journey in tackling 30 different challenges. Through consistent practice and dedication, I aim to enhance not only my programming skills but also various aspects of personal growth.
 
-## Why Did I Decide to Embark on This Journey?
+## Why Embark on This Journey?
 
-- Short answer:
-  To land a job.
+- In Brief:
+  To secure a job opportunity.
 
-- Long answer:
-  To enhance my programming skills and acquire one of the most important soft skills any developer should have: consistency!
+- In Detail:
+  This journey is driven by the desire to elevate my programming proficiency and cultivate one of the most crucial soft skills for any developer: consistency.
 
-## Which Technologies Will I Use?
+## Choice of Technologies
 
-Most of these challenges will focus on front-end development. As a result, the most common languages and frameworks you'll find in this repository are HTML, CSS, and JavaScript. However, this may change in the future, with the addition of the React JS library and the static site framework Astro.
+The majority of these challenges will revolve around front-end development. As a result, the primary languages and frameworks featured within this repository are HTML, CSS, and JavaScript. However, there is potential for future diversification, including the integration of the React JS library and the static site framework Astro.
 
 ## Author
 
@@ -55,5 +55,15 @@ Most of these challenges will focus on front-end development. As a result, the m
 
 ## Project 7:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-7)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/tic-tac-toe/dist/index.html)
+
+## Project 8:
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-8)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-8/index.html)
+
+## Project 9 (Building):
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/index.html)
