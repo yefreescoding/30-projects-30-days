@@ -5,7 +5,7 @@
       "date": "Finished: Thursday July 27, 2023.",
       "text": "A basic hero section for a landing page.",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-1",
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-01",
       "liveSite": "./project-1/index.html"
     },
     {
@@ -13,7 +13,7 @@
       "date": "Finished: Friday July 28, 2023.",
       "text": "QR code component.",
       "tools": ["HTML5", "CSS"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-2",
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-02",
       "liveSite": "./project-2/index.html"
     },
     {

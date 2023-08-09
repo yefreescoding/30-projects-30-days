@@ -29,7 +29,7 @@ window.addEventListener('load', async () => {
             </ul>
             <div>
               <a
-                href=${item.gitHub}
+                href=${item.github}
                 >Github repo</a
               >
               <a href=${item.liveSite}>Live Site</a>
