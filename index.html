@@ -2,7 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="30 projects 30 days" />
+    <meta name="description" content="Let's learn by building" />
+    <meta name="keywords" content="website, development, front-end" />
+    <meta name="author" content="Yefree De Los Santos Valdez" />
+    <meta property="og:title" content="Your Page Title" />
+    <meta property="og:description" content="30 projects 30 days" />
+    <meta property="og:image" content="./opengraph.jpg" />
+    <meta
+      property="og:url"
+      content="https://yefreescoding.github.io/30-projects-30-days/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="opengraph" content="./opengraph.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="30 projects 30 days" />
+    <meta name="twitter:description" content="Let's learn by building" />
+    <meta name="twitter:image" content="./opengraph.jpg" />
     <title>30 projects 30 days</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="scripts.js"></script>
@@ -10,38 +28,47 @@
   <body>
     <main class="main">
       <header class="header">
-        <div class="header__logo">30-30</div>
+        <a class="header__logo" href="index.html">30-30</a>
         <nav class="header__nav">
-          <a href="index.html">Home</a>
-          <a
-            href="https://github.com/yefreescoding/30-projects-30-days"
-            target="_blank"
-          >
-            source code
+          <a href="https://github.com/yefreescoding/30-projects-30-days">
+            Source Code
           </a>
           <a href="https://yefreevaldezdev.vercel.app" target="_blank"
-            >portfolio</a
+            >Author</a
           >
         </nav>
+        <a class="btn_principal" href="https://twitter.com/YefreeCodes">
+          Follow along on twitter
+        </a>
       </header>
-      <section>
-        <header>
-          <h1>30 projects 30 days</h1>
-          <h2>Introduction</h2>
-          <p>
-            This challenges will make you a pro in less than a month. Will teach
-            you the fundamentals of web the front end development world and
-            more...
-          </p>
+      <section aria-label="Projects section">
+        <header class="cover_header" aria-label="Hero cover of the website">
+          <div class="cover_header__div">
+            <h1>30 projects 30 days</h1>
+            <p>
+              The best way to learn how to code is through practice. And the
+              best way to practice coding is by building projects. I'm gaining
+              knowledge and experience with this challenge, and I'm
+              open-sourcing everything. Join me as we figure this out together.
+            </p>
+          </div>
           <article>
             <h2>
-              Here are the projects I've completed so far:
-              <span id="project-count"></span> / 30
+              Projects
+              <span id="project-count" style="color: #1fe0e0"></span> / 30
             </h2>
-            <p>
-              Every project has the date of completion, and two links: One for
-              the live site and the other one for the github repository.
-            </p>
+            <p>Useful information:</p>
+            <ul>
+              <li>
+                All the projects have two links:
+                <ul>
+                  <li>Live site.</li>
+                  <li>Github repo.</li>
+                </ul>
+              </li>
+              <li>README files with a proper description and documentation.</li>
+              <li>Credit to all the resources.</li>
+            </ul>
           </article>
         </header>
         <div class="projects_container">
