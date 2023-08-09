@@ -79,8 +79,9 @@ h1 {
   padding: 1rem;
   display: flex;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__logo {
@@ -96,21 +97,24 @@ h1 {
   text-transform: capitalize;
 }
 
-.header__nav a:hover {
-  color: var(--clr-accent);
-  text-decoration: underline;
-}
-
 .btn_principal {
+  justify-self: center;
+  width: fit-content;
   border: solid transparent 1px;
   border-radius: 8px;
   padding: 0.5rem 0.8rem;
   background-color: var(--clr-bg-body);
-  transition: opacity 0.24s;
+  transition: all 0.24s;
 }
+@media (hover: hover) {
+  .header__nav a:hover {
+    color: var(--clr-accent);
+    text-decoration: underline;
+  }
 
-.btn_principal:hover {
-  opacity: 0.8;
+  .btn_principal:hover {
+    opacity: 0.8;
+  }
 }
 
 .main {
@@ -124,7 +128,6 @@ h1 {
   position: sticky;
   padding: 1rem;
   top: 0;
-  margin: 10vh 0;
   z-index: -1;
 }
 
@@ -132,6 +135,7 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin: 5vh 0;
 }
 
 .cover_header__div p {
