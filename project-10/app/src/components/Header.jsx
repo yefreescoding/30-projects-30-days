@@ -4,6 +4,7 @@ import bookMarkLogo from '/images/logo-bookmark.svg';
 import BtnHamburger from './ButtonHamburger';
 // import components
 import HeaderLinks from './HeaderLinks';
+// import data
 import links from '../data/links';
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
       </div>
       <nav className="header__nav">
         <ul className="header__ul">
-          {links.map((link) => (
+          {links.links.map((link) => (
             <HeaderLinks
               key={link.name}
               name={link.name}
