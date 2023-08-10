@@ -14,12 +14,12 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header className="header flex">
       <div className="header__logo">
         <img src={bookMarkLogo} alt="" className="header__logo-img" />
       </div>
-      <nav className="header__nav">
-        <ul className="header__ul">
+      <nav className="header__nav flex">
+        <ul className="header__ul flex">
           {links.links.map((link) => (
             <HeaderLinks
               key={link.name}
@@ -29,11 +29,7 @@ export default function Header() {
             />
           ))}
         </ul>
-        <button
-          className="header__btn-act"
-          onClick={handleLoggingClick}
-          type="button"
-        >
+        <button className="btn-act" onClick={handleLoggingClick} type="button">
           {log ? (
             <span className="header__btn-in">Log in</span>
           ) : (

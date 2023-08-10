@@ -2,7 +2,7 @@ import heroIllustration from '/images/illustration-hero.svg';
 
 export default function HeroSection() {
   return (
-    <section className="cover">
+    <section className="cover flex">
       <article className="cover__article">
         <h1 className="cover__h1">A simple book mark manager</h1>
         <p className="cover__p">

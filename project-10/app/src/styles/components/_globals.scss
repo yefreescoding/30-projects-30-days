@@ -1,0 +1,37 @@
+@use '../utils/' as *;
+
+.btn-act {
+  text-transform: inherit;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  background-color: $SofRed;
+  border: 1px solid $SofRed;
+  border-radius: 8px;
+  color: $White;
+  font-weight: 600;
+  transition: all 0.24s ease-in-out;
+  &:hover {
+    background-color: $White;
+    color: $SofRed;
+    box-shadow: 0 0 7px $SofRed;
+  }
+}
+
+.btn {
+  text-transform: inherit;
+}
+.btn_primary {
+  background-color: $softBlue;
+  color: $White;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.24s;
+  &:hover {
+    color: $VeryDarBlue;
+  }
+}
+
+.btn_secondary {
+  background-color: $GrayishBlue;
+  color: $VeryDarBlue;
+}

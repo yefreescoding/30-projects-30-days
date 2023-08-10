@@ -1,0 +1,39 @@
+@use '../utils/' as *;
+
+.header {
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  &__logo {
+  }
+  &__logo-img {
+  }
+  &__nav {
+    flex: 1;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  &__ul {
+    gap: 1rem;
+    align-items: center;
+  }
+  &__li {
+    a {
+      color: $GrayishBlue;
+      &:hover {
+        color: $VeryDarBlue;
+      }
+    }
+  }
+
+  &__btn-in {
+  }
+  &__btn-out {
+  }
+  &__btn-mobile {
+    @media (width > 48em) {
+      display: none;
+    }
+  }
+}

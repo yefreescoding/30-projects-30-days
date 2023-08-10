@@ -28,6 +28,7 @@ button,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;
 }
 /* 
 text-wrap: balance;
@@ -41,4 +42,13 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
 }
