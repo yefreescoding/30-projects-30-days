@@ -1,0 +1,19 @@
+.cards {
+  box-shadow: 0px 8px 20px hsl(0, 0%, 85%);
+  border-radius: 7px;
+  gap: 1rem;
+  &,
+  &__info,
+  &__action {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__info {
+    padding: 1.5rem;
+  }
+  &__action {
+    padding-bottom: 1rem;
+  }
+}

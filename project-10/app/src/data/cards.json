@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "title": "Add to Chrome",
+      "text": "Minimum version 51",
+      "link": "/",
+      "image": ""
+    },
+    {
+      "title": "Add to Firefox",
+      "text": "Minimum version 52",
+      "link": "/",
+      "image": ""
+    },
+    {
+      "title": "Add to Opera ",
+      "text": "Minimum version 53",
+      "link": "/",
+      "image": ""
+    }
+  ]
+}
