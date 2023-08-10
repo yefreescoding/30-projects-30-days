@@ -1,14 +1,15 @@
-export default function Cards() {
+/* eslint-disable react/prop-types */
+export default function Cards({ title, text, img, link, animation }) {
   return (
-    <article className="cards flex">
+    <article className={`cards flex ${animation}`}>
       <div className="cards__info flex">
-        <img src="/images/logo-chrome.svg" alt="" />
-        <h3>Add to chrome</h3>
-        <p>Minimum version 62</p>
+        <img src={`/images/${img}`} alt="" />
+        <h3>{title}</h3>
+        <p>{text}</p>
       </div>
       <div className="cards__action flex">
         <img src="/images/bg-dots.svg" alt="" />
-        <a href="/" className="btn primary">
+        <a href={link} className="btn primary">
           Add and install extension
         </a>
       </div>

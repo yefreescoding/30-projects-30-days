@@ -1,22 +1,25 @@
 {
   "cards": [
     {
+      "id": 1,
       "title": "Add to Chrome",
       "text": "Minimum version 51",
-      "link": "/",
-      "image": ""
+      "image": "logo-chrome.svg",
+      "link": "/"
     },
     {
+      "id": 2,
       "title": "Add to Firefox",
       "text": "Minimum version 52",
-      "link": "/",
-      "image": ""
+      "image": "logo-chrome.svg",
+      "link": "/"
     },
     {
+      "id": 3,
       "title": "Add to Opera ",
       "text": "Minimum version 53",
-      "link": "/",
-      "image": ""
+      "image": "logo-chrome.svg",
+      "link": "/"
     }
   ]
 }

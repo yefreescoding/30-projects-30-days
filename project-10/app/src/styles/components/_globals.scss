@@ -52,7 +52,12 @@
 .section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   margin: 10vh 0;
+  .container_cards {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
