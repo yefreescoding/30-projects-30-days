@@ -2,7 +2,7 @@
 export default function HeaderLinks({ name, href, worth = true }) {
   return (
     <li key={name} className="header__li">
-      <a href={href} className={worth ? 'btn primary' : 'btn secondary'}>
+      <a href={href} className={worth ? 'primary' : 'secondary'}>
         {name}
       </a>
     </li>

@@ -1,0 +1,27 @@
+.cover {
+  flex-wrap: wrap-reverse;
+  margin: 3rem 0;
+  padding: 2rem;
+  &__article,
+  &__image {
+    flex-basis: 30em;
+    flex-grow: 1;
+  }
+
+  &__article {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__h1 {
+    line-height: 1;
+  }
+  &__p {
+  }
+  &__links {
+    gap: 1rem;
+  }
+  &__img {
+    position: relative;
+  }
+}

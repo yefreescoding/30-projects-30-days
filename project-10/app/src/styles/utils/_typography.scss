@@ -24,7 +24,8 @@ p {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 7rem);
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  text-transform: capitalize;
 }
 
 h2 {

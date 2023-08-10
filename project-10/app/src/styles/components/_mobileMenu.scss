@@ -3,6 +3,7 @@
 .mobile_menu {
   display: none;
   @media (width < 48em) {
+    z-index: 99999;
     flex-direction: column;
     position: absolute;
     inset: 0;

@@ -19,19 +19,23 @@
 
 .btn {
   text-transform: inherit;
-}
-.btn_primary {
-  background-color: $softBlue;
-  color: $White;
+  padding: 1rem;
+  width: fit-content;
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.24s;
   &:hover {
-    color: $VeryDarBlue;
+    transform: translateY(-3px);
+    opacity: 0.9;
+    box-shadow: 0 2px 2px gray;
   }
 }
+.btn.primary {
+  background-color: $softBlue;
+  color: $White;
+}
 
-.btn_secondary {
-  background-color: $GrayishBlue;
+.btn.secondary {
+  background-color: $ShadowGrayishBlue;
   color: $VeryDarBlue;
 }
