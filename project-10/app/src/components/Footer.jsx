@@ -26,8 +26,8 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="footer__logos">
-          <img src={iconFacebook} alt="" />
-          <img src={iconTwitter} alt="" />
+          <img src={iconFacebook} alt="Facebook logo icon" />
+          <img src={iconTwitter} alt="Twitter Logo Icon" />
         </div>
       </div>
       <p className="attribution">

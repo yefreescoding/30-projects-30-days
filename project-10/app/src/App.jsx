@@ -7,6 +7,8 @@ import HeroSection from './components/HeroSection';
 import SectionCards from './components/SectionCards';
 import SectionFeatures from './components/SectionFeatures';
 import SectionQuestions from './components/SectionQuestion';
+import SectionForm from './components/SectionForms';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <SectionFeatures />
       <SectionCards />
       <SectionQuestions />
+      <SectionForm />
+      <Footer />
     </div>
   );
 }
