@@ -1,11 +1,10 @@
 import { useState } from 'react';
-// import useDataFetching from '../hooks/useDataFetching';
-
+// import svg
 import bookMarkLogo from '/images/logo-bookmark.svg';
-// import HeaderLinks from './HeaderLinks';
-import links from '../data/links';
 import BtnHamburger from './ButtonHamburger';
-console.log(links);
+// import components
+import HeaderLinks from './HeaderLinks';
+import links from '../data/links';
 
 export default function Header() {
   const [log, isLog] = useState(true);
@@ -21,9 +20,12 @@ export default function Header() {
       <nav className="header__nav">
         <ul className="header__ul">
           {links.map((link) => (
-            <li key={link.name}>
-              <a href={link.href}>{link.name}</a>
-            </li>
+            <HeaderLinks
+              key={link.name}
+              name={link.name}
+              href={link.href}
+              worth={true}
+            />
           ))}
         </ul>
         <button
