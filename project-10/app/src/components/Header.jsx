@@ -4,13 +4,14 @@ import bookMarkLogo from '/images/logo-bookmark.svg';
 import BtnHamburger from './ButtonHamburger';
 // import components
 import HeaderLinks from './HeaderLinks';
+import MobileMenu from './MobileMenu';
 // import data
 import links from '../data/links';
 
 export default function Header() {
-  const [mobileMenu, setMobileMenu] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   const handleToggle = () => {
-    setMobileMenu(!mobileMenu);
+    setExpanded(!expanded);
   };
 
   return (
@@ -18,7 +19,7 @@ export default function Header() {
       <div className="header__logo">
         <img src={bookMarkLogo} alt="" className="header__logo-img" />
       </div>
-      <nav className="header__nav flex" aria-expanded="false">
+      <nav className="header__nav flex">
         <ul className="header__ul flex">
           {links.links.map((link) => (
             <HeaderLinks
@@ -33,6 +34,7 @@ export default function Header() {
           Login
         </button>
       </nav>
+      <MobileMenu handleClose={handleToggle} ariaExpanded={expanded} />
       <BtnHamburger handleClick={handleToggle} />
     </header>
   );

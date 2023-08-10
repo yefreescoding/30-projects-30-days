@@ -1,0 +1,63 @@
+@use '../utils/' as *;
+
+.mobile_menu {
+  display: none;
+  @media (width < 48em) {
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    background-color: $VeryDarBlue;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem;
+    &[aria-expanded='true'] {
+      display: flex;
+    }
+
+    &__actions div {
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    &__close {
+      // width: 3rem;
+      background-color: transparent;
+      border: none;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    & ul {
+      flex-direction: column;
+      padding: 1rem 0;
+      // align-items: center;
+      width: 100%;
+      & li {
+        border-top: 1px solid $GrayishBlue;
+        flex: 1;
+        padding: 1.5rem 0;
+        a {
+          color: $White;
+        }
+      }
+    }
+
+    &__login {
+      width: 100%;
+      padding: 1rem;
+      border: 2px $White solid;
+      color: $White;
+      font-weight: 600;
+      border-radius: 7px;
+      background-color: transparent;
+    }
+
+    &__socials {
+      justify-content: center;
+      gap: 2.5rem;
+    }
+  }
+}

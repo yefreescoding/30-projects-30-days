@@ -6,7 +6,7 @@
   align-items: center;
   text-transform: uppercase;
   flex-wrap: wrap;
-  position: relative;
+  // position: relative;
   &__nav {
     display: none;
     @media (width > 40em) {
@@ -29,14 +29,10 @@
     }
   }
   &__btn-mobile {
+    background-color: transparent;
+    border: none;
     @media (width > 48em) {
       display: none;
     }
   }
-}
-
-// Styles that will trigger when the user opens mobile menu
-
-.wrapper[aria-expanded='true'] {
-  position: fixed;
 }
