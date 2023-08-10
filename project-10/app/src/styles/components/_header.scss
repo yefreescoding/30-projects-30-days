@@ -5,11 +5,13 @@
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  &__logo {
-  }
-  &__logo-img {
-  }
+  flex-wrap: wrap;
+  position: relative;
   &__nav {
+    display: none;
+    @media (width > 40em) {
+      display: flex;
+    }
     flex: 1;
     justify-content: flex-end;
     gap: 1rem;
@@ -26,14 +28,15 @@
       }
     }
   }
-
-  &__btn-in {
-  }
-  &__btn-out {
-  }
   &__btn-mobile {
     @media (width > 48em) {
       display: none;
     }
   }
+}
+
+// Styles that will trigger when the user opens mobile menu
+
+.wrapper[aria-expanded='true'] {
+  position: fixed;
 }

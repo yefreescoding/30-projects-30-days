@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className="wrapper" aria-expanded="false">
       <Header />
       <HeroSection />
       <SectionFeatures />

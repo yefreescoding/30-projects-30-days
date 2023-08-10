@@ -8,9 +8,9 @@ import HeaderLinks from './HeaderLinks';
 import links from '../data/links';
 
 export default function Header() {
-  const [log, isLog] = useState(true);
-  const handleLoggingClick = () => {
-    isLog(!log);
+  const [mobileMenu, setMobileMenu] = useState(true);
+  const handleToggle = () => {
+    setMobileMenu(!mobileMenu);
   };
 
   return (
@@ -18,7 +18,7 @@ export default function Header() {
       <div className="header__logo">
         <img src={bookMarkLogo} alt="" className="header__logo-img" />
       </div>
-      <nav className="header__nav flex">
+      <nav className="header__nav flex" aria-expanded="false">
         <ul className="header__ul flex">
           {links.links.map((link) => (
             <HeaderLinks
@@ -29,15 +29,11 @@ export default function Header() {
             />
           ))}
         </ul>
-        <button className="btn-act" onClick={handleLoggingClick} type="button">
-          {log ? (
-            <span className="header__btn-in">Log in</span>
-          ) : (
-            <span className="header__btn-out">Log out</span>
-          )}
+        <button className="btn-act" type="button">
+          Login
         </button>
       </nav>
-      <BtnHamburger />
+      <BtnHamburger handleClick={handleToggle} />
     </header>
   );
 }
