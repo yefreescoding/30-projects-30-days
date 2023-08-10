@@ -4,7 +4,7 @@ import Slider from './Slider';
 
 export default function FeaturesSection() {
   return (
-    <section>
+    <section className="section">
       <TitleSection
         sectionTitle="Features"
         description={`Our aim is to make it quick and easy for you 

@@ -3,7 +3,7 @@ import TitleSection from './TitleSection';
 
 export default function SectionCards() {
   return (
-    <section>
+    <section className="section">
       <TitleSection
         sectionTitle="Download the extension"
         description={`We’ve got more browsers in the pipeline. 

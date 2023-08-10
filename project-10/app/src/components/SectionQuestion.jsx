@@ -2,7 +2,7 @@ import TitleSection from './TitleSection';
 
 export default function SectionQuestions() {
   return (
-    <section>
+    <section className="section">
       <TitleSection
         sectionTitle="Frequently Asked Questions"
         description={`Here are some of our FAQs. If you have any other questions
