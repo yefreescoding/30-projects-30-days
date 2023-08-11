@@ -23,45 +23,50 @@ The majority of these challenges will revolve around front-end development. As a
 
 ## Project 1:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-1)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-01)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-1/index.html)
 
 ## Project 2:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-2)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-02)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-2/index.html)
 
 ## Project 3:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-3)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-03)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-3/index.html)
 
 ## Project 4:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-4)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-04)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-4/index.html)
 
 ## Project 5:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-5)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-05)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-5/app/dist/index.html)
 
 ## Project 6:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-06)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-6/index.html)
 
 ## Project 7:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-7)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-07)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/tic-tac-toe/dist/index.html)
 
 ## Project 8:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-8)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-08)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-8/index.html)
 
 ## Project 9:
 
-- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-6)
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-09)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-9/index.html)
+
+## Project 9:
+
+- [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10)
 - [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/index.html)
