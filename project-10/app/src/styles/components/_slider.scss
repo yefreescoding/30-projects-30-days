@@ -11,16 +11,42 @@
 .slider {
   gap: 2rem;
   &__ul {
+    --_left: 0;
+    position: relative;
+    width: min(100%, 60em);
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem max(10vw, 2rem);
+    &::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 -4px 0;
+      height: 4px;
+      scale: var(--_width, 34%) 1;
+      translate: var(--_left, 0);
+      transform-origin: left;
+      background-color: lightblue;
+      transition: all 0.5s ease;
+    }
   }
   &__li {
+    padding: 1.5rem;
+    position: relative;
     text-align: center;
-    flex-basis: 10em;
+    flex-basis: 15em;
     flex-grow: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 -4px 0;
+      height: 4px;
+      background-color: $ShadowGrayishBlue;
+    }
+
+    &[aria-selected='true'] {
+      // background-color: lightblue;
+    }
   }
   &__a {
     color: $GrayishBlue;
