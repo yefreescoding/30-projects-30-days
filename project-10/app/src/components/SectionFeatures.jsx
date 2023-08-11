@@ -4,7 +4,7 @@ import Slider from './Slider';
 
 export default function FeaturesSection() {
   return (
-    <section className="section">
+    <section className="section" aria-label="Features">
       <TitleSection
         sectionTitle="Features"
         description={`Our aim is to make it quick and easy for you 

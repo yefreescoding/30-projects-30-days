@@ -1,0 +1,21 @@
+.panel.hidden {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.slider {
+  &__ul {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__li {
+  }
+  &__a {
+  }
+  &__panels {
+  }
+}
