@@ -1,3 +1,5 @@
+@use '../utils/' as *;
+
 .panel.hidden {
   display: none;
 }
@@ -7,15 +9,43 @@
 }
 
 .slider {
+  gap: 2rem;
   &__ul {
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     gap: 1rem;
+    padding: 1rem max(10vw, 2rem);
   }
   &__li {
+    text-align: center;
+    flex-basis: 10em;
+    flex-grow: 1;
   }
   &__a {
+    color: $GrayishBlue;
   }
-  &__panels {
+}
+
+.tab {
+  flex-wrap: wrap;
+  gap: 5rem;
+  & > div {
+    flex-basis: 15em;
+    flex-grow: 1;
+  }
+  &__img {
+    img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: contain;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
   }
 }

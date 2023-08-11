@@ -14,6 +14,9 @@ export default function SliderTabs({
       <div className="tab__text">
         <h3>{title}</h3>
         <p>{description}</p>
+        <a href="/" className="btn primary">
+          More info
+        </a>
       </div>
     </article>
   );

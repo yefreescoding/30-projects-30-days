@@ -24,6 +24,7 @@
   padding: 1rem;
   width: fit-content;
   border-radius: 8px;
+  font-size: 1rem;
   font-weight: 600;
   transition: all 0.24s;
   &:hover {
@@ -59,7 +60,9 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  margin: 10vh 0;
+  @media (width < 40em) {
+    text-align: center;
+  }
   .container_cards {
     gap: 1rem;
     flex-wrap: wrap;

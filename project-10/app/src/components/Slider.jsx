@@ -6,6 +6,20 @@ import SliderTabs from './SliderTabs';
 import tabsData from '../data/tabs.json';
 
 export default function Slider() {
+  const tabsLink = [
+    {
+      name: 'Simple Bookmarking',
+      href: '#simple-bookmarking',
+    },
+    {
+      name: 'Speedy Searching',
+      href: '#speedy-searching',
+    },
+    {
+      name: 'Easy Sharing',
+      href: '#easy-sharing',
+    },
+  ];
   const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   const handleTabClick = (e, index) => {
@@ -16,35 +30,19 @@ export default function Slider() {
   // let tabLabel = 1;
 
   return (
-    <div className="slider">
+    <div className="slider flex flex-col">
       <ul className="slider__ul flex" aria-labelledby="tabs-title">
-        <li className="slider__li">
-          <a
-            className="slider__a"
-            onClick={(e) => handleTabClick(e, 0)}
-            href="#simple-bookmarking"
-          >
-            Simple Bookmarking
-          </a>
-        </li>
-        <li className="slider__li">
-          <a
-            className="slider__a"
-            onClick={(e) => handleTabClick(e, 1)}
-            href="#speedy-searching"
-          >
-            Speedy Searching
-          </a>
-        </li>
-        <li className="slider__li">
-          <a
-            className="slider__a"
-            onClick={(e) => handleTabClick(e, 2)}
-            href="#easy-sharing"
-          >
-            Easy Searching
-          </a>
-        </li>
+        {tabsLink.map((link, index) => (
+          <li key={link.href} className="slider__li">
+            <a
+              className="slider__a"
+              onClick={(e) => handleTabClick(e, index)}
+              href={link.href}
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className="slider__panels flex">
         {tabsData.info.map((tab, index) => (
