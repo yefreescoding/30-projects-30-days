@@ -1,11 +1,11 @@
 //  import components
-
 import Cards from './Cards';
 import TitleSection from './TitleSection';
-
 import cards from '../data/cards.json';
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 export default function SectionCards() {
+  useIntersectionObserver('.cards', 'show');
   return (
     <section className="section">
       <TitleSection
