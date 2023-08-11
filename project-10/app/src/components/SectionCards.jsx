@@ -1,3 +1,5 @@
+//  import components
+
 import Cards from './Cards';
 import TitleSection from './TitleSection';
 

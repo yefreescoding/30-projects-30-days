@@ -13,9 +13,9 @@
   font-weight: 600;
   transition: all 0.24s ease-in-out;
   &:hover {
-    background-color: $White;
-    color: $SofRed;
-    box-shadow: 0 0 7px $SofRed;
+    transform: translateY(-3px);
+    opacity: 0.9;
+    box-shadow: 0 2px 2px gray;
   }
 }
 
@@ -46,6 +46,9 @@
   text-align: center;
   width: min(100% - 1rem, 65ch);
   margin: 0 auto;
+  .section__text {
+    opacity: 0;
+  }
 }
 
 // Section styles

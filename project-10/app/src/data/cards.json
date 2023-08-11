@@ -11,14 +11,14 @@
       "id": 2,
       "title": "Add to Firefox",
       "text": "Minimum version 52",
-      "image": "logo-chrome.svg",
+      "image": "logo-firefox.svg",
       "link": "/"
     },
     {
       "id": 3,
       "title": "Add to Opera ",
       "text": "Minimum version 53",
-      "image": "logo-chrome.svg",
+      "image": "logo-opera.svg",
       "link": "/"
     }
   ]
