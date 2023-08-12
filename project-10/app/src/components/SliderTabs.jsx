@@ -12,7 +12,7 @@ export default function SliderTabs({
         <img src={image} alt="" />
       </div>
       <div className="tab__text">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{description}</p>
         <a href="/" className="btn primary">
           More info

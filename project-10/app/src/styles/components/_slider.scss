@@ -36,6 +36,7 @@
     text-align: center;
     flex-basis: 15em;
     flex-grow: 1;
+    color: $GrayishBlue;
     &::after {
       content: '';
       position: absolute;
@@ -43,13 +44,12 @@
       height: 4px;
       background-color: $ShadowGrayishBlue;
     }
-
     &[aria-selected='true'] {
-      // background-color: lightblue;
+      color: $VeryDarBlue;
     }
   }
   &__a {
-    color: $GrayishBlue;
+    color: inherit;
   }
 }
 
