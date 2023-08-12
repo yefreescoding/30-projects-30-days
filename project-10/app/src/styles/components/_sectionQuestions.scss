@@ -1,0 +1,45 @@
+@use '../utils/' as *;
+
+.section_questions {
+  text-align: left;
+  .section_questions__tabs {
+    width: min(100%, 75ch);
+    margin: 0 auto;
+  }
+  .section_questions__article {
+    border-top: 1px solid $ShadowGrayishBlue;
+    padding: 1rem 0;
+    isolation: isolate;
+    p {
+      z-index: -1;
+      position: relative;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.24s ease-in-out;
+      &[data-open='true'] {
+        opacity: 1;
+        max-height: 100vh;
+        // transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  .section_questions__h3 {
+    z-index: 99;
+    justify-content: space-between;
+    padding: 1rem 0;
+    transition: all 0.24s;
+    background-color: $White;
+    &[aria-selected='true'] {
+      color: $SofRed;
+    }
+    img {
+      object-fit: contain;
+      aspect-ratio: 1;
+      width: 1.5rem;
+      transition: all 0.24s ease;
+      &[data-open='true'] {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
