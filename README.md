@@ -69,4 +69,4 @@ The majority of these challenges will revolve around front-end development. As a
 ## Project 10:
 
 - [GitHub repo](https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10)
-- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-7/index.html)
+- [Live Site](https://yefreescoding.github.io/30-projects-30-days/project-10/app/dist/index.html)
