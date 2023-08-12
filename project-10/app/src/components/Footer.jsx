@@ -8,13 +8,16 @@ import iconTwitter from '/images/icon-twitter.svg';
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__top">
-        <div className="header__logo">
-          <img src={bookMarkLogo} alt="" className="header__logo-img" />
-        </div>
-        <nav className="footer__nav">
-          <ul className="footer__ul">
+    <footer
+      className="footer flex flex-col"
+      aria-labelledby="Footer of the website, end of it."
+    >
+      <div className="footer__top flex">
+        <nav className="footer__nav flex">
+          <div className="header__logo">
+            <img src={bookMarkLogo} alt="" className="header__logo-img" />
+          </div>
+          <ul className="footer__ul flex">
             {links.links.map((link) => (
               <HeaderLinks
                 key={link.name}
@@ -25,12 +28,12 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <div className="footer__logos">
+        <div className="footer__logos flex">
           <img src={iconFacebook} alt="Facebook logo icon" />
           <img src={iconTwitter} alt="Twitter Logo Icon" />
         </div>
       </div>
-      <p className="attribution">
+      <small className="attribution">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -40,7 +43,7 @@ export default function Footer() {
           Frontend Mentor
         </a>
         . Coded by <a href="#">Your Name Here</a>.
-      </p>
+      </small>
     </footer>
   );
 }

@@ -1,0 +1,39 @@
+@use '../utils/' as *;
+
+.footer {
+  background-color: $VeryDarBlue;
+  &__top {
+    padding: 1.5rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__nav {
+    flex-basis: 15em;
+    flex-grow: 1;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__ul {
+    gap: 1rem;
+    text-transform: uppercase;
+  }
+  &__logos {
+    flex-basis: 15em;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 2.5rem;
+    img {
+      object-fit: contain;
+      aspect-ratio: 1;
+      width: 1.75rem;
+    }
+  }
+
+  small {
+    color: $White;
+    text-align: center;
+    padding: 1rem;
+  }
+}
