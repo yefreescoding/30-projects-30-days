@@ -79,6 +79,30 @@
       "tools": ["REACTJS", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10",
       "liveSite": "./project-10/app/dist/index.html"
+    },
+    {
+      "title": "Project #11",
+      "date": "Draft.",
+      "text": "- - -",
+      "tools": ["REACTJS", "HTML5", "SCSS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-11",
+      "liveSite": "./project-10/index.html"
+    },
+    {
+      "title": "Project #12",
+      "date": "Draft.",
+      "text": "- - -",
+      "tools": ["REACTJS", "HTML5", "SCSS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-12",
+      "liveSite": "./project-10/index.html"
+    },
+    {
+      "title": "Project #13",
+      "date": "Building...",
+      "text": "NFT Preview Card Component",
+      "tools": ["REACTJS", "HTML5", "SCSS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
+      "liveSite": "./project-10/index.html"
     }
   ]
 }
