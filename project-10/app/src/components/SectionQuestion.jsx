@@ -3,7 +3,10 @@ import TitleSection from './TitleSection';
 
 export default function SectionQuestions() {
   return (
-    <section className="section" aria-labelledby="Frequently asked questions">
+    <section
+      className="section section_questions"
+      aria-labelledby="Frequently asked questions"
+    >
       <TitleSection
         sectionTitle="Frequently Asked Questions"
         description={`Here are some of our FAQs. If you have any other questions
