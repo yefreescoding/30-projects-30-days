@@ -1,0 +1,38 @@
+@use '../utils/' as *;
+
+.form {
+  padding: 5rem 0;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  background-color: $softBlue;
+  color: $White;
+  h2 {
+    color: inherit;
+  }
+  &__span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  &__action {
+    gap: 1rem;
+    width: min(100% - 1rem, 40em);
+
+    input[type='email'] {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $GrayishBlue;
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      outline: 1px solid transparent;
+      &::placeholder {
+        color: $GrayishBlue;
+      }
+      &:focus {
+        outline: $SofRed 3px solid;
+      }
+    }
+  }
+}
