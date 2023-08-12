@@ -78,7 +78,7 @@
       "text": "Sass landing page",
       "tools": ["REACTJS", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10",
-      "liveSite": "./project-10/app/index.html"
+      "liveSite": "./project-10/app/dist/index.html"
     }
   ]
 }
