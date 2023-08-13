@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="chart flex-col gap-4">
+        <header class="chart__header flex-row">
+          <div>
+            <span class="chart__header_title">My balance</span>
+            <h1 id="total-balance" class="chart__h1">$921.48</h1>
+          </div>
+          <img src="./images/logo.svg" alt="" />
+        </header>
+        <div class="chart__body flex-col">
+          <h2>Spending - Last 7 days</h2>
+          <div id="charts-container" class="chart__stats flex-row gap-4">
+            <!-- data displayed using javascript -->
+          </div>
+          <footer class="chart__footer flex-row">
+            <div>
+              <h2 class="chart__footer_title">Total this month</h2>
+              <p class="chart__footer_result">
+                <!-- Javascript injection -->
+              </p>
+            </div>
+            <div>
+              <p class="chart__footer_result">+2.4%</p>
+              <h2 class="chart__footer_title">from last month</h2>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+  </body>
 </html>
