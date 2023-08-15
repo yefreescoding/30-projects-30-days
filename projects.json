@@ -103,6 +103,62 @@
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
       "liveSite": "./project-13/index.html"
+    },
+    {
+      "title": "Project #14",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
+      "liveSite": "./project-14/index.html"
+    },
+    {
+      "title": "Project #15",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-15",
+      "liveSite": "./project-15/index.html"
+    },
+    {
+      "title": "Project #16",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-16",
+      "liveSite": "./project-16/index.html"
+    },
+    {
+      "title": "Project #17",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-17",
+      "liveSite": "./project-17/index.html"
+    },
+    {
+      "title": "Project #18",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-18",
+      "liveSite": "./project-18/index.html"
+    },
+    {
+      "title": "Project #19",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-19",
+      "liveSite": "./project-19/index.html"
+    },
+    {
+      "title": "Project #20",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
+      "liveSite": "./project-20/index.html"
     }
   ]
 }
