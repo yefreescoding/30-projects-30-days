@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  box-sizing: border-box;
+  /*border: 1px grey solid;*/
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+  padding: 5%;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  place-content: center;
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+}
+
+div.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+div.cards-section div.front-face-card {
+  width: 27.9375em;
+  height: 15.3125em;
+  align-self: flex-start;
+  position: relative;
+  text-align: center;
+  margin-left: 3.8em;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 6px 12px 50px rgba(45, 45, 45, 0.427);
+}
+div.cards-section div.front-face-card img {
+  width: 100%;
+  height: 100%;
+}
+div.cards-section div.front-face-card div.card-numbers {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  /*transform: translate(-50%, -50%);*/
+  font-size: 2em;
+}
+div.cards-section div.front-face-card div.card-name {
+  position: absolute;
+  bottom: 1.25em;
+  left: 1.875em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+div.cards-section div.front-face-card div.card-date {
+  position: absolute;
+  bottom: 1.25em;
+  right: 1.875em;
+}
+div.cards-section div.front-face-card div.month {
+  position: absolute;
+  bottom: 1.25em;
+  right: 3.2em;
+}
+div.cards-section div.back-face-card {
+  width: 27.9375em;
+  height: 15.3125em;
+  position: relative;
+  text-align: center;
+  align-self: flex-end;
+  margin-right: 1em;
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 6px 12px 50px rgba(45, 45, 45, 0.427);
+}
+div.cards-section div.back-face-card img {
+  width: 100%;
+  height: 100%;
+}
+div.cards-section div.back-face-card div {
+  position: absolute;
+  top: 49%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+
+div.form-section {
+  padding: 0 1%;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  /*min-height: 100vh;*/
+}
+div.form-section form {
+  padding: 0 3%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 2em 0;
+}
+div.form-section form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 18px;
+}
+div.form-section form div label {
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: hsl(278, 68%, 11%);
+}
+div.form-section form div input {
+  margin-left: 3px;
+  font-size: 1.05em;
+  width: 20em;
+  padding: 15px;
+  color: hsl(279, 6%, 55%);
+  border-radius: 9px;
+  border: 1px solid hsl(279, 6%, 55%);
+}
+div.form-section form div input:focus {
+  outline: none;
+  border: 1px solid hsl(278, 68%, 11%);
+}
+div.form-section form div.date-cvc {
+  display: flex;
+  flex-flow: row;
+  flex: 2 1;
+}
+div.form-section form div.date-cvc input {
+  width: 4.8em;
+}
+div.form-section form div.date-cvc div.exp-date {
+  width: 100%;
+}
+div.form-section form div.date-cvc div.exp-date div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+div.form-section form div button {
+  width: 100%;
+  background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
+  padding: 10px;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 100%);
+  border-radius: 6px;
+  border: 1px solid hsl(278, 68%, 11%);
+  cursor: pointer;
+  transition: all 0.23s linear;
+}
+div.form-section form div button:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+  main {
+    height: 900px;
+    display: block;
+    grid-template-columns: 1fr;
+    gap: 10em;
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    padding: 2%;
+  }
+  div.cards-section {
+    /*padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    */
+    gap: 0;
+    margin-bottom: -150px;
+    position: relative;
+  }
+  div.cards-section div.front-face-card {
+    margin: 0;
+  }
+  div.form-section {
+    background: none;
+    padding-top: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.form-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em 0;
+  }
+}
+div.form-section.display-hide {
+  display: none;
+}
+
+div.complete-section {
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.3em;
+}
+div.complete-section div.thanks {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+div.complete-section p {
+  margin: 0;
+  color: hsl(279, 6%, 55%);
+}
+div.complete-section button.button-continue {
+  width: 20em;
+  background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
+  padding: 10px;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 100%);
+  border-radius: 6px;
+  border: 1px solid hsl(278, 68%, 11%);
+  cursor: pointer;
+  transition: all 0.23s linear;
+}
+div.complete-section button.button-continue:hover {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+div.complete-section.display-success {
+  display: flex;
+}
+
+.error {
+  display: none;
+  width: 100%;
+  color: #af4242;
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+.error.display-error {
+  display: block;
+}/*# sourceMappingURL=styles.css.map */
