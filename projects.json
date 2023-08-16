@@ -82,11 +82,11 @@
     },
     {
       "title": "Project #11",
-      "date": "Draft.",
-      "text": "- - -",
-      "tools": ["REACTJS", "HTML5", "SCSS"],
+      "date": "Finished: Wednesday August 16, 2023.",
+      "text": "Age Calculator App",
+      "tools": ["Vanilla JavaScript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-11",
-      "liveSite": "./project-10/index.html"
+      "liveSite": "./project-11/index.html"
     },
     {
       "title": "Project #12",
@@ -154,6 +154,14 @@
     },
     {
       "title": "Project #20",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
+      "liveSite": "./project-20/index.html"
+    },
+    {
+      "title": "Project #21",
       "date": "- - -",
       "text": "Draft.",
       "tools": ["none"],
