@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <form id="form_age" class="main__form">
+          <label for="day"
+            >Day:
+            <input
+              type="text"
+              id="day"
+              name="day"
+              placeholder="DD"
+              max="2"
+              maxlength="2"
+              pattern="[0-9]+"
+              required
+            />
+            <span class="error_message error_message_day" aria-invalid="false"
+              >Must be a valid day.</span
+            >
+          </label>
+          <label for="first_name"
+            >Month:
+            <input
+              type="text"
+              id="month"
+              name="month"
+              placeholder="MM"
+              maxlength="2"
+              pattern="[0-9]+"
+              required
+            />
+            <span class="error_message error_message_month" aria-invalid="false"
+              >Must be a valid month.</span
+            >
+          </label>
+          <label for="year"
+            >Year:
+            <input
+              type="text"
+              id="year"
+              name="year"
+              placeholder="YYYY"
+              maxlength="4"
+              pattern="[0-9]+"
+              required
+            />
+            <span class="error_message error_message_year" aria-invalid="false"
+              >Must be in the past.</span
+            >
+          </label>
+          <button id="submit_age" class="submit__btn" type="submit">
+            <img src="./assets/images/icon-arrow.svg" alt="" />
+          </button>
+        </form>
+        <section class="main__section">
+          <p class="main__results">
+            <span id="years_result">- -</span>
+            years
+          </p>
+          <p class="main__results">
+            <span id="months_result">- -</span>
+            months
+          </p>
+          <p class="main__results">
+            <span id="days_result">- -</span>
+            days
+          </p>
+        </section>
+      </main>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </footer>
+    </div>
+  </body>
 </html>
