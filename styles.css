@@ -147,7 +147,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
   border-radius: 5px;
   background-color: var(--clr-bg-body);
-  box-shadow: 0 15px 2rem hsla(0, 0%, 57%, 0.744);
+  box-shadow: 0 15px 2.5rem hsla(0, 0%, 64%, 0.596);
 }
 
 .projects_container article {

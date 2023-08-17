@@ -1,79 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles/styles.css">
-  <title>Frontend Mentor | Interactive card details form</title>
- 
-</head>
-<body>
-  <!--Theres an image set as a background of the web page. above all the content-->
-  <!--Left section of the page. The card section-->
-  <main>
-    <div class="cards-section">
-      <div class="front-face-card">
-        <img src="images/bg-card-front.png" alt="card front">
-        <div class="card-numbers">0000 0000 0000 0000</div>
-        <div class="card-name">Jane Appleseed</div>
-        <div class="card-date month">00</div>
-        <div class="card-date year">00</div>
-      </div>
-      <div class="back-face-card">
-        <img src="images/bg-card-back.png" alt="card back face">
-        <div class="cvc-output">000</div>
-      </div>
-    </div>
-    <!--Right section of the page. The form section-->
-    <div class="form-section">
-      <form name="card-payment-form" action="#" method="post" autocomplete="off">
-        <div>
-          <label>Cardholder Name</label>
-          <input name="name" class="card-holder-name input-error" type="text" placeholder="e.g. Jane Appleseed">
-          <span class="error name-error"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <!--Theres an image set as a background of the web page. above all the content-->
+    <main>
+      <div class="cards-section">
+        <div class="front-face-card">
+          <img src="images/bg-card-front.png" alt="card front" />
+          <div class="card-numbers">0000 0000 0000 0000</div>
+          <div class="card-name">Jane Appleseed</div>
+          <div class="card-date month">00</div>
+          <div class="card-date year">00</div>
         </div>
-        <div>
-          <label>Card Number <span></span></label>
-          <input name="card" class="card-number-input" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="e.g. 1234-5678-9123-0000">
-          <p class="error number-error"></p>
+        <div class="back-face-card">
+          <img src="images/bg-card-back.png" alt="card back face" />
+          <div class="cvc-output">000</div>
         </div>
-        <div class="date-cvc">
-          <div class="exp-date">
-            <label>Exp. Date (MM/YY)</label>
-            <div>
-              <input name="month" class="card-month" type="text" placeholder="MM" maxlength="2">
-              <input name="year" class="card-year" type="text" placeholder="YY" maxlength="2">
-            </div>
-            <p class="error date-error"></p>
+      </div>
+      <!--Right section of the page. The form section-->
+      <div class="form-section">
+        <form
+          name="card-payment-form"
+          action="#"
+          method="post"
+          autocomplete="off"
+        >
+          <div>
+            <label>Cardholder Name</label>
+            <input
+              name="name"
+              class="card-holder-name input-error"
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <span class="error name-error"></span>
           </div>
           <div>
-            <label>CVC</label>
-            <input name="cvcname" class="cvc" type="text" placeholder="e.g. 123" maxlength="3">
-            <p class="error cvc-error"></p>
+            <label>Card Number <span></span></label>
+            <input
+              name="card"
+              class="card-number-input"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              placeholder="e.g. 1234-5678-9123-0000"
+            />
+            <p class="error number-error"></p>
           </div>
-        </div>
-        <div>
-          <button type="submit" name="register-submition">Confirm</button>
-          <p class="error register-error"></p>
-        </div>
-      </form>
-    </div>
-    <div class="complete-section">
-      <img src="images/icon-complete.svg" alt="complete icon">
-      <div class="thanks">Thank you!</div>
-      <p>We've added your card details</p>
-      <div>
-        <button class="button-continue">Continue</button>
+          <div class="date-cvc">
+            <div class="exp-date">
+              <label>Exp. Date (MM/YY)</label>
+              <div>
+                <input
+                  name="month"
+                  class="card-month"
+                  type="text"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  name="year"
+                  class="card-year"
+                  type="text"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+              </div>
+              <p class="error date-error"></p>
+            </div>
+            <div>
+              <label>CVC</label>
+              <input
+                name="cvcname"
+                class="cvc"
+                type="text"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+              <p class="error cvc-error"></p>
+            </div>
+          </div>
+          <div>
+            <button type="submit" name="register-submition">Confirm</button>
+            <p class="error register-error"></p>
+          </div>
+        </form>
       </div>
-    </div>
-  </main>
-<!--Java script file linked-->
-  <script src="script/script.js"></script>
-<!--Java script file linked-->
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Yefree De Los Santos</a>.
-  </footer>
-</body>
+      <div class="complete-section">
+        <img src="images/icon-complete.svg" alt="complete icon" />
+        <div class="thanks">Thank you!</div>
+        <p>We've added your card details</p>
+        <div>
+          <button class="button-continue">Continue</button>
+        </div>
+      </div>
+    </main>
+    <!--Java script file linked-->
+    <script src="script/script.js"></script>
+    <!--Java script file linked-->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yefree De Los Santos</a>.
+    </footer>
+  </body>
 </html>
