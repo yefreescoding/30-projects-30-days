@@ -131,13 +131,13 @@ h6 {
   background-color: white;
   padding: 1em;
   border-radius: 1rem 1rem 8rem 1rem;
-  width: min(100%, 40em);
+  width: min(100% - 1rem, 40em);
   margin: 0 auto;
   box-shadow: 3px 3px 16px var(--clr-light-grey);
 }
 .main__form {
-  /* position: relative; */
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
   border-bottom: 1px solid var(--clr-light-grey);
   padding: 1rem;
@@ -178,7 +178,7 @@ h6 {
 
 .submit__btn {
   position: relative;
-  top: 3.5rem;
+  top: 5rem;
   display: grid;
   place-items: center;
   background-color: var(--clr-purple);
@@ -214,7 +214,7 @@ h6 {
 }
 .main__results {
   display: flex;
-  font-size: 5.5rem;
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 900;
   gap: 1rem;
   font-style: italic;
