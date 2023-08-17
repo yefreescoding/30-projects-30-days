@@ -3,6 +3,7 @@ $white: hsl(0, 0%, 100%);
 $LightGrayishViolet: hsl(270, 3%, 87%);
 $DarkGrayishViolet: hsl(279, 6%, 55%);
 $VeryDarkViolet: hsl(278, 68%, 11%);
+$Error: hsl(10, 89%, 47%);
 
 .attribution {
   font-size: 11px;
@@ -38,12 +39,10 @@ body {
   place-items: center;
   &__section {
     padding: 5%;
-    width: min(100%, 85em);
+    width: min(100%, 90em);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
-    gap: 1rem;
-    // background-image: url('../images/bg-main-desktop.png');
-    // background-repeat: no-repeat;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
+    gap: 10rem;
   }
 
   &__cards {
@@ -118,10 +117,6 @@ body {
     }
   }
 }
-
-// styles right section the card section.
-
-// styles for the right section:
 .form {
   padding: 0.4rem;
   display: flex;
@@ -129,7 +124,7 @@ body {
   justify-content: center;
   gap: 1rem;
 
-  & > div {
+  &__div {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
@@ -139,83 +134,70 @@ body {
       letter-spacing: 1px;
       color: $VeryDarkViolet;
     }
-    & > input {
+    & input[type='text'] {
+      font-weight: 700;
       font-size: 1.1rem;
-      // width: min(100%, 20em);
-      min-width: 100%;
       padding: 1rem;
       border-radius: 9px;
       color: $DarkGrayishViolet;
       border: 1px solid $LightGrayishViolet;
+      transition: all 0.2s ease-in-out;
       &::placeholder {
         font-weight: 700;
         color: $DarkGrayishViolet;
       }
-    }
-
-    input:focus {
-      outline: none;
-      border: 1px solid $VeryDarkViolet;
-    }
-  }
-
-  div.date-cvc {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    input {
-      width: 4.8em;
-    }
-    div.exp-date {
-      width: 100%;
-      div {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+      &[data-invalid='true'] {
+        color: $Error;
+        border: 2px solid $Error;
       }
     }
-  }
-
-  div button {
-    width: 100%;
-    background: linear-gradient(45deg, $VeryDarkViolet, $DarkGrayishViolet);
-    padding: 10px;
-    font-size: 0.9em;
-    color: $white;
-    border-radius: 6px;
-    border: 1px solid $VeryDarkViolet;
-    cursor: pointer;
-    transition: all 0.23s linear;
-  }
-
-  div button:hover {
-    letter-spacing: 2px;
-    opacity: 0.8;
-  }
-}
-
-@media (max-width: 900px) {
-  // html {
-  //   font-size: 75%;
-  // }
-  div.form-section {
-    background: none;
-    padding-top: 15em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    form {
-      display: flex;
-      flex-direction: column;
+    &_last_row {
+      flex-direction: row;
       justify-content: space-between;
-      gap: 1em 0;
+      gap: 1rem;
+      .inputs_date {
+        display: flex;
+        gap: 5px;
+        input {
+          width: 5rem;
+        }
+      }
+      .form__label {
+        gap: 10px;
+        display: flex;
+        flex-flow: column;
+      }
+      input {
+        flex: 1;
+      }
+    }
+    input[type='text']:focus {
+      outline: $VeryDarkViolet 3px solid;
+      outline-offset: 3px;
     }
   }
-}
 
-div.form-section.display-hide {
-  display: none;
+  &__submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    color: $white;
+    border: 1px solid $VeryDarkViolet;
+    background-color: $VeryDarkViolet;
+    cursor: pointer;
+    transition: all 200ms ease;
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 3px 3px gray;
+      transform: translateY(-3px);
+    }
+  }
+  // Styles after submitting the form
+  &.display-hide {
+    display: none;
+  }
 }
 
 div.complete-section {
@@ -259,12 +241,11 @@ div.complete-section.display-success {
 
 .error {
   display: none;
-  width: 100%;
-  color: #af4242;
-  font-size: 0.8em;
-  margin-left: 1em;
+  color: $Error;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.error.display-error {
+.error[aria-invalid='true'] {
   display: block;
 }

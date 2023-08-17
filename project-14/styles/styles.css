@@ -36,10 +36,10 @@ body {
 }
 .main__section {
   padding: 5%;
-  width: min(100%, 85em);
+  width: min(100%, 90em);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
+  gap: 10rem;
 }
 .main__cards {
   display: grid;
@@ -119,82 +119,76 @@ body {
   justify-content: center;
   gap: 1rem;
 }
-.form > div {
+.form__div {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
   gap: 0.7rem;
 }
-.form > div label {
+.form__div label {
   font-weight: 700;
   letter-spacing: 1px;
   color: hsl(278, 68%, 11%);
 }
-.form > div > input {
+.form__div input[type=text] {
+  font-weight: 700;
   font-size: 1.1rem;
-  min-width: 100%;
   padding: 1rem;
   border-radius: 9px;
   color: hsl(279, 6%, 55%);
   border: 1px solid hsl(270, 3%, 87%);
+  transition: all 0.2s ease-in-out;
 }
-.form > div > input::placeholder {
+.form__div input[type=text]::placeholder {
   font-weight: 700;
   color: hsl(279, 6%, 55%);
 }
-.form > div input:focus {
-  outline: none;
-  border: 1px solid hsl(278, 68%, 11%);
+.form__div input[type=text][data-invalid=true] {
+  color: hsl(10, 89%, 47%);
+  border: 2px solid hsl(10, 89%, 47%);
 }
-.form div.date-cvc {
-  display: flex;
+.form__div_last_row {
   flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.form div.date-cvc input {
-  width: 4.8em;
-}
-.form div.date-cvc div.exp-date {
-  width: 100%;
-}
-.form div.date-cvc div.exp-date div {
-  width: 100%;
+.form__div_last_row .inputs_date {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  gap: 5px;
 }
-.form div button {
+.form__div_last_row .inputs_date input {
+  width: 5rem;
+}
+.form__div_last_row .form__label {
+  gap: 10px;
+  display: flex;
+  flex-flow: column;
+}
+.form__div_last_row input {
+  flex: 1;
+}
+.form__div input[type=text]:focus {
+  outline: hsl(278, 68%, 11%) 3px solid;
+  outline-offset: 3px;
+}
+.form__submit {
   width: 100%;
-  background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
-  padding: 10px;
-  font-size: 0.9em;
-  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 6px;
+  color: hsl(0, 0%, 100%);
   border: 1px solid hsl(278, 68%, 11%);
+  background-color: hsl(278, 68%, 11%);
   cursor: pointer;
-  transition: all 0.23s linear;
+  transition: all 200ms ease;
 }
-.form div button:hover {
-  letter-spacing: 2px;
+.form__submit:hover {
   opacity: 0.8;
+  box-shadow: 0 3px 3px gray;
+  transform: translateY(-3px);
 }
-
-@media (max-width: 900px) {
-  div.form-section {
-    background: none;
-    padding-top: 15em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  div.form-section form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em 0;
-  }
-}
-div.form-section.display-hide {
+.form.display-hide {
   display: none;
 }
 
@@ -235,13 +229,12 @@ div.complete-section.display-success {
 
 .error {
   display: none;
-  width: 100%;
-  color: #af4242;
-  font-size: 0.8em;
-  margin-left: 1em;
+  color: hsl(10, 89%, 47%);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.error.display-error {
+.error[aria-invalid=true] {
   display: block;
 }
 

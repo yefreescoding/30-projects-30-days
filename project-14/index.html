@@ -66,67 +66,75 @@
         </div>
         <form class="form" autocomplete="off">
           <div class="form__div">
-            <label>Cardholder Name</label>
+            <label for="name">Cardholder Name</label>
             <input
               name="name"
-              class="card-holder-name input-error"
+              class="card-holder-name"
               type="text"
               placeholder="e.g. Jane Appleseed"
               required
+              data-invalid="false"
             />
-            <span class="error name-error"></span>
+            <span class="error" aria-invalid="false"> Can't be blank </span>
           </div>
           <div class="form__div">
-            <label>Card Number <span></span></label>
+            <label>Card Number</label>
             <input
               name="card"
               class="card-number-input"
-              type="tel"
+              type="text"
               inputmode="numeric"
               pattern="[0-9\s]{13,19}"
-              autocomplete="cc-number"
               maxlength="19"
               placeholder="e.g. 1234-5678-9123-0000"
+              required
+              data-invalid="false"
             />
-            <p class="error number-error"></p>
+            <span class="error" aria-invalid="false">
+              * Match the requested format
+            </span>
           </div>
-          <div class="form__div date-cvc">
-            <div class="exp-date">
-              <label>Exp. Date (MM/YY)</label>
-              <div>
+          <div class="form__div form__div_last_row">
+            <div class="inputs_date">
+              <label class="form__label">
+                EXP. DATE
                 <input
-                  name="month"
-                  class="card-month"
+                  id="card-year"
                   type="text"
+                  maxlength="2"
+                  inputmode="numeric"
                   placeholder="MM"
-                  maxlength="2"
+                  data-invalid="false"
                 />
+              </label>
+              <label class="form__label">
+                (YY/MM)
                 <input
-                  name="year"
-                  class="card-year"
+                  id="card-year"
                   type="text"
-                  placeholder="YY"
                   maxlength="2"
+                  inputmode="numeric"
+                  placeholder="YY"
+                  data-invalid="false"
                 />
-              </div>
-              <p class="error date-error"></p>
+              </label>
             </div>
-            <div>
-              <label>CVC</label>
+            <label class="form__label">
+              CVC
               <input
-                name="cvcname"
-                class="cvc"
+                id="card-year"
                 type="text"
-                placeholder="e.g. 123"
-                maxlength="3"
+                maxlength="2"
+                inputmode="numeric"
+                placeholder="YY"
+                data-invalid="false"
               />
-              <p class="error cvc-error"></p>
-            </div>
+            </label>
           </div>
-          <div>
-            <button type="submit" id="submit-card">Confirm</button>
-            <p class="error register-error"></p>
-          </div>
+          <span class="error" aria-invalid="false"> Can't be blank </span>
+          <button type="submit" id="submit-card" class="form__submit">
+            Confirm
+          </button>
         </form>
         <div class="complete-section" data-visible="false">
           <img src="images/icon-complete.svg" alt="complete icon" />
