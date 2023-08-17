@@ -8,161 +8,162 @@
   color: hsl(228, 45%, 44%);
 }
 
-* {
-  box-sizing: border-box;
-  /*border: 1px grey solid;*/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   margin: 0;
+  padding: 0;
 }
 
 html {
-  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Space Grotesk", sans-serif;
 }
 
-main {
-  padding: 5%;
-  width: 100%;
-  height: 100vh;
+.main {
+  min-height: 100dvh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  place-content: center;
-  background-image: url("../images/bg-main-desktop.png");
-  background-repeat: no-repeat;
+  place-items: center;
 }
-
-div.cards-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+.main__section {
+  padding: 5%;
+  width: min(100%, 85em);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
+  gap: 1rem;
 }
-div.cards-section div.front-face-card {
-  width: 27.9375em;
-  height: 15.3125em;
-  align-self: flex-start;
+.main__cards {
+  display: grid;
+  gap: 1em;
+  grid-template-areas: "front" "back";
+}
+@media (width < 40em) {
+  .main__cards {
+    grid-template-areas: "back" "front";
+  }
+}
+:is(.main__cards_front, .main__cards_back) {
   position: relative;
-  text-align: center;
-  margin-left: 3.8em;
-  color: hsl(0, 0%, 100%);
-  border-radius: 10px;
+  height: 15.3125rem;
+  width: 27.9375rem;
   box-shadow: 6px 12px 50px rgba(45, 45, 45, 0.427);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
 }
-div.cards-section div.front-face-card img {
+@media (width < 40em) {
+  :is(.main__cards_front, .main__cards_back) {
+    height: 12.3125rem;
+    width: 22.9375rem;
+  }
+}
+.main__cards_img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 16/9;
 }
-div.cards-section div.front-face-card div.card-numbers {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  right: 10%;
-  /*transform: translate(-50%, -50%);*/
-  font-size: 2em;
-}
-div.cards-section div.front-face-card div.card-name {
-  position: absolute;
-  bottom: 1.25em;
-  left: 1.875em;
+.main__cards_front {
+  justify-self: start;
+  grid-area: front;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-div.cards-section div.front-face-card div.card-date {
+@media (width < 40em) {
+  .main__cards_front {
+    margin-top: -4.75rem;
+  }
+}
+.main__cards_front > span {
   position: absolute;
-  bottom: 1.25em;
-  right: 1.875em;
+  font-size: 1.1rem;
 }
-div.cards-section div.front-face-card div.month {
-  position: absolute;
-  bottom: 1.25em;
-  right: 3.2em;
-}
-div.cards-section div.back-face-card {
-  width: 27.9375em;
-  height: 15.3125em;
-  position: relative;
-  text-align: center;
-  align-self: flex-end;
-  margin-right: 1em;
-  color: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  box-shadow: 6px 12px 50px rgba(45, 45, 45, 0.427);
-}
-div.cards-section div.back-face-card img {
-  width: 100%;
-  height: 100%;
-}
-div.cards-section div.back-face-card div {
-  position: absolute;
-  top: 49%;
+.main__cards_front .card_numbers {
+  top: 50%;
+  left: 10%;
   right: 10%;
+  font-size: clamp(1.4rem, 3vw, 1.7rem);
+}
+.main__cards_front :is(.card_name, .card_date) {
+  bottom: 1.5rem;
+}
+.main__cards_front .card_name {
+  left: 1em;
+}
+.main__cards_front .card_date {
+  position: absolute;
+  right: 1rem;
+}
+.main__cards_back {
+  justify-self: end;
+  grid-area: back;
+}
+.main__cards_back .cvc_output {
+  position: absolute;
+  top: 52%;
+  right: 8%;
   transform: translate(-50%, -50%);
 }
 
-div.form-section {
-  padding: 0 1%;
-  background-color: hsl(0, 0%, 100%);
+.form {
+  padding: 0.4rem;
   display: flex;
-  align-items: center;
+  flex-flow: column;
   justify-content: center;
-  flex-flow: column;
-  /*min-height: 100vh;*/
+  gap: 1rem;
 }
-div.form-section form {
-  padding: 0 3%;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  gap: 2em 0;
-}
-div.form-section form div {
+.form > div {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-size: 18px;
+  font-size: 1rem;
+  gap: 0.7rem;
 }
-div.form-section form div label {
+.form > div label {
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 6px;
   color: hsl(278, 68%, 11%);
 }
-div.form-section form div input {
-  margin-left: 3px;
-  font-size: 1.05em;
-  width: 20em;
-  padding: 15px;
-  color: hsl(279, 6%, 55%);
+.form > div > input {
+  font-size: 1.1rem;
+  min-width: 100%;
+  padding: 1rem;
   border-radius: 9px;
-  border: 1px solid hsl(279, 6%, 55%);
+  color: hsl(279, 6%, 55%);
+  border: 1px solid hsl(270, 3%, 87%);
 }
-div.form-section form div input:focus {
+.form > div > input::placeholder {
+  font-weight: 700;
+  color: hsl(279, 6%, 55%);
+}
+.form > div input:focus {
   outline: none;
   border: 1px solid hsl(278, 68%, 11%);
 }
-div.form-section form div.date-cvc {
+.form div.date-cvc {
   display: flex;
-  flex-flow: row;
-  flex: 2 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-div.form-section form div.date-cvc input {
+.form div.date-cvc input {
   width: 4.8em;
 }
-div.form-section form div.date-cvc div.exp-date {
+.form div.date-cvc div.exp-date {
   width: 100%;
 }
-div.form-section form div.date-cvc div.exp-date div {
+.form div.date-cvc div.exp-date div {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
-div.form-section form div button {
+.form div button {
   width: 100%;
   background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
   padding: 10px;
@@ -173,39 +174,12 @@ div.form-section form div button {
   cursor: pointer;
   transition: all 0.23s linear;
 }
-div.form-section form div button:hover {
+.form div button:hover {
   letter-spacing: 2px;
   opacity: 0.8;
 }
 
 @media (max-width: 900px) {
-  html {
-    font-size: 75%;
-  }
-  main {
-    height: 900px;
-    display: block;
-    grid-template-columns: 1fr;
-    gap: 10em;
-    background-image: url(../images/bg-main-mobile.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    padding: 2%;
-  }
-  div.cards-section {
-    /*padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    */
-    gap: 0;
-    margin-bottom: -150px;
-    position: relative;
-  }
-  div.cards-section div.front-face-card {
-    margin: 0;
-  }
   div.form-section {
     background: none;
     padding-top: 15em;
@@ -269,4 +243,6 @@ div.complete-section.display-success {
 
 .error.display-error {
   display: block;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */

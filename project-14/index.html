@@ -10,44 +10,73 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles/styles.css" />
     <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="script/script.js" defer></script>
   </head>
   <body>
     <!--Theres an image set as a background of the web page. above all the content-->
-    <main>
-      <div class="cards-section">
-        <div class="front-face-card">
-          <img src="images/bg-card-front.png" alt="card front" />
-          <div class="card-numbers">0000 0000 0000 0000</div>
-          <div class="card-name">Jane Appleseed</div>
-          <div class="card-date month">00</div>
-          <div class="card-date year">00</div>
+    <main class="main">
+      <section class="main__section" aria-labelledby="Complete form payment">
+        <div class="main__cards">
+          <div class="main__cards_back">
+            <img
+              class="main__cards_img"
+              src="images/bg-card-back.png"
+              alt="card back face"
+            />
+            <div id="card-cvc" class="cvc_output">000</div>
+          </div>
+          <div class="main__cards_front">
+            <img
+              class="main__cards_img"
+              src="images/bg-card-front.png"
+              alt="card front"
+            />
+            <span
+              id="card-number"
+              class="card_numbers"
+              aria-label="Card-number"
+            >
+              0000 0000 0000 0000
+            </span>
+            <span
+              id="card-name"
+              class="card_name"
+              aria-label="Card holder name"
+            >
+              Jane Appleseed
+            </span>
+            <div class="card_date">
+              <span
+                id="card-month"
+                class="card-date"
+                aria-label="Card expired month"
+              >
+                00
+              </span>
+              <span
+                id="card-year"
+                class="card-date"
+                aria-label="Card expired year"
+                >00</span
+              >
+            </div>
+          </div>
         </div>
-        <div class="back-face-card">
-          <img src="images/bg-card-back.png" alt="card back face" />
-          <div class="cvc-output">000</div>
-        </div>
-      </div>
-      <!--Right section of the page. The form section-->
-      <div class="form-section">
-        <form
-          name="card-payment-form"
-          action="#"
-          method="post"
-          autocomplete="off"
-        >
-          <div>
+        <form class="form" autocomplete="off">
+          <div class="form__div">
             <label>Cardholder Name</label>
             <input
               name="name"
               class="card-holder-name input-error"
               type="text"
               placeholder="e.g. Jane Appleseed"
+              required
             />
             <span class="error name-error"></span>
           </div>
-          <div>
+          <div class="form__div">
             <label>Card Number <span></span></label>
             <input
               name="card"
@@ -61,7 +90,7 @@
             />
             <p class="error number-error"></p>
           </div>
-          <div class="date-cvc">
+          <div class="form__div date-cvc">
             <div class="exp-date">
               <label>Exp. Date (MM/YY)</label>
               <div>
@@ -95,23 +124,20 @@
             </div>
           </div>
           <div>
-            <button type="submit" name="register-submition">Confirm</button>
+            <button type="submit" id="submit-card">Confirm</button>
             <p class="error register-error"></p>
           </div>
         </form>
-      </div>
-      <div class="complete-section">
-        <img src="images/icon-complete.svg" alt="complete icon" />
-        <div class="thanks">Thank you!</div>
-        <p>We've added your card details</p>
-        <div>
-          <button class="button-continue">Continue</button>
+        <div class="complete-section" data-visible="false">
+          <img src="images/icon-complete.svg" alt="complete icon" />
+          <div class="thanks">Thank you!</div>
+          <p>We've added your card details</p>
+          <div>
+            <button class="button-continue">Continue</button>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
-    <!--Java script file linked-->
-    <script src="script/script.js"></script>
-    <!--Java script file linked-->
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
