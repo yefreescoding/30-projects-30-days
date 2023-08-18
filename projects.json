@@ -106,10 +106,10 @@
     },
     {
       "title": "Project #14",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
+      "date": "Finished: Friday August 18, 2023.",
+      "text": "Interactive Card Details",
+      "tools": ["Vanilla JavaScript", "SASS", "HTML5"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-14",
       "liveSite": "./project-14/index.html"
     },
     {
@@ -162,6 +162,22 @@
     },
     {
       "title": "Project #21",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
+      "liveSite": "./project-20/index.html"
+    },
+    {
+      "title": "Project #22",
+      "date": "- - -",
+      "text": "Draft.",
+      "tools": ["none"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
+      "liveSite": "./project-20/index.html"
+    },
+    {
+      "title": "Project #23",
       "date": "- - -",
       "text": "Draft.",
       "tools": ["none"],
