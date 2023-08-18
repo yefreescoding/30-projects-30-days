@@ -12,7 +12,7 @@
     />
     <title>Frontend Mentor | Interactive card details form</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="script/script.js" defer></script>
+    <script src="./script/script.js" defer></script>
   </head>
   <body>
     <!--Theres an image set as a background of the web page. above all the content-->
@@ -64,33 +64,33 @@
             </div>
           </div>
         </div>
-        <form class="form" autocomplete="off">
+        <form id="card-form" class="form" autocomplete="off">
           <div class="form__div">
             <label for="name">Cardholder Name</label>
             <input
               name="name"
-              class="card-holder-name"
+              id="card-name-input"
               type="text"
               placeholder="e.g. Jane Appleseed"
-              required
               data-invalid="false"
             />
-            <span class="error" aria-invalid="false"> Can't be blank </span>
+            <span class="error" data-error="card-name" aria-invalid="false">
+              Can't be blank
+            </span>
           </div>
           <div class="form__div">
             <label>Card Number</label>
             <input
-              name="card"
-              class="card-number-input"
+              id="card-number-input"
+              name="number"
+              class="card_number_input"
               type="text"
               inputmode="numeric"
-              pattern="[0-9\s]{13,19}"
               maxlength="19"
               placeholder="e.g. 1234-5678-9123-0000"
-              required
               data-invalid="false"
             />
-            <span class="error" aria-invalid="false">
+            <span class="error" data-error="card-number" aria-invalid="false">
               * Match the requested format
             </span>
           </div>
@@ -99,7 +99,8 @@
               <label class="form__label">
                 EXP. DATE
                 <input
-                  id="card-year"
+                  id="card-month-input"
+                  name="month"
                   type="text"
                   maxlength="2"
                   inputmode="numeric"
@@ -110,7 +111,8 @@
               <label class="form__label">
                 (YY/MM)
                 <input
-                  id="card-year"
+                  id="card-year-input"
+                  name="year"
                   type="text"
                   maxlength="2"
                   inputmode="numeric"
@@ -122,28 +124,40 @@
             <label class="form__label">
               CVC
               <input
-                id="card-year"
+                id="card-cvc-input"
+                name="cvc"
                 type="text"
-                maxlength="2"
+                maxlength="3"
                 inputmode="numeric"
-                placeholder="YY"
+                placeholder="123"
                 data-invalid="false"
               />
             </label>
           </div>
-          <span class="error" aria-invalid="false"> Can't be blank </span>
+          <span class="error" data-error="date-cvc" aria-invalid="false">
+            Can't be blank
+          </span>
+          <span
+            class="error"
+            data-error="date-cvc-numbers-only"
+            aria-invalid="false"
+          >
+            It can only contain numbers
+          </span>
           <button type="submit" id="submit-card" class="form__submit">
             Confirm
           </button>
         </form>
-        <div class="complete-section" data-visible="false">
+        <article class="main__completed" data-visible="false">
           <img src="images/icon-complete.svg" alt="complete icon" />
-          <div class="thanks">Thank you!</div>
-          <p>We've added your card details</p>
+          <h2 class="main__completed_h2">Thank you!</h2>
+          <p class="main__completed_p">We've added your card details</p>
           <div>
-            <button class="button-continue">Continue</button>
+            <a href="index.html" class="main__completed_a form__submit"
+              >Continue</a
+            >
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="attribution">

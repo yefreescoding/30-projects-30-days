@@ -1,65 +1,117 @@
-document.querySelector('.card-number-input').oninput = () =>{
-  document.querySelector('.card-numbers').innerText = document.querySelector('.card-number-input').value;
-}
-document.querySelector('.card-holder-name').oninput = () =>{
-  document.querySelector('.card-name').innerText = document.querySelector('.card-holder-name').value;
-}
-document.querySelector('.card-month').oninput = () =>{
-  document.querySelector('.month').innerText = document.querySelector('.card-month').value;
-}
-document.querySelector('.card-year').oninput = () =>{
-  document.querySelector('.year').innerText = document.querySelector('.card-year').value;
-}
-document.querySelector('.cvc').oninput = () =>{
-  document.querySelector('.cvc-output').innerText = document.querySelector('.cvc').value;
+console.log('test');
+
+const $inputCardNumber = document.getElementById('card-number-input');
+const $cardNumberDisplay = document.getElementById('card-number');
+
+const $inputCardName = document.getElementById('card-name-input');
+const $cardNameDisplay = document.getElementById('card-name');
+
+const $inputCardMonth = document.getElementById('card-month-input');
+const $cardMonthDisplay = document.getElementById('card-month');
+
+const $inputCardYear = document.getElementById('card-year-input');
+const $cardYearDisplay = document.getElementById('card-year');
+
+const $inputCardCvc = document.getElementById('card-cvc-input');
+const $cardCvcDisplay = document.getElementById('card-cvc');
+
+function formatCardNumber(input) {
+  const inputValue = input.value.replace(/\D/g, '');
+  const formattedValue = inputValue.replace(/(\d{4})(?=\d)/g, '$1 ');
+  input.value = formattedValue;
+  return formattedValue;
 }
 
-// Display error with JavaScript
-function showError(errorElement, errorMessage){
-  document.querySelector("." + errorElement).classList.add("display-error");
-  document.querySelector("." + errorElement).innerHTML = errorMessage;
+function showError(errorElementData) {
+  for (let errorMessage of errorMessages) {
+    if (errorMessage.getAttribute('data-error') === errorElementData) {
+      errorMessage.setAttribute('aria-invalid', 'true');
+      console.log(errorMessage);
+    }
+  }
 }
-function clearError(){
-  let errors = document.querySelectorAll(".error");
-
-  for (let error of errors) {
-    error.classList.remove("display-error");
+function clearError() {
+  for (let errorMessage of errorMessages) {
+    errorMessage.setAttribute('aria-invalid', 'false');
   }
 }
 
-let form = document.forms['card-payment-form'];
+$inputCardNumber.oninput = () => {
+  formatCardNumber($inputCardNumber);
+  $cardNumberDisplay.innerText = $inputCardNumber.value;
+};
+$inputCardName.oninput = () => {
+  $cardNameDisplay.innerText = $inputCardName.value;
+};
+$inputCardMonth.oninput = () => {
+  $cardMonthDisplay.innerText = $inputCardMonth.value;
+};
+$inputCardYear.oninput = () => {
+  $cardYearDisplay.innerText = $inputCardYear.value;
+};
+$inputCardCvc.oninput = () => {
+  $cardCvcDisplay.innerText = $inputCardCvc.value;
+};
 
-form.onsubmit = function(event){
-  
-  clearError(); 
+const errorMessages = document.querySelectorAll('.error');
 
-  if(form.name.value === ""){
-    showError("name-error", "You have to enter the name linked to the card.");
-    return false;
-  }
+const form = document.getElementById('card-form');
+const inputs = document.querySelectorAll("input[type='text']");
 
-  if(form.card.value === ""){
-    showError("number-error", "This space can't be blank.");
-    return false;
-  }
-
-  if(form.month.value === ""){
-    showError("date-error", "Can't be blank.");
-    return false;
-  }
-
-  if(form.year.value === ""){
-    showError("date-error", "Can't be blank.");
-    return false;
-  }
-
-  if(form.cvcname.value === ""){
-    showError("cvc-error", "Can't be blank.");
-    return false;
-  }
-
-  document.querySelector('.form-section').classList.add('display-hide');
-  document.querySelector('.complete-section').classList.add('display-success');
-
+form.addEventListener('submit', (event) => {
   event.preventDefault();
-}
+
+  const formData = {};
+
+  inputs.forEach((input) => {
+    const inputId = input.id;
+    const inputValue = input.value.trim();
+    formData[inputId] = inputValue;
+  });
+
+  console.log(formData);
+
+  if (formData['card-name-input'] === '') {
+    showError('card-name');
+    return false;
+  } else {
+    clearError();
+  }
+
+  if (
+    formData['card-number-input'] === '' ||
+    formData['card-number-input'].length < 19
+  ) {
+    showError('card-number');
+    return false;
+  } else {
+    clearError();
+  }
+
+  if (
+    formData['card-month-input'] === '' ||
+    formData['card-year-input'] === '' ||
+    formData['card-cvc-input'] === ''
+  ) {
+    showError('date-cvc');
+    return false;
+  } else {
+    clearError();
+  }
+  if (
+    /[^0-9]/.test(formData['card-month-input']) ||
+    /[^0-9]/.test(formData['card-year-input']) ||
+    /[^0-9]/.test(formData['card-cvc-input'])
+  ) {
+    showError('date-cvc-numbers-only');
+    return false;
+  } else {
+    clearError();
+  }
+
+  form.classList.add('submitted');
+
+  document
+    .querySelector('.main__completed')
+    .setAttribute('data-visible', 'true');
+});

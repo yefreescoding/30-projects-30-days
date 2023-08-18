@@ -19,6 +19,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -111,6 +115,24 @@ body {
   right: 8%;
   transform: translate(-50%, -50%);
 }
+.main__completed {
+  display: none;
+}
+.main__completed[data-visible=true] {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.main__completed_h2 {
+  font-size: clamp(2rem, 2.5vw, 2.7rem);
+  text-transform: uppercase;
+}
+.main__completed_p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
 
 .form {
   padding: 0.4rem;
@@ -188,43 +210,8 @@ body {
   box-shadow: 0 3px 3px gray;
   transform: translateY(-3px);
 }
-.form.display-hide {
+.form.submitted {
   display: none;
-}
-
-div.complete-section {
-  display: none;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 1.3em;
-}
-div.complete-section div.thanks {
-  font-size: 2em;
-  text-transform: uppercase;
-}
-div.complete-section p {
-  margin: 0;
-  color: hsl(279, 6%, 55%);
-}
-div.complete-section button.button-continue {
-  width: 20em;
-  background: linear-gradient(45deg, hsl(278, 68%, 11%), hsl(279, 6%, 55%));
-  padding: 10px;
-  font-size: 0.9em;
-  color: hsl(0, 0%, 100%);
-  border-radius: 6px;
-  border: 1px solid hsl(278, 68%, 11%);
-  cursor: pointer;
-  transition: all 0.23s linear;
-}
-div.complete-section button.button-continue:hover {
-  letter-spacing: 2px;
-  opacity: 0.8;
-}
-
-div.complete-section.display-success {
-  display: flex;
 }
 
 .error {
