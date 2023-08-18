@@ -41,6 +41,7 @@ body {
   min-height: 100dvh;
   display: grid;
   place-items: center;
+  overflow-x: hidden;
   &__section {
     padding: 5%;
     width: min(100%, 90em);
@@ -65,6 +66,8 @@ body {
       border-radius: 10px;
       color: $white;
       text-align: center;
+      animation-name: cardShow;
+      animation-duration: 600ms;
       @media (width < 40em) {
         height: 12.3125rem;
         width: 22.9375rem;
@@ -81,6 +84,7 @@ body {
       grid-area: front;
       text-transform: uppercase;
       letter-spacing: 2px;
+      animation-delay: 150ms;
 
       @media (width < 40em) {
         margin-top: -4.75rem;
@@ -181,9 +185,6 @@ body {
       .inputs_date {
         display: flex;
         gap: 5px;
-        input {
-          width: 5rem;
-        }
       }
       .form__label {
         gap: 10px;
@@ -192,6 +193,7 @@ body {
       }
       input {
         flex: 1;
+        width: 5rem;
       }
     }
     input[type='text']:focus {
@@ -232,4 +234,14 @@ body {
 
 .error[aria-invalid='true'] {
   display: block;
+}
+
+@keyframes cardShow {
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }

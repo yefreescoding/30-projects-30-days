@@ -37,6 +37,7 @@ body {
   min-height: 100dvh;
   display: grid;
   place-items: center;
+  overflow-x: hidden;
 }
 .main__section {
   padding: 5%;
@@ -63,6 +64,8 @@ body {
   border-radius: 10px;
   color: hsl(0, 0%, 100%);
   text-align: center;
+  animation-name: cardShow;
+  animation-duration: 600ms;
 }
 @media (width < 40em) {
   :is(.main__cards_front, .main__cards_back) {
@@ -79,6 +82,7 @@ body {
   grid-area: front;
   text-transform: uppercase;
   letter-spacing: 2px;
+  animation-delay: 150ms;
 }
 @media (width < 40em) {
   .main__cards_front {
@@ -178,9 +182,6 @@ body {
   display: flex;
   gap: 5px;
 }
-.form__div_last_row .inputs_date input {
-  width: 5rem;
-}
 .form__div_last_row .form__label {
   gap: 10px;
   display: flex;
@@ -188,6 +189,7 @@ body {
 }
 .form__div_last_row input {
   flex: 1;
+  width: 5rem;
 }
 .form__div input[type=text]:focus {
   outline: hsl(278, 68%, 11%) 3px solid;
@@ -223,6 +225,15 @@ body {
 
 .error[aria-invalid=true] {
   display: block;
+}
+
+@keyframes cardShow {
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
