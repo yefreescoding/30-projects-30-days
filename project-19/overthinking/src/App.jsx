@@ -10,7 +10,6 @@ import Menu from './components/Menu';
 function App() {
   const [thoughtsList, setThoughtsList] = useState([]);
 
-  // Load initial data from localStorage when the component mounts
   useEffect(() => {
     const savedThoughts = JSON.parse(localStorage.getItem('thoughts')) || [];
     setThoughtsList(savedThoughts);
@@ -19,15 +18,16 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newThought = e.target.thoughts.value;
-    setThoughtsList((current) => [...current, newThought]);
-    e.target.thoughts.value = '';
+    if (newThought !== '') {
+      setThoughtsList((current) => [...current, newThought]);
+      e.target.thoughts.value = '';
+    }
   };
 
   const eraseThoughts = () => {
     setThoughtsList([]);
   };
 
-  // Save data to localStorage whenever thoughtsList changes
   useEffect(() => {
     localStorage.setItem('thoughts', JSON.stringify(thoughtsList));
   }, [thoughtsList]);

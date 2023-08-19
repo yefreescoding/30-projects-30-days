@@ -10,7 +10,7 @@ const Thoughts = ({ thoughts }) => {
       <ul className="thoughts__ul">
         {thoughts.map((thought, index) => (
           <li key={index} className="thoughts__li">
-            <BsFillChatLeftQuoteFill />
+            <BsFillChatLeftQuoteFill className="h-6 w-6" />
             <p className="thoughts__p">{thought}</p>
           </li>
         ))}
