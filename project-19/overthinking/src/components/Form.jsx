@@ -2,7 +2,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 // library imports
-import { PlusCircleIcon } from '@heroicons/react/24/solid';
+import { CloudArrowUpIcon } from '@heroicons/react/24/solid';
 
 export default function Form({ addThoughts }) {
   const handleSubmit = (e) => {
@@ -17,21 +17,24 @@ export default function Form({ addThoughts }) {
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <label htmlFor="thoughts">Write in here...</label>
-      <input
-        className="form__input"
-        type="text"
-        name="thoughts"
-        autoFocus
-        required
-        maxLength={60}
-      />
+      <label className="form__label" htmlFor="thoughts">
+        {'Today'}
+        <input
+          className="form__input"
+          type="text"
+          name="thoughts"
+          autoFocus
+          required
+          maxLength={60}
+          placeholder="What's on your mind"
+        />
+      </label>
       <button
         className="form__submit"
         aria-label="Enter new thought"
         type="submit"
       >
-        <PlusCircleIcon className="icons medium" />
+        <CloudArrowUpIcon className="icons large" />
       </button>
     </form>
   );

@@ -34,13 +34,15 @@ function App() {
 
   return (
     <div className="wrapper">
-      <main className="main">
+      <main className="main" aria-label="Main content of the app">
         <header className="main__header">
-          <CloudIcon className="icons" />
+          <div className="main__logo" aria-label="Logo of the site">
+            <CloudIcon className="icons" />
+          </div>
           <Menu eraseFunction={eraseThoughts} />
         </header>
         <section className="main__cover">
-          <h1 className="main__h1">Overthinking? What you have in mind?</h1>
+          <h1 className="main__h1">Overthinking?</h1>
         </section>
         <Form addThoughts={addThoughts} />
         <Thoughts thoughts={thoughtsList} />
