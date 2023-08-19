@@ -1,7 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 
-import { BsFillChatLeftQuoteFill } from 'react-icons/bs';
+// Library imports
+import { CloudIcon } from '@heroicons/react/24/solid';
 
 const Thoughts = ({ thoughts }) => {
   return (
@@ -10,7 +11,7 @@ const Thoughts = ({ thoughts }) => {
       <ul className="thoughts__ul">
         {thoughts.map((thought, index) => (
           <li key={index} className="thoughts__li">
-            <BsFillChatLeftQuoteFill className="h-6 w-6" />
+            <CloudIcon className="icons icon-1 icon-2" />
             <p className="thoughts__p">{thought}</p>
           </li>
         ))}
