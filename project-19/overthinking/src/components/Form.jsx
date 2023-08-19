@@ -11,6 +11,7 @@ export default function Form({ addThoughts }) {
     addThoughts({
       id: Date.now(),
       name: newThought,
+      blur: true,
       delete: false,
     });
     e.target.thoughts.value = '';
@@ -19,23 +20,25 @@ export default function Form({ addThoughts }) {
     <form className="form" onSubmit={handleSubmit}>
       <label className="form__label" htmlFor="thoughts">
         {'Today'}
-        <input
-          className="form__input"
-          type="text"
-          name="thoughts"
-          autoFocus
-          required
-          maxLength={60}
-          placeholder="What's on your mind"
-        />
+        <div className="form__input_submit">
+          <input
+            className="form__input"
+            type="text"
+            name="thoughts"
+            autoFocus
+            required
+            maxLength={60}
+            placeholder="What's on your mind"
+          />
+          <button
+            className="form__submit"
+            aria-label="Enter new thought"
+            type="submit"
+          >
+            <CloudArrowUpIcon className="icons large" />
+          </button>
+        </div>
       </label>
-      <button
-        className="form__submit"
-        aria-label="Enter new thought"
-        type="submit"
-      >
-        <CloudArrowUpIcon className="icons large" />
-      </button>
     </form>
   );
 }

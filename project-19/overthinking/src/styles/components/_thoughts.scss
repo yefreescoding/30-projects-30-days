@@ -1,0 +1,28 @@
+.thoughts {
+  width: 100%;
+  padding: 1rem;
+  &__h2 {
+    margin-bottom: 1rem;
+  }
+  &__ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  &__li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    transition: 400ms;
+    border-radius: 10px;
+    &[data-onBlur='true'] {
+      filter: blur(0.3rem);
+    }
+    &:hover {
+      background-color: hsla(221, 64%, 24%, 0.5);
+      filter: blur(0rem);
+      box-shadow: 0 8px 1rem hsla(225, 100%, 8%, 0.6);
+    }
+  }
+}

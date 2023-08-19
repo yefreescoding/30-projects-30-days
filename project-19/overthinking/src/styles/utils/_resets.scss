@@ -48,3 +48,15 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+}

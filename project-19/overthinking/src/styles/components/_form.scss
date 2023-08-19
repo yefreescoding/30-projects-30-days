@@ -7,13 +7,19 @@
   padding: 1rem;
 
   &__label {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-weight: 600;
   }
+  &__input_submit {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
   &__input {
+    flex: 1;
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -27,8 +33,9 @@
     }
   }
   &__submit {
+    position: absolute;
+    right: 1rem;
     aspect-ratio: 1;
-    width: fit-content;
     cursor: pointer;
     background-color: transparent;
     border: 1px solid transparent;
