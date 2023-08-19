@@ -146,11 +146,11 @@
     },
     {
       "title": "Project #19",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
+      "date": "Finished: Friday August 11, 2023.",
+      "text": "overthink",
+      "tools": ["REACTJS", "SASS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-19",
-      "liveSite": "./project-19/index.html"
+      "liveSite": "https://overthink.vercel.app/"
     },
     {
       "title": "Project #20",
