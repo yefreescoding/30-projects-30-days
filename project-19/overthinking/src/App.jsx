@@ -20,13 +20,8 @@ function App() {
     setThoughtsList(savedThoughts);
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newThought = e.target.thoughts.value;
-    if (newThought !== '') {
-      setThoughtsList((current) => [...current, newThought]);
-      e.target.thoughts.value = '';
-    }
+  const addThoughts = (e) => {
+    setThoughtsList((current) => [...current, e]);
   };
 
   const eraseThoughts = () => {
@@ -47,7 +42,7 @@ function App() {
         <section className="main__cover">
           <h1 className="main__h1">Overthinking? What you have in mind?</h1>
         </section>
-        <Form handleSubmit={handleSubmit} />
+        <Form addThoughts={addThoughts} />
         <Thoughts thoughts={thoughtsList} />
       </main>
     </div>

@@ -4,7 +4,17 @@
 // library imports
 import { PlusCircleIcon } from '@heroicons/react/24/solid';
 
-export default function Form({ handleSubmit, handleInput }) {
+export default function Form({ addThoughts }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newThought = e.target.thoughts.value;
+    addThoughts({
+      id: Date.now(),
+      name: newThought,
+      delete: false,
+    });
+    e.target.thoughts.value = '';
+  };
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="thoughts">Write in here...</label>
@@ -20,7 +30,6 @@ export default function Form({ handleSubmit, handleInput }) {
         className="form__submit"
         aria-label="Enter new thought"
         type="submit"
-        onChange={handleInput}
       >
         <PlusCircleIcon className="icons medium" />
       </button>
