@@ -12,6 +12,10 @@ import { MoonIcon } from '@heroicons/react/24/solid';
 function Menu({ eraseFunction }) {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const handleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+  };
+
   const handleOpen = () => {
     setOpenMenu(!openMenu);
   };
@@ -25,7 +29,11 @@ function Menu({ eraseFunction }) {
         )}
       </button>
       <div className={`menu__actions ${openMenu && 'open'}`}>
-        <button aria-label="Dark mode toggle" className="menu__btn">
+        <button
+          onClick={handleDarkMode}
+          aria-label="Dark mode toggle"
+          className="menu__btn"
+        >
           <span>Dark mode</span>
           <MoonIcon className="icons small" />
         </button>

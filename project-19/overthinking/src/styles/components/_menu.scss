@@ -34,13 +34,11 @@
     justify-content: space-between;
     transition: all 250ms;
     &:hover {
-      opacity: 0.8;
       background-color: var(--clr-cards);
     }
   }
 
   &:hover {
-    opacity: 0.8;
     background-color: var(--clr-accent-8);
   }
 }

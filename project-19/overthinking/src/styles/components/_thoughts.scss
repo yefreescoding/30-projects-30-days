@@ -1,6 +1,6 @@
 .thoughts {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
   &__h2 {
     margin-bottom: 1rem;
   }
@@ -20,13 +20,22 @@
     transition: 600ms;
     border-radius: 10px;
     &[data-onBlur='true'] {
-      transition: 600ms;
-      filter: blur(0.3rem);
+      filter: blur(0.5rem);
     }
     &:hover {
       background-color: var(--clr-cards);
+      animation-play-state: paused;
       filter: blur(0rem);
-      box-shadow: 0 8px 1rem var(--clr-cards);
     }
   }
 }
+
+// @keyframes hide {
+//   0% {
+//     filter: blur(0.5rem);
+//   }
+
+//   100% {
+//     filter: blur(0rem);
+//   }
+// }
