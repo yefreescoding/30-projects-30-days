@@ -1,0 +1,27 @@
+.menu {
+  position: relative;
+  &__actions,
+  &__btn {
+    display: flex;
+    padding: 0.5rem;
+    gap: 1rem;
+    border-radius: 8px;
+  }
+  &__actions {
+    position: absolute;
+    width: 15em;
+    right: 0.2rem;
+    flex-direction: column;
+    border: 1px solid var(--clr-accent);
+    background-color: var(--clr-bgk);
+  }
+  &__btn {
+    align-items: center;
+    justify-content: space-between;
+    transition: all 250ms;
+    &:hover {
+      opacity: 0.8;
+      background-color: var(--clr-cards);
+    }
+  }
+}
