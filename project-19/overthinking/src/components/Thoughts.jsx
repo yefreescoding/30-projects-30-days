@@ -4,6 +4,9 @@
 // Library imports
 import { CloudIcon } from '@heroicons/react/24/solid';
 
+// function imports
+import calculateTimeAgo from '../functions/calculateTimeSubmitted';
+
 const Thoughts = ({ thoughts }) => {
   return (
     <section className="thoughts">
@@ -16,7 +19,10 @@ const Thoughts = ({ thoughts }) => {
             data-onblur={thought.blur}
           >
             <CloudIcon className="icons icon-1 icon-2" />
-            <p className="thoughts__p">{thought.name}</p>
+            <div>
+              <p className="thoughts__p">{thought.name}</p>
+              <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
+            </div>
           </li>
         ))}
       </ul>

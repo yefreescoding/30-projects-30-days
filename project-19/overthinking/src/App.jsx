@@ -20,8 +20,8 @@ function App() {
     setThoughtsList(savedThoughts);
   }, []);
 
-  const addThoughts = (e) => {
-    setThoughtsList((current) => [...current, e]);
+  const addThoughts = (newThought) => {
+    setThoughtsList((current) => [...current, newThought]);
   };
 
   const eraseThoughts = () => {
@@ -42,10 +42,10 @@ function App() {
           <Menu eraseFunction={eraseThoughts} />
         </header>
         <section className="main__cover">
-          <h1 className="main__h1">Overthinking?</h1>
+          <h1 className="main__h1">Overthink</h1>
         </section>
         <Form addThoughts={addThoughts} />
-        <Thoughts thoughts={thoughtsList} />
+        <Thoughts thoughts={thoughtsList.reverse()} />
       </main>
     </div>
   );

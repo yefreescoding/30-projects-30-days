@@ -10,6 +10,7 @@ export default function Form({ addThoughts }) {
     const newThought = e.target.thoughts.value;
     addThoughts({
       id: Date.now(),
+      timeSubmitted: Date.now(),
       name: newThought,
       blur: true,
       delete: false,
@@ -19,7 +20,7 @@ export default function Form({ addThoughts }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <label className="form__label" htmlFor="thoughts">
-        {'Today'}
+        Today
         <div className="form__input_submit">
           <input
             className="form__input"
