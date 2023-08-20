@@ -24,22 +24,20 @@ function Menu({ eraseFunction }) {
           <XMarkIcon className="icons" />
         )}
       </button>
-      {openMenu && (
-        <div className="menu__actions">
-          <button aria-label="Dark mode toggle" className="menu__btn">
-            <span>Dark mode</span>
-            <MoonIcon className="icons small" />
-          </button>
-          <button
-            onClick={eraseFunction}
-            aria-label="Erase my thoughts"
-            className="menu__btn"
-          >
-            <span>Delete my thoughts</span>
-            <TrashIcon className="icons small" />
-          </button>
-        </div>
-      )}
+      <div className={`menu__actions ${openMenu && 'open'}`}>
+        <button aria-label="Dark mode toggle" className="menu__btn">
+          <span>Dark mode</span>
+          <MoonIcon className="icons small" />
+        </button>
+        <button
+          onClick={eraseFunction}
+          aria-label="Erase my thoughts"
+          className="menu__btn"
+        >
+          <span>Delete my thoughts</span>
+          <TrashIcon className="icons small" />
+        </button>
+      </div>
     </div>
   );
 }

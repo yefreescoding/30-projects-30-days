@@ -1,5 +1,6 @@
 .menu {
   position: relative;
+  transition: all 240ms;
   &__actions,
   &__btn {
     display: flex;
@@ -7,13 +8,26 @@
     gap: 1rem;
     border-radius: 8px;
   }
+  border-radius: 8px;
   &__actions {
     position: absolute;
-    width: 15em;
     right: 0.2rem;
+    height: fit-content;
     flex-direction: column;
     border: 1px solid var(--clr-accent);
     background-color: var(--clr-bgk);
+    transform: translateY(-150%);
+    transition: all 350ms ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    min-width: 100%;
+    min-height: 100%;
+    &.open {
+      opacity: 1;
+      min-width: 15em;
+      height: fit-content;
+      transform: translateY(0px);
+    }
   }
   &__btn {
     align-items: center;
@@ -23,5 +37,10 @@
       opacity: 0.8;
       background-color: var(--clr-cards);
     }
+  }
+
+  &:hover {
+    opacity: 0.8;
+    background-color: var(--clr-accent-8);
   }
 }
