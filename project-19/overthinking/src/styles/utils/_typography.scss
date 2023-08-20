@@ -4,10 +4,11 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, 3.5vw, 4.5rem);
+  font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+  text-transform: lowercase;
 }
 h2 {
-  font-size: clamp(1.6rem, 2.75vw, 3.5rem);
+  font-size: clamp(1.3rem, 2vw, 2rem);
 }
 h3 {
   font-size: clamp(1.3rem, 2vw, 2rem);

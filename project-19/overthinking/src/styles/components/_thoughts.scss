@@ -4,17 +4,20 @@
   &__h2 {
     margin-bottom: 1rem;
   }
-  &__ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-  }
+  &__ul,
   &__li {
     display: flex;
-    align-items: center;
+  }
+  &__ul {
+    list-style: none;
+    flex-direction: column;
+  }
+
+  &__li {
+    align-items: start;
     padding: 1rem;
     gap: 1rem;
-    transition: 400ms;
+    transition: 600ms;
     border-radius: 10px;
     &[data-onBlur='true'] {
       filter: blur(0.3rem);
