@@ -1,11 +1,35 @@
+@property --gradient-angel {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .wrapper {
-  background-image: linear-gradient(
-    to top,
-    var(--clr-accent) 0%,
-    var(--clr-bgk) 40%,
-    var(--clr-bgk)
-  );
+  position: relative;
+  background-color: var(--clr-bgk);
   overflow-x: hidden;
+  isolation: isolate;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    left: -1rem;
+    right: -1rem;
+    z-index: -1;
+    filter: blur(2.5rem);
+    border-radius: 30% 30% 0 0;
+  }
+  &::after {
+    background: linear-gradient(45deg, var(--clr-cards), var(--clr-bgk));
+    bottom: 0;
+    animation: wave 15000ms linear reverse infinite;
+  }
+  &::before {
+    background: linear-gradient(45deg, var(--clr-accent-8), var(--clr-accent));
+    bottom: 0.5rem;
+    animation: wave 15000ms linear infinite;
+  }
 }
 
 .main {
@@ -47,5 +71,17 @@
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(50px) translateY(50px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
   }
 }
