@@ -8,12 +8,20 @@ import { TrashIcon } from '@heroicons/react/24/solid';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { MoonIcon } from '@heroicons/react/24/solid';
+import { EyeIcon } from '@heroicons/react/24/solid';
 
-function Menu({ eraseFunction }) {
+// variable imports
+import css from '../functions/themeTransitions';
+
+function Menu({ eraseFunction, showThoughts }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleDarkMode = () => {
+    document.head.appendChild(css);
     document.documentElement.classList.toggle('dark');
+    const _ = window.getComputedStyle(css).opacity;
+    document.head.removeChild(css);
+    _;
   };
 
   const handleOpen = () => {
@@ -36,6 +44,14 @@ function Menu({ eraseFunction }) {
         >
           <span>Dark mode</span>
           <MoonIcon className="icons small" />
+        </button>
+        <button
+          onClick={showThoughts}
+          aria-label="Show all thoughts"
+          className="menu__btn"
+        >
+          <span>Show my thoughts</span>
+          <EyeIcon className="icons small" />
         </button>
         <button
           onClick={eraseFunction}

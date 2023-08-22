@@ -17,8 +17,8 @@
     align-items: start;
     padding: 1rem;
     gap: 1rem;
-    transition: 600ms;
     border-radius: 10px;
+    transition: 600ms;
     &[data-onBlur='true'] {
       filter: blur(0.5rem);
     }
@@ -29,13 +29,3 @@
     }
   }
 }
-
-// @keyframes hide {
-//   0% {
-//     filter: blur(0.5rem);
-//   }
-
-//   100% {
-//     filter: blur(0rem);
-//   }
-// }

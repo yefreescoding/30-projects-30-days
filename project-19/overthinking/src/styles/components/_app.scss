@@ -23,12 +23,12 @@
   &::after {
     background: linear-gradient(45deg, var(--clr-cards), var(--clr-bgk));
     bottom: 0;
-    animation: wave 15000ms linear reverse infinite;
+    animation: wave 15000ms linear infinite;
   }
   &::before {
     background: linear-gradient(45deg, var(--clr-accent-8), var(--clr-accent));
     bottom: 0.5rem;
-    animation: wave 15000ms linear infinite;
+    animation: wave 15000ms linear reverse infinite;
   }
 }
 
