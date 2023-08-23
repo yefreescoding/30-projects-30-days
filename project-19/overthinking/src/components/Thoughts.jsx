@@ -13,7 +13,12 @@ const Thoughts = ({ thoughts, visible }) => {
       {thoughts.length > 0 && <h2 className="thoughts__h2">My thoughts</h2>}
       <ul className="thoughts__ul" aria-label="List of thoughts">
         {thoughts.map((thought) => (
-          <li key={thought.id} className="thoughts__li" data-onblur={visible}>
+          <li
+            draggable="true"
+            key={thought.id}
+            className="thoughts__li"
+            data-onblur={visible}
+          >
             <CloudIcon className="icons icon-1 icon-2" />
             <div>
               <p className="thoughts__p">{thought.name}</p>

@@ -14,11 +14,15 @@
   }
 
   &__li {
+    cursor: grab;
     align-items: start;
     padding: 1rem;
     gap: 1rem;
     border-radius: 10px;
     transition: 600ms;
+    &:active {
+      cursor: grabbing;
+    }
     &[data-onBlur='true'] {
       filter: blur(0.5rem);
     }
