@@ -50,3 +50,15 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+button {
+  color: inherit;
+  background-color: transparent;
+  border: transparent 1px solid;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -11,7 +11,7 @@ function ProductShowcase({
   salePrice,
 }) {
   return (
-    <main className="main">
+    <>
       <ProductDisplay />
       <section className="product_showcase">
         <p>SNEAKERS COMPANY</p>
@@ -40,10 +40,10 @@ function ProductShowcase({
               onClickFunction={addValueFunction}
             />
           </div>
-          <Buttons linkOrButton={false} name="Check out" />
+          <Buttons linkOrButton={true} name="Check out" link="/" />
         </div>
       </section>
-    </main>
+    </>
   );
 }
 
