@@ -1,8 +1,9 @@
 // Component imports
-import ShoppingCart from '../shoppingCart/ShoppingCart';
+import ShoppingCart from '../cartShopping/ShoppingCart';
 
 // images import
 const logo = '/icons/logo.svg/';
+const avatarLogo = '/icons/image-avatar.png/';
 
 // Navigation Links
 const navLinks = [
@@ -43,7 +44,7 @@ function Header() {
       </nav>
       <ShoppingCart />
       <div className="header__avatar">
-        <img src="" alt="" />
+        <img className="header__avatar_img" src={avatarLogo} alt="" />
       </div>
     </header>
   );
