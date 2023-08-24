@@ -24,6 +24,7 @@
   font-weight: 500;
   color: var(--clr-Dark-grayish-blue);
   border-bottom: 3px solid transparent;
+  transition: all 240ms;
 }
 
 .header__link:hover {

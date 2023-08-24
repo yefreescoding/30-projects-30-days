@@ -23,10 +23,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
   padding: 3rem;
+  gap: 4rem;
+  min-height: 80dvh;
 }
 
 h1 {
-  font-size: clamp(3rem, 4vw, 4.5rem);
+  font-size: clamp(2.5rem, 3.75vw, 3.5rem);
 }
 h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
