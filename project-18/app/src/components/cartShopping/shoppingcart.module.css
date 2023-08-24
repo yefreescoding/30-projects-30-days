@@ -1,0 +1,31 @@
+.cart {
+  position: relative;
+}
+/* .cart__button {
+} */
+.cart__container {
+  background-color: var(--clr-White);
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  box-shadow: 0 3px 14px var(--clr-Grayish-blue);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 23em;
+  height: fit-content;
+  height: fit-content;
+}
+.cart__h2 {
+  padding: 1rem;
+  border-bottom: 1px solid var(--clr-Grayish-blue);
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.cart__nest {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  height: 100%;
+}

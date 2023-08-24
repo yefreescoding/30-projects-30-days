@@ -33,12 +33,17 @@ export default function App() {
     }
   };
 
+  const handleEmptyCart = () => {
+    setTotalSelection(0);
+  };
+
   return (
     <div className="wrapper">
       <Header>
         <ShoppingCart
           valueSelection={totalSelection}
           productPrice={SALE_PRICE}
+          emptyCartFunction={handleEmptyCart}
         />
       </Header>
       <main className="main">

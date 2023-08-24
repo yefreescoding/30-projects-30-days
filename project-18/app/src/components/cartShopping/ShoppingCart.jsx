@@ -7,7 +7,13 @@ import Buttons from '../Buttons/Buttons';
 // svg imports
 import cartLogo from '/icons/icon-cart.svg';
 
-export default function ShoppingCart({ valueSelection, productPrice }) {
+import styles from './shoppingcart.module.css';
+
+export default function ShoppingCart({
+  valueSelection,
+  productPrice,
+  emptyCartFunction,
+}) {
   const [openCart, setOpenCart] = useState(false);
 
   const handleOpen = () => {
@@ -15,24 +21,29 @@ export default function ShoppingCart({ valueSelection, productPrice }) {
   };
 
   return (
-    <div className="cart">
-      <button onClick={handleOpen} type="button" className="cart__button">
+    <div className={styles['cart']}>
+      <button
+        onClick={handleOpen}
+        type="button"
+        className={styles['cart__button']}
+      >
         <img src={cartLogo} alt="" />
       </button>
       {openCart && (
-        <div className="cart__container">
-          <h3 className="cart__h2">cart</h3>
-          <div className="cart__nest">
+        <div className={styles['cart__container']}>
+          <h3 className={styles['cart__h2']}>cart</h3>
+          <div className={styles['cart__nest']}>
             {valueSelection < 1 ? (
-              <p className="cart__p">Your cart is empty</p>
+              <p className={styles['cart__p']}>Your cart is empty</p>
             ) : (
-              <div className="cart__fill">
+              <>
                 <CartArticle
                   valueSelection={valueSelection}
                   productPrice={productPrice}
+                  emptyCartFunction={emptyCartFunction}
                 />
-                <Buttons name="checkout" link="/" />
-              </div>
+                <Buttons name="checkout" link="/" colorFilled="orange" />
+              </>
             )}
           </div>
         </div>

@@ -1,0 +1,22 @@
+.btn {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: opacity 250ms;
+  border: 1px lightblue solid;
+}
+
+.btn[data-filled='orange'] {
+  color: var(--clr-White);
+  background-color: var(--clr-Orange);
+}
+.btn[data-filled='gray'] {
+  color: var(--clr-Black);
+  background-color: var(--clr-Pale-orange);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

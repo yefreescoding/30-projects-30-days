@@ -1,0 +1,17 @@
+.cart_article {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.cart_article__img {
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+
+.cart_article__p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
