@@ -1,0 +1,21 @@
+.product_images {
+  display: grid;
+  gap: 1rem;
+}
+
+.product_images img {
+  border-radius: 16px;
+}
+.product_images__cover img {
+  aspect-ratio: 4/4;
+  object-fit: cover;
+}
+.product_images__select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.product_images__select img {
+  /* width: 5rem; */
+}

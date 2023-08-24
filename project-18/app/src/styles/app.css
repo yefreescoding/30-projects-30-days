@@ -15,16 +15,15 @@
 }
 
 .wrapper {
-  width: min(100%, 90em);
+  width: min(100%, 85em);
   margin: 0 auto;
 }
 
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 25em), 1fr));
-  padding: 3rem;
+  padding: 10vh 5vw;
   gap: 4rem;
-  min-height: 80dvh;
 }
 
 h1 {
