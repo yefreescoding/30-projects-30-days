@@ -1,6 +1,4 @@
-// Component imports
-import ShoppingCart from '../cartShopping/ShoppingCart';
-
+/* eslint-disable react/prop-types */
 // images import
 const logo = '/icons/logo.svg/';
 const avatarLogo = '/icons/image-avatar.png/';
@@ -29,7 +27,7 @@ const navLinks = [
   },
 ];
 
-function Header() {
+function Header({ children }) {
   return (
     <header className="header">
       <a href="/" aria-label="Link home">
@@ -42,7 +40,7 @@ function Header() {
           </a>
         ))}
       </nav>
-      <ShoppingCart />
+      {children}
       <div className="header__avatar">
         <img className="header__avatar_img" src={avatarLogo} alt="" />
       </div>

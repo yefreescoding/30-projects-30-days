@@ -1,7 +1,15 @@
+/* eslint-disable react/prop-types */
 import ProductDisplay from '../productDisplay/ProductDisplay';
 import Buttons from '../Buttons/Buttons';
 
-function ProductShowcase() {
+function ProductShowcase({
+  valueSelection,
+  addValueFunction,
+  subtractValue,
+  productPrice,
+  discount,
+  salePrice,
+}) {
   return (
     <main className="main">
       <ProductDisplay />
@@ -14,17 +22,25 @@ function ProductShowcase() {
           the weather can offer.
         </p>
         <p className="product_showcase__price">
-          <strong className="product_showcase__sale">$125.00</strong>
-          <span className="product_showcase__discount">50%</span>
+          <strong className="product_showcase__sale">${salePrice}</strong>
+          <span className="product_showcase__discount"> {discount}%</span>
         </p>
-        <span className="product_showcase__">$250.00</span>
+        <span className="product_showcase__">{productPrice}</span>
         <div>
           <div>
-            <Buttons />
-            <span>value</span>
-            <Buttons />
+            <Buttons
+              linkOrButton={false}
+              name="-"
+              onClickFunction={subtractValue}
+            />
+            <span>Pairs: {valueSelection}</span>
+            <Buttons
+              linkOrButton={false}
+              name="+"
+              onClickFunction={addValueFunction}
+            />
           </div>
-          <Buttons />
+          <Buttons linkOrButton={false} name="Check out" />
         </div>
       </section>
     </main>
