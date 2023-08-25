@@ -7,7 +7,7 @@ import Buttons from '../Buttons/Buttons';
 // svg imports
 import cartLogo from '/icons/icon-cart.svg';
 
-import styles from './shoppingcart.module.css';
+import styles from './shoppingCart.module.css';
 
 export default function ShoppingCart({
   valueSelection,

@@ -1,6 +1,7 @@
 .header,
 .header__nav,
-.header__user {
+.header__user,
+.nav__links {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -13,12 +14,26 @@
 .header__logo {
   margin-right: 1rem;
 }
-/* .header__nav {
-} */
+.header__nav {
+  position: relative;
+  flex: 1;
+  flex-wrap: wrap;
+  /* background-color: lightblue; */
+}
 
-.header__nav > *,
+.nav__links a,
 .header__user {
   padding: 2rem 1rem;
+}
+
+@media (width < 45em) {
+  .nav__links {
+    flex: 1;
+    align-items: center;
+  }
+  .nav__links a {
+    padding: 0;
+  }
 }
 .header__link {
   font-weight: 500;
@@ -32,8 +47,6 @@
   border-bottom: 3px solid var(--clr-Orange);
 }
 
-/* .header__user {
-} */
 .header__avatar {
   width: 1.8rem;
 }

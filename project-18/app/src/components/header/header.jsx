@@ -37,15 +37,17 @@ function Header({ children }) {
         <a className={styles['header__logo']} href="/" aria-label="Link home">
           <img src={logo} alt="Logo of the website" />
         </a>
-        {navLinks.map((link) => (
-          <a
-            className={styles['header__link']}
-            key={link.name}
-            href={link.href}
-          >
-            {link.name}
-          </a>
-        ))}
+        <div className={styles['nav__links']}>
+          {navLinks.map((link) => (
+            <a
+              className={styles['header__link']}
+              key={link.name}
+              href={link.href}
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
       </nav>
       <div className={styles['header__user']}>
         {children}

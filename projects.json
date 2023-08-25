@@ -138,11 +138,11 @@
     },
     {
       "title": "Project #18",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
+      "date": "Finished: Friday August 25, 2023.",
+      "text": "Product sneaker e-commerce",
+      "tools": ["REACTJS", "CSS modules", "HTML5"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-18",
-      "liveSite": "./project-18/index.html"
+      "liveSite": "./project-18/app/dist/index.html"
     },
     {
       "title": "Project #19",

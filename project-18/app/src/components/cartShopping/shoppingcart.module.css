@@ -4,16 +4,23 @@
 /* .cart__button {
 } */
 .cart__container {
-  background-color: var(--clr-White);
   position: absolute;
   top: 3rem;
   right: 0;
-  box-shadow: 0 3px 14px var(--clr-Grayish-blue);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
   width: 23em;
   height: 15em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: var(--clr-White);
+  box-shadow: 0 3px 14px var(--clr-Grayish-blue);
+}
+
+@media (width < 40em) {
+  .cart__container {
+    /* left: 0; */
+    right: -2rem;
+  }
 }
 .cart__h2 {
   padding: 1rem;
