@@ -5,6 +5,7 @@
 
 .product_images img {
   border-radius: 16px;
+  border: 2px solid transparent;
 }
 .product_images__cover img {
   aspect-ratio: 4/4;
@@ -16,6 +17,8 @@
   gap: 1rem;
 }
 
-.product_images__select img {
+.product_images__select img:hover {
   /* width: 5rem; */
+  opacity: 0.8;
+  border: 2px solid var(--clr-Orange);
 }

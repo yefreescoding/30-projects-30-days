@@ -37,7 +37,7 @@ h3 {
 }
 
 p {
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 a {
