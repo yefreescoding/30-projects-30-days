@@ -12,10 +12,14 @@ export default function UserWallet() {
   }, 0);
 
   return (
-    <div>
-      <CardBudget name="Budget" value={budget} />
-      <CardBudget name="Remaining" value={budget - totalExpenses} />
-      <CardBudget name="Spent so far" value={totalExpenses} />
+    <div className="flex flex-col justify-between my-8 gap-8 ">
+      <CardBudget name="Budget" value={budget} color="blue" />
+      <CardBudget
+        name="Remaining"
+        value={budget - totalExpenses}
+        color="lime"
+      />
+      <CardBudget name="Spent so far" value={totalExpenses} color="red" />
     </div>
   );
 }

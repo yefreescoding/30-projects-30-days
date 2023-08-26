@@ -1,11 +1,25 @@
 /* eslint-disable react/prop-types */
 
-function Card({ name, value }) {
+function Card({ name, value, color }) {
+  let bgkColor = '';
+
+  if (color === 'red') {
+    bgkColor = 'bg-red-500';
+  }
+  if (color === 'blue') {
+    bgkColor = 'bg-blue-400';
+  }
+  if (color === 'lime') {
+    bgkColor = 'bg-lime-500';
+  }
+
   return (
-    <div>
-      <h3>{name}</h3>
-      <p>${value}</p>
-    </div>
+    <article className="flex-1 flex items-center justify-between">
+      <h3 className="text-lg uppercase font-bold">{name}</h3>
+      <p className={`text-md p-2 rounded-lg font-bold text-white ${bgkColor}`}>
+        ${value}
+      </p>
+    </article>
   );
 }
 
