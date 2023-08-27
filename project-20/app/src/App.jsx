@@ -15,16 +15,14 @@ const date = new Date();
 const options = { month: 'short', day: 'numeric' };
 const currentDate = date.toLocaleString('en-US', options);
 
-console.log(currentDate); // Output: Aug 27, 2023
-
 export default function App() {
   return (
     <AppProvider>
       <div
-        className="flex flex-wrap items-start w-full md:w-[90em] mx-auto "
+        className="lg:overflow-hidden h-[100dvh] flex flex-wrap items-start justify-start w-full md:w-[45em] lg:w-[90em] mx-auto "
         aria-label="Body of the page"
       >
-        <aside className="basis-[20em] flex-grow p-6 grid gap-8 h-full bg-slate-200 border-r border-slate-300">
+        <aside className="lg:h-[100dvh] basis-[20em] flex-grow p-4 grid bg-slate-200 border-r border-slate-300 ">
           <div className="p-4">
             <h2 className="font-bold text-lg">Your wallet</h2>
             <UserWallet />
@@ -33,7 +31,7 @@ export default function App() {
         </aside>
         <main
           aria-label="Body of the app"
-          className="basis-[40em] flex-grow p-4 lg:px-16 grid gap-8"
+          className="overflow-y-auto lg:h-full basis-[40em] flex flex-col flex-grow p-8 lg:px-16 gap-8"
         >
           <header>
             <h1 className="text-3xl md:text-4xl font-extrabold">
