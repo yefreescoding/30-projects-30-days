@@ -25,44 +25,47 @@ export default function AddExpensesForm() {
       type: 'ADD_EXPENSE',
       payload: expense,
     });
+
+    event.target.expense.value = '';
+    event.target.cost.value = '';
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mb-6">
+    <form onSubmit={handleSubmit} className="p-4 flex flex-col">
+      <div className="mb-6 flex gap-4">
         <label
           htmlFor="expense"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block text-lg font-bold text-gray-80 basis-1/2 flex-grow"
         >
           Name
+          <input
+            type="text"
+            id="expense"
+            name="expense"
+            className="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg   focus:outline-1 focus:outline-offset-3 w-full p-2.5 placeholder:text-gray-600"
+            placeholder="Groceries, Bills, Sweats..."
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+            required
+          />
         </label>
-        <input
-          type="text"
-          id="expense"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Groceries, Bills, Sweats..."
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-          required
-        />
-      </div>
-      <div className="mb-6">
         <label
           htmlFor="cost"
-          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          className="block text-lg font-bold text-gray-80 basis-1/4 flex-grow"
         >
           Cost
+          <input
+            type="number"
+            id="cost"
+            name="cost"
+            className="bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg   focus:outline-1 focus:outline-offset-3 w-full p-2.5 placeholder:text-gray-600"
+            onChange={(event) => {
+              setCost(event.target.value);
+            }}
+            required
+          />
         </label>
-        <input
-          type="number"
-          id="cost"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          onChange={(event) => {
-            setCost(event.target.value);
-          }}
-          required
-        />
       </div>
       <button
         type="submit"

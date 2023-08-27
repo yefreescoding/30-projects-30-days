@@ -15,8 +15,10 @@ function Card({ name, value, color }) {
 
   return (
     <article className="flex-1 flex items-center justify-between">
-      <h3 className="text-lg uppercase font-bold">{name}</h3>
-      <p className={`text-md p-2 rounded-lg font-bold text-white ${bgkColor}`}>
+      <h3 className="text-lg uppercase font-bold text-gray-600">{name}</h3>
+      <p
+        className={`text-md py-1 px-2 rounded font-medium text-white ${bgkColor}`}
+      >
         ${value}
       </p>
     </article>
