@@ -1,6 +1,8 @@
 .icons {
   aspect-ratio: 1;
   width: 1.75rem;
+  display: block;
+  background-color: inherit;
 
   &.small {
     width: 1rem;

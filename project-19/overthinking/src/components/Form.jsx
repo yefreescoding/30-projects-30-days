@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
-
 // library imports
 import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
 import { useContext, useState } from "react";
@@ -29,30 +26,32 @@ export default function Form() {
     setTextThought("");
   };
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <label className="form__label" htmlFor="thoughts">
-        Today
-        <div className="form__input_submit">
-          <input
-            className="form__input"
-            type="text"
-            name="thought"
-            autoFocus
-            required
-            maxLength={60}
-            value={textThought}
-            onChange={(e) => setTextThought(e.target.value)}
-            placeholder="What's on your mind"
-          />
-          <button
-            className="form__submit"
-            aria-label="Enter new thought"
-            type="submit"
-          >
-            <CloudArrowUpIcon className="icons large" />
-          </button>
-        </div>
-      </label>
-    </form>
+    <>
+      <form className="form" onSubmit={handleSubmit}>
+        <label className="form__label" htmlFor="thoughts">
+          Today
+          <div className="form__input_submit">
+            <input
+              className="form__input"
+              type="text"
+              name="thought"
+              autoFocus
+              required
+              maxLength={60}
+              value={textThought}
+              onChange={(e) => setTextThought(e.target.value)}
+              placeholder="What's on your mind"
+            />
+            <button
+              className="form__submit"
+              aria-label="Enter new thought"
+              type="submit"
+            >
+              <CloudArrowUpIcon className="icons large" />
+            </button>
+          </div>
+        </label>
+      </form>
+    </>
   );
 }

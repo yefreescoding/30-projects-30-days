@@ -9,13 +9,14 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { EyeIcon } from "@heroicons/react/24/solid";
+import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
 
 // functions imports
 import { handleDarkMode } from "../functions/themeTransitions";
 
 import { AppContext } from "../context/AppContext";
 
-function Menu() {
+function Menu({ openForm }) {
   const { dispatch } = useContext(AppContext);
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -42,12 +43,12 @@ function Menu() {
       </button>
       <div className={`menu__actions ${openMenu && "open"}`}>
         <button
-          onClick={handleDarkMode}
-          aria-label="Dark mode toggle"
+          onClick={openForm}
+          aria-label="Add new though"
           className="menu__btn"
         >
-          <span>Dark mode</span>
-          <MoonIcon className="icons small" />
+          <span>Add new thought</span>
+          <CloudArrowUpIcon className="icons small" />
         </button>
         <button
           onClick={showThoughts}
@@ -64,6 +65,14 @@ function Menu() {
         >
           <span>Delete my thoughts</span>
           <TrashIcon className="icons small" />
+        </button>
+        <button
+          onClick={handleDarkMode}
+          aria-label="Dark mode toggle"
+          className="menu__btn"
+        >
+          <span>Dark mode</span>
+          <MoonIcon className="icons small" />
         </button>
       </div>
     </div>
