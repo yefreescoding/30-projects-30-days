@@ -4,32 +4,48 @@
   &__h2 {
     margin-bottom: 1rem;
   }
-  &__ul,
+
   &__li {
     display: flex;
   }
   &__ul {
-    list-style: none;
     flex-direction: column;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    @media (width < 40em) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__li {
-    cursor: grab;
+    flex-direction: column;
+    border: 1px solid hsl(0, 0%, 15.8%);
     align-items: start;
     padding: 1rem;
     gap: 1rem;
-    border-radius: 10px;
+    border-radius: 0.3rem;
     transition: 600ms;
-    &:active {
-      cursor: grabbing;
+    @media (width < 40em) {
+      flex-direction: row;
     }
-    &[data-onBlur='true'] {
+    div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (width < 40em) {
+        flex-direction: row;
+      }
+    }
+    &[data-onBlur="true"] {
       filter: blur(0.5rem);
     }
     &:hover {
-      background-color: var(--clr-cards);
-      animation-play-state: paused;
+      // animation-play-state: paused;
       filter: blur(0rem);
+      background-color: hsla(280, 33%, 96%, 0.2);
     }
   }
 }

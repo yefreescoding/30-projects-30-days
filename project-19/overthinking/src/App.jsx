@@ -1,56 +1,45 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/prop-types */
-
 // React imports
-import { useState, useEffect } from 'react';
+import { useState } from "react";
 
 // component imports
-import Form from './components/Form';
-import Thoughts from './components/Thoughts';
-import Menu from './components/Menu';
+import Menu from "./components/Menu";
+import Form from "./components/Form";
+import Thoughts from "./components/Thoughts";
 
 //import libraries
-import { CloudIcon } from '@heroicons/react/24/solid';
+import { CloudIcon } from "@heroicons/react/24/solid";
+
+// context imports
+import { AppProvider } from "./context/AppContext";
 
 function App() {
-  const [thoughtsList, setThoughtsList] = useState([]);
-  const [visible, setVisible] = useState(true);
+  const [formIsOpen, setFormIsOPen] = useState(false);
 
-  useEffect(() => {
-    const savedThoughts = JSON.parse(localStorage.getItem('thoughts')) || [];
-    setThoughtsList(savedThoughts);
-  }, []);
-
-  const addThoughts = (newThought) => {
-    setThoughtsList((current) => [...current, newThought]);
+  const handleForm = () => {
+    setFormIsOPen(!formIsOpen);
   };
-  const eraseThoughts = () => {
-    setThoughtsList([]);
-  };
-  const showThoughts = () => {
-    setVisible(!visible);
-  };
-
-  useEffect(() => {
-    localStorage.setItem('thoughts', JSON.stringify(thoughtsList));
-  }, [thoughtsList]);
 
   return (
-    <div className="wrapper">
-      <main className="main" aria-label="Main content of the app">
-        <header className="main__header">
-          <div className="main__logo" aria-label="Logo of the site">
-            <CloudIcon className="icons" />
-          </div>
-          <Menu eraseFunction={eraseThoughts} showThoughts={showThoughts} />
-        </header>
-        <section className="main__cover">
-          <h1 className="main__h1">Overthink</h1>
-        </section>
-        <Form addThoughts={addThoughts} />
-        <Thoughts thoughts={thoughtsList.reverse()} visible={visible} />
-      </main>
-    </div>
+    <AppProvider>
+      <div className="wrapper">
+        <main className="main" aria-label="Main content of the app">
+          <header className="main__header">
+            <div className="main__logo" aria-label="Logo of the site">
+              <CloudIcon className="icons medium" />
+            </div>
+            <nav className="main__nav">
+              <small>Use the menu to add and delete your thoughts</small>
+              <Menu openForm={handleForm} />
+            </nav>
+          </header>
+          <section className="main__body">
+            <h1 className="main__h1">Overthink</h1>
+            {formIsOpen && <Form onClick={handleForm} />}
+            <Thoughts />
+          </section>
+        </main>
+      </div>
+    </AppProvider>
   );
 }
 

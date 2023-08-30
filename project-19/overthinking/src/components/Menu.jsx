@@ -1,42 +1,75 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
-// component imports
-import { useState } from 'react';
+// react imports
+import { useState, useContext } from "react";
 
 // library imports
-import { TrashIcon } from '@heroicons/react/24/solid';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import { XMarkIcon } from '@heroicons/react/24/solid';
-import { MoonIcon } from '@heroicons/react/24/solid';
-import { EyeIcon } from '@heroicons/react/24/solid';
+import { TrashIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/24/solid";
+import { MoonIcon } from "@heroicons/react/24/solid";
+import { EyeIcon } from "@heroicons/react/24/solid";
+import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
 
-// variable imports
-import css from '../functions/themeTransitions';
+// functions imports
+import { handleDarkMode } from "../functions/themeTransitions";
 
-function Menu({ eraseFunction, showThoughts }) {
+import { AppContext } from "../context/AppContext";
+
+function Menu({ openForm }) {
+  const { dispatch } = useContext(AppContext);
   const [openMenu, setOpenMenu] = useState(false);
+  const [hide, setHide] = useState(true);
 
-  const handleDarkMode = () => {
-    document.head.appendChild(css);
-    document.documentElement.classList.toggle('dark');
-    const _ = window.getComputedStyle(css).opacity;
-    document.head.removeChild(css);
-    _;
-  };
+  const showThoughts = () => {
+    dispatch({
+      type: "VIEW_THOUGHTS",
+      payload: PaymentResponse.id,
+    });
 
-  const handleOpen = () => {
     setOpenMenu(!openMenu);
+    setHide(!hide);
   };
+  const eraseThoughts = () => {
+    dispatch({
+      type: "DELETE_THOUGHTS",
+    });
+  };
+
   return (
     <div className="menu">
-      <button onClick={handleOpen} aria-label="Open the menu">
+      <button onClick={() => setOpenMenu(!openMenu)} aria-label="Open the menu">
         {!openMenu ? (
           <Bars3Icon className="icons" />
         ) : (
           <XMarkIcon className="icons" />
         )}
       </button>
-      <div className={`menu__actions ${openMenu && 'open'}`}>
+      <div className={`menu__actions ${openMenu && "open"}`}>
+        <button
+          onClick={openForm}
+          aria-label="Add new though"
+          className="menu__btn"
+        >
+          <span>Add new thought</span>
+          <CloudArrowUpIcon className="icons small" />
+        </button>
+        <button
+          onClick={showThoughts}
+          aria-label="Show all thoughts"
+          className="menu__btn"
+        >
+          {hide ? <span>Show my thoughts</span> : <span>Hide my thoughts</span>}
+          <EyeIcon className="icons small" />
+        </button>
+        <button
+          onClick={eraseThoughts}
+          aria-label="Erase my thoughts"
+          className="menu__btn"
+        >
+          <span>Delete my thoughts</span>
+          <TrashIcon className="icons small" />
+        </button>
         <button
           onClick={handleDarkMode}
           aria-label="Dark mode toggle"
@@ -44,22 +77,6 @@ function Menu({ eraseFunction, showThoughts }) {
         >
           <span>Dark mode</span>
           <MoonIcon className="icons small" />
-        </button>
-        <button
-          onClick={showThoughts}
-          aria-label="Show all thoughts"
-          className="menu__btn"
-        >
-          <span>Show my thoughts</span>
-          <EyeIcon className="icons small" />
-        </button>
-        <button
-          onClick={eraseFunction}
-          aria-label="Erase my thoughts"
-          className="menu__btn"
-        >
-          <span>Delete my thoughts</span>
-          <TrashIcon className="icons small" />
         </button>
       </div>
     </div>
