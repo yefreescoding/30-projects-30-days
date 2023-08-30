@@ -32,11 +32,11 @@ function App() {
               <Menu openForm={handleForm} />
             </nav>
           </header>
-          <section className="main__cover">
+          <section className="main__body">
             <h1 className="main__h1">Overthink</h1>
+            {formIsOpen && <Form onClick={handleForm} />}
+            <Thoughts />
           </section>
-          {formIsOpen && <Form />}
-          <Thoughts />
         </main>
       </div>
     </AppProvider>

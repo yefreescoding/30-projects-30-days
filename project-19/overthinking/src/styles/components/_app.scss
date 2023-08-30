@@ -73,6 +73,13 @@
     animation-iteration-count: infinite;
     animation-play-state: running;
   }
+  &__body {
+    display: grid;
+    // justify-content: center;
+    // min-height: 100dvh;
+    width: 100%;
+    position: relative;
+  }
   &__h1 {
     text-align: center;
   }

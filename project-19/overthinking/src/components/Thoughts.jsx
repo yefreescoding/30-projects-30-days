@@ -9,11 +9,13 @@ import { AppContext } from "../context/AppContext";
 const Thoughts = () => {
   const { thoughts } = useContext(AppContext);
 
-  console.log(thoughts);
-
   return (
     <section className="thoughts">
-      {thoughts.length > 0 && <h2 className="thoughts__h2">My thoughts</h2>}
+      {thoughts.length > 0 ? (
+        <h2 className="thoughts__h2">My thoughts</h2>
+      ) : (
+        <h2 className="thoughts__h2">Start writing...</h2>
+      )}
       <ul className="thoughts__ul" aria-label="List of thoughts">
         {thoughts
           .sort((a, b) => b.timeSubmitted - a.timeSubmitted)
@@ -25,7 +27,7 @@ const Thoughts = () => {
             >
               <CloudIcon className="icons icon-1 icon-2" />
               <div>
-                <p className="thoughts__p">{thought.name}</p>
+                <p className="thoughts__p"> &quot; {thought.name} &quot;</p>
                 <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
               </div>
             </li>

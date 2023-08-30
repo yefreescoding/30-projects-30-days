@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
 // library imports
 import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
 import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
 
-export default function Form() {
+export default function Form({ onClick }) {
   const [textThought, setTextThought] = useState("");
   const { dispatch } = useContext(AppContext);
+  const [focused, setFocused] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,11 +27,22 @@ export default function Form() {
 
     setTextThought("");
   };
+
+  // const handleCancel = () => {
+  //   if (focused === false) {
+  //     setFocused(true);
+  //   } else {
+  //     setFocused(false);
+  //   }
+  // };
   return (
     <>
-      <form className="form" onSubmit={handleSubmit}>
-        <label className="form__label" htmlFor="thoughts">
-          Today
+      <form className="form" onSubmit={handleSubmit} autoComplete="off">
+        <label
+          className="form__label"
+          htmlFor="thoughts"
+          data-focused={focused}
+        >
           <div className="form__input_submit">
             <input
               className="form__input"
@@ -40,7 +53,9 @@ export default function Form() {
               maxLength={60}
               value={textThought}
               onChange={(e) => setTextThought(e.target.value)}
-              placeholder="What's on your mind"
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
+              placeholder="What's on your mind?"
             />
             <button
               className="form__submit"
@@ -50,6 +65,13 @@ export default function Form() {
               <CloudArrowUpIcon className="icons large" />
             </button>
           </div>
+          <button
+            className="form__cancel"
+            onClick={onClick}
+            data-focused={focused}
+          >
+            Cancel
+          </button>
         </label>
       </form>
     </>

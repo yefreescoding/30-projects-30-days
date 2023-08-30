@@ -19,12 +19,16 @@ import { AppContext } from "../context/AppContext";
 function Menu({ openForm }) {
   const { dispatch } = useContext(AppContext);
   const [openMenu, setOpenMenu] = useState(false);
+  const [hide, setHide] = useState(true);
 
   const showThoughts = () => {
     dispatch({
       type: "VIEW_THOUGHTS",
       payload: PaymentResponse.id,
     });
+
+    setOpenMenu(!openMenu);
+    setHide(!hide);
   };
   const eraseThoughts = () => {
     dispatch({
@@ -55,7 +59,7 @@ function Menu({ openForm }) {
           aria-label="Show all thoughts"
           className="menu__btn"
         >
-          <span>Show my thoughts</span>
+          {hide ? <span>Show my thoughts</span> : <span>Hide my thoughts</span>}
           <EyeIcon className="icons small" />
         </button>
         <button
