@@ -14,4 +14,12 @@ css.appendChild(
   )
 );
 
+export const handleDarkMode = () => {
+  document.head.appendChild(css);
+  document.documentElement.classList.toggle('dark');
+  const _ = window.getComputedStyle(css).opacity;
+  document.head.removeChild(css);
+  _;
+};
+
 export default css;

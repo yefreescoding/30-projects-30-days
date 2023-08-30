@@ -3,19 +3,30 @@
 
 // library imports
 import { CloudArrowUpIcon } from '@heroicons/react/24/solid';
+import { useContext, useState } from 'react';
+import { AppContext } from '../context/AppContext';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function Form({ addThoughts }) {
+export default function Form() {
+  const [textThought, setTextThought] = useState('');
+  const { dispatch } = useContext(AppContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newThought = e.target.thoughts.value;
-    addThoughts({
-      id: Date.now(),
+    const newThought = {
+      id: uuidv4(),
       timeSubmitted: Date.now(),
-      name: newThought,
+      name: textThought,
       blur: true,
       delete: false,
+    };
+
+    dispatch({
+      type: 'ADD_THOUGHT',
+      payload: newThought,
     });
-    e.target.thoughts.value = '';
+
+    setTextThought('');
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -25,10 +36,12 @@ export default function Form({ addThoughts }) {
           <input
             className="form__input"
             type="text"
-            name="thoughts"
+            name="thought"
             autoFocus
             required
             maxLength={60}
+            value={textThought}
+            onChange={(e) => setTextThought(e.target.value)}
             placeholder="What's on your mind"
           />
           <button

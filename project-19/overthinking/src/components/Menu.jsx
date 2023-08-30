@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
-// component imports
-import { useState } from 'react';
+// react imports
+import { useState, useContext } from 'react';
 
 // library imports
 import { TrashIcon } from '@heroicons/react/24/solid';
@@ -10,26 +10,30 @@ import { XMarkIcon } from '@heroicons/react/24/solid';
 import { MoonIcon } from '@heroicons/react/24/solid';
 import { EyeIcon } from '@heroicons/react/24/solid';
 
-// variable imports
-import css from '../functions/themeTransitions';
+// functions imports
+import { handleDarkMode } from '../functions/themeTransitions';
 
-function Menu({ eraseFunction, showThoughts }) {
+import { AppContext } from '../context/AppContext';
+
+function Menu() {
+  const { dispatch } = useContext(AppContext);
   const [openMenu, setOpenMenu] = useState(false);
 
-  const handleDarkMode = () => {
-    document.head.appendChild(css);
-    document.documentElement.classList.toggle('dark');
-    const _ = window.getComputedStyle(css).opacity;
-    document.head.removeChild(css);
-    _;
+  const showThoughts = () => {
+    dispatch({
+      type: 'VIEW_THOUGHTS',
+      payload: PaymentResponse.id,
+    });
+  };
+  const eraseThoughts = () => {
+    dispatch({
+      type: 'DELETE_THOUGHTS',
+    });
   };
 
-  const handleOpen = () => {
-    setOpenMenu(!openMenu);
-  };
   return (
     <div className="menu">
-      <button onClick={handleOpen} aria-label="Open the menu">
+      <button onClick={() => setOpenMenu(!openMenu)} aria-label="Open the menu">
         {!openMenu ? (
           <Bars3Icon className="icons" />
         ) : (
@@ -54,7 +58,7 @@ function Menu({ eraseFunction, showThoughts }) {
           <EyeIcon className="icons small" />
         </button>
         <button
-          onClick={eraseFunction}
+          onClick={eraseThoughts}
           aria-label="Erase my thoughts"
           className="menu__btn"
         >
