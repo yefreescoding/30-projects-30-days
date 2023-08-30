@@ -7,11 +7,14 @@ import { createContext, useReducer } from "react";
 const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_THOUGHT":
+      const newThoughts = [...state.thoughts, action.payload];
+      localStorage.setItem("thoughts", JSON.stringify(newThoughts)); // Save to localStorage
       return {
         ...state,
-        thoughts: [...state.thoughts, action.payload],
+        thoughts: newThoughts,
       };
     case "DELETE_THOUGHTS":
+      localStorage.removeItem("thoughts");
       return {
         ...state,
         thoughts: [],
@@ -29,14 +32,17 @@ const AppReducer = (state, action) => {
       return state;
   }
 };
-const initialState = {
-  thoughts: [],
-};
+// const initialState = {
+//   thoughts: [],
+// };
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+  const storedThoughts = JSON.parse(localStorage.getItem("thoughts")) || [];
+  const [state, dispatch] = useReducer(AppReducer, {
+    thoughts: storedThoughts,
+  });
 
   return (
     <AppContext.Provider

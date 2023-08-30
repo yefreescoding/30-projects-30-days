@@ -1,5 +1,5 @@
-const css = document.createElement('style');
-css.type = 'text/css';
+const css = document.createElement("style");
+css.type = "text/css";
 css.appendChild(
   document.createTextNode(
     `
@@ -16,7 +16,7 @@ css.appendChild(
 
 export const handleDarkMode = () => {
   document.head.appendChild(css);
-  document.documentElement.classList.toggle('dark');
+  document.documentElement.classList.toggle("dark");
   const _ = window.getComputedStyle(css).opacity;
   document.head.removeChild(css);
   _;
