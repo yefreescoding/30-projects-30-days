@@ -1,13 +1,10 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/prop-types */
-
 // Library imports
-import { CloudIcon } from '@heroicons/react/24/solid';
+import { CloudIcon } from "@heroicons/react/24/solid";
 
 // function imports
-import calculateTimeAgo from '../functions/calculateTimeSubmitted';
-import { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+import calculateTimeAgo from "../functions/calculateTimeSubmitted";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 const Thoughts = () => {
   const { thoughts } = useContext(AppContext);

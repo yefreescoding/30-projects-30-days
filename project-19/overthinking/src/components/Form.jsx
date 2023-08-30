@@ -2,13 +2,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 // library imports
-import { CloudArrowUpIcon } from '@heroicons/react/24/solid';
-import { useContext, useState } from 'react';
-import { AppContext } from '../context/AppContext';
-import { v4 as uuidv4 } from 'uuid';
+import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
+import { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Form() {
-  const [textThought, setTextThought] = useState('');
+  const [textThought, setTextThought] = useState("");
   const { dispatch } = useContext(AppContext);
 
   const handleSubmit = (e) => {
@@ -22,11 +22,11 @@ export default function Form() {
     };
 
     dispatch({
-      type: 'ADD_THOUGHT',
+      type: "ADD_THOUGHT",
       payload: newThought,
     });
 
-    setTextThought('');
+    setTextThought("");
   };
   return (
     <form className="form" onSubmit={handleSubmit}>

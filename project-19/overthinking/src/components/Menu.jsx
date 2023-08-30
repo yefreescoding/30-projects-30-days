@@ -1,19 +1,19 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 // react imports
-import { useState, useContext } from 'react';
+import { useState, useContext } from "react";
 
 // library imports
-import { TrashIcon } from '@heroicons/react/24/solid';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import { XMarkIcon } from '@heroicons/react/24/solid';
-import { MoonIcon } from '@heroicons/react/24/solid';
-import { EyeIcon } from '@heroicons/react/24/solid';
+import { TrashIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/24/solid";
+import { MoonIcon } from "@heroicons/react/24/solid";
+import { EyeIcon } from "@heroicons/react/24/solid";
 
 // functions imports
-import { handleDarkMode } from '../functions/themeTransitions';
+import { handleDarkMode } from "../functions/themeTransitions";
 
-import { AppContext } from '../context/AppContext';
+import { AppContext } from "../context/AppContext";
 
 function Menu() {
   const { dispatch } = useContext(AppContext);
@@ -21,13 +21,13 @@ function Menu() {
 
   const showThoughts = () => {
     dispatch({
-      type: 'VIEW_THOUGHTS',
+      type: "VIEW_THOUGHTS",
       payload: PaymentResponse.id,
     });
   };
   const eraseThoughts = () => {
     dispatch({
-      type: 'DELETE_THOUGHTS',
+      type: "DELETE_THOUGHTS",
     });
   };
 
@@ -40,7 +40,7 @@ function Menu() {
           <XMarkIcon className="icons" />
         )}
       </button>
-      <div className={`menu__actions ${openMenu && 'open'}`}>
+      <div className={`menu__actions ${openMenu && "open"}`}>
         <button
           onClick={handleDarkMode}
           aria-label="Dark mode toggle"

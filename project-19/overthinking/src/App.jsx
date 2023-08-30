@@ -1,17 +1,14 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/prop-types */
-
 // React imports
 // import { useState } from 'react';
 
 // component imports
-import Form from './components/Form';
-import Thoughts from './components/Thoughts';
-import Menu from './components/Menu';
+import Form from "./components/Form";
+import Thoughts from "./components/Thoughts";
+import Menu from "./components/Menu";
 
 //import libraries
-import { CloudIcon } from '@heroicons/react/24/solid';
-import { AppProvider } from './context/AppContext';
+import { CloudIcon } from "@heroicons/react/24/solid";
+import { AppProvider } from "./context/AppContext";
 
 function App() {
   // useEffect(() => {

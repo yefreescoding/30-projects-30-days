@@ -2,21 +2,21 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 
-import { createContext, useReducer } from 'react';
+import { createContext, useReducer } from "react";
 
 const AppReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_THOUGHT':
+    case "ADD_THOUGHT":
       return {
         ...state,
         thoughts: [...state.thoughts, action.payload],
       };
-    case 'DELETE_THOUGHTS':
+    case "DELETE_THOUGHTS":
       return {
         ...state,
         thoughts: [],
       };
-    case 'VIEW_THOUGHTS':
+    case "VIEW_THOUGHTS":
       const showThoughts = state.thoughts.map((thought) => ({
         ...thought,
         blur: !thought.blur,
