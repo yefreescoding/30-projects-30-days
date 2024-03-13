@@ -1,12 +1,13 @@
 {
   "projects": [
     {
-      "title": "Project #1",
+      "title": "Hero Section",
       "date": "Finished: Thursday July 27, 2023.",
       "text": "A basic hero section for a landing page.",
-      "tools": ["HTML5", "CSS", "Vanilla Javascript"],
+      "tools": ["HTML5", "CSS3", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-01",
-      "liveSite": "./project-01/index.html"
+      "liveSite": "./project-01/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #2",
@@ -14,7 +15,8 @@
       "text": "QR code component.",
       "tools": ["HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-02",
-      "liveSite": "./project-02/index.html"
+      "liveSite": "./project-02/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #3",
@@ -22,7 +24,8 @@
       "text": "Stats card component.",
       "tools": ["HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-03",
-      "liveSite": "./project-03/index.html"
+      "liveSite": "./project-03/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #4",
@@ -30,7 +33,8 @@
       "text": "Room Landing Page",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-04",
-      "liveSite": "./project-04/index.html"
+      "liveSite": "./project-04/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #5",
@@ -38,7 +42,8 @@
       "text": "Sign up card component.",
       "tools": ["HTML5", "SASS", "Vite JS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-05",
-      "liveSite": "./project-05/app/dist/index.html"
+      "liveSite": "./project-05/app/dist/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #6",
@@ -46,7 +51,8 @@
       "text": "Calculator App with theme switcher.",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-06",
-      "liveSite": "./project-06/index.html"
+      "liveSite": "./project-06/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #7",
@@ -54,7 +60,8 @@
       "text": "TIC TAC TOE",
       "tools": ["REACTJS", "VITE JS", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-07",
-      "liveSite": "./project-07/tic-tac-toe/dist/index.html"
+      "liveSite": "./project-07/tic-tac-toe/dist/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #8",
@@ -62,7 +69,8 @@
       "text": "Social Proof Section",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-08",
-      "liveSite": "./project-08/index.html"
+      "liveSite": "./project-08/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #9",
@@ -70,7 +78,8 @@
       "text": "Profile Card Component",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-09",
-      "liveSite": "./project-09/index.html"
+      "liveSite": "./project-09/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #10",
@@ -78,7 +87,8 @@
       "text": "Sass landing page",
       "tools": ["REACTJS", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10",
-      "liveSite": "./project-10/app/dist/index.html"
+      "liveSite": "./project-10/app/dist/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #11",
@@ -86,7 +96,8 @@
       "text": "Age Calculator App",
       "tools": ["Vanilla JavaScript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-11",
-      "liveSite": "./project-11/index.html"
+      "liveSite": "./project-11/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #12",
@@ -94,7 +105,8 @@
       "text": "Expenses chart component",
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-12",
-      "liveSite": "./project-12/index.html"
+      "liveSite": "./project-12/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #13",
@@ -102,7 +114,8 @@
       "text": "NFT Preview Card Component",
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
-      "liveSite": "./project-13/index.html"
+      "liveSite": "./project-13/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #14",
@@ -110,7 +123,8 @@
       "text": "Interactive Card Details",
       "tools": ["Vanilla JavaScript", "SASS", "HTML5"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-14",
-      "liveSite": "./project-14/index.html"
+      "liveSite": "./project-14/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #15",
@@ -118,7 +132,8 @@
       "text": "Order Summary Card",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-15",
-      "liveSite": "./project-15/index.html"
+      "liveSite": "./project-15/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #16",
@@ -126,7 +141,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-16",
-      "liveSite": "./project-16/index.html"
+      "liveSite": "./project-16/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #17",
@@ -134,7 +150,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-17",
-      "liveSite": "./project-17/index.html"
+      "liveSite": "./project-17/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #18",
@@ -142,7 +159,8 @@
       "text": "Product sneaker e-commerce",
       "tools": ["REACTJS", "CSS modules", "HTML5"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-18",
-      "liveSite": "./project-18/app/dist/index.html"
+      "liveSite": "./project-18/app/dist/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #19",
@@ -150,7 +168,8 @@
       "text": "overthink",
       "tools": ["REACTJS", "SASS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-19",
-      "liveSite": "https://overthink.vercel.app/"
+      "liveSite": "https://overthink.vercel.app/",
+      "image": "project.jpg"
     },
     {
       "title": "Project #20",
@@ -158,7 +177,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html"
+      "liveSite": "./project-20/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #21",
@@ -166,7 +186,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html"
+      "liveSite": "./project-20/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #22",
@@ -174,7 +195,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html"
+      "liveSite": "./project-20/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #23",
@@ -182,7 +204,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html"
+      "liveSite": "./project-20/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #24",
@@ -190,7 +213,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-24",
-      "liveSite": "./project-24/index.html"
+      "liveSite": "./project-24/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #25",
@@ -198,7 +222,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html"
+      "liveSite": "./project-20/index.html",
+      "image": "project.jpg"
     },
     {
       "title": "Project #26",
@@ -206,7 +231,8 @@
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-26",
-      "liveSite": "./project-26/index.html"
+      "liveSite": "./project-26/index.html",
+      "image": "project.jpg"
     }
   ]
 }
