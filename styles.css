@@ -11,7 +11,7 @@
     --clr-text-h: #111;
     --clr-text-span: #111;
     --clr-accent: hsl(193, 100%, 42%);
-    --clr-bg-card: hsl(0, 0%, 94%);
+    --clr-bg-card: hsl(0, 0%, 93%);
     --clr-bg-body: hsl(0, 0%, 99%);
   }
 }
@@ -166,14 +166,13 @@ h1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20em), 1fr));
-  border-radius: 5px;
-  border: 1px solid var(--clr-text-h);
-  background-color: var(--clr-bg-body);
+  border-radius: 1.5rem;
+  border: 1px solid var(--clr-bg-card);
+  background-color: var(--clr-bg-card);
   /* box-shadow: 0 15px 2.5rem hsla(0, 0%, 64%, 0.596); */
 }
 
 .article {
-  /* height: 100%; */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -182,22 +181,30 @@ h1 {
   gap: 1rem;
   justify-content: space-between;
   padding: 1rem;
-  border-radius: 5px;
-  background-color: var(--clr-bg-card);
-  & img {
+  border-radius: 1rem;
+  background-color: var(--clr-bg-body);
+  border: 1px solid var(--clr-bg-card);
+  & .article__img {
+    display: grid;
+    /* place-items: center; */
     position: absolute;
+    overflow: hidden;
     bottom: 0;
-    right: -3rem;
     width: 100%;
-    aspect-ratio: 16/10;
-    border-radius: 3px;
-    object-fit: cover;
-    object-position: center;
-    transform: translateY(2.5rem);
+    height: 20em;
+    border-radius: 0.9rem;
+    transform: translateY(8rem);
     transition: transform 240ms ease-in-out;
+    background-color: var(--clr-bg-body);
+    object-fit: cover;
   }
-  & img:hover {
-    transform: translateY(1.5rem) translateX(-1rem);
+
+  & img {
+    --size: 100%;
+    width: var(--size);
+  }
+  & .article__img:hover {
+    transform: translateY(7rem);
   }
 }
 
@@ -205,6 +212,7 @@ h1 {
   margin: 1rem 0;
   display: flex;
   gap: 1rem;
+  justify-content: flex-end;
 }
 
 .article__links a {
@@ -217,8 +225,13 @@ h1 {
   transition: all 0.3s;
 }
 
-.article__links a:hover {
-  /* box-shadow: 0 0 5px var(--clr-accent); */
+.article__links-github:hover {
+  background-color: var(--clr-text-h);
+  color: var(--clr-bg-body);
+}
+.article__links-site:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-bg-body);
 }
 
 .projects_container article p {
@@ -234,9 +247,9 @@ h1 {
   margin: 0.5rem 0;
 
   & li {
-    font-weight: 700;
-    background-color: var(--clr-bg-body);
-    padding: 5px 15px;
+    font-weight: 600;
+    background-color: var(--clr-bg-card);
+    padding: 3px 10px;
     border-radius: 2rem;
   }
 }
