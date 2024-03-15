@@ -2,7 +2,6 @@
   "projects": [
     {
       "title": "Hero Section",
-      "date": "Finished: Thursday July 27, 2023.",
       "text": "A basic hero section for a landing page.",
       "tools": ["HTML5", "CSS3", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-01",
@@ -12,7 +11,6 @@
     },
     {
       "title": "QR code component",
-      "date": "Finished: Friday July 28, 2023.",
       "text": "A basic component to showcase a qr code.",
       "tools": ["HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-02",
@@ -22,7 +20,6 @@
     },
     {
       "title": "Stats card component",
-      "date": "Finished: Saturday July 29, 2023.",
       "text": "A component that showcase stats for a business.",
       "tools": ["HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-03",
@@ -32,7 +29,6 @@
     },
     {
       "title": "Room Landing Page",
-      "date": "Finished: Sunday July 30, 2023.",
       "text": "A landing page where user can change images",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-04",
@@ -42,7 +38,6 @@
     },
     {
       "title": "Sign up card component",
-      "date": "Finished: Monday July 31, 2023.",
       "text": "Sign up card component develop to showcase important info.",
       "tools": ["HTML5", "SASS", "Vite JS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-05",
@@ -52,7 +47,6 @@
     },
     {
       "title": "Calculator App.",
-      "date": "Finished: Tuesday August 1, 2023.",
       "text": "Calculator App with theme switcher. Achieved with the use of css variables.",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-06",
@@ -62,7 +56,6 @@
     },
     {
       "title": "TIC TAC TOE",
-      "date": "Finished: Thursday August 2, 2023.",
       "text": "TIC TAC TOE classic game, in a game boy!",
       "tools": ["REACTJS", "VITE JS", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-07",
@@ -72,7 +65,6 @@
     },
     {
       "title": "Social Proof Section",
-      "date": "Finished: Monday August 7, 2023.",
       "text": "Social Proof Section with seamless animations.",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-08",
@@ -82,7 +74,6 @@
     },
     {
       "title": "Profile Card Component.",
-      "date": "Finished: Monday August 7, 2023.",
       "text": "Profile Card Component for a social media platform.",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-09",
@@ -92,7 +83,6 @@
     },
     {
       "title": "Sass landing page",
-      "date": "Finished: Saturday August 12, 2023.",
       "text": "Sass landing page, with beautiful animations and simple design.",
       "tools": ["REACTJS", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-10",
@@ -102,7 +92,6 @@
     },
     {
       "title": "Age Calculator App",
-      "date": "Finished: Wednesday August 16, 2023.",
       "text": "Age Calculator App. Get to know the age of anybody and anything.",
       "tools": ["Vanilla JavaScript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-11",
@@ -111,9 +100,8 @@
       "image-size": "100px"
     },
     {
-      "title": "Project #12",
-      "date": "Finished: Sunday August 13, 2023.",
-      "text": "Expenses chart component",
+      "title": "Expenses chart component",
+      "text": "Expenses chart component, for a money application that shows your expenses in the last week.",
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-12",
       "liveSite": "./project-12/index.html",
@@ -121,19 +109,19 @@
       "image-size": "100px"
     },
     {
-      "title": "Project #13",
-      "date": "Finished: Friday August 11, 2023.",
-      "text": "NFT Preview Card Component",
+      "id": 13,
+      "title": "NFT Preview Card Component",
+      "text": "Super cool component to showcase NFT buyers a preview of the art piece.",
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-13",
       "liveSite": "./project-13/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "image": "project-13.jpg",
+      "image-size": "100%"
     },
     {
-      "title": "Project #14",
-      "date": "Finished: Friday August 18, 2023.",
-      "text": "Interactive Card Details",
+      "id": 14,
+      "title": "Interactive Card Details",
+      "text": "Component, that shows your debit/credit card details while you made a payment.",
       "tools": ["Vanilla JavaScript", "SASS", "HTML5"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-14",
       "liveSite": "./project-14/index.html",
@@ -141,122 +129,32 @@
       "image-size": "100px"
     },
     {
-      "title": "Project #15",
-      "date": "Finished: Tuesday August 22, 2023.",
-      "text": "Order Summary Card",
+      "id": 15,
+      "title": "Order Summary Card",
+      "text": "Order Summary Card component to showcase all the details of a purchase.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-15",
       "liveSite": "./project-15/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "image": "project-15.jpg",
+      "image-size": "100%"
     },
     {
-      "title": "Project #16",
-      "date": "- - -",
+      "id": 16,
+      "title": "Infinite scroll div content",
+      "text": "An infinite scroll div content to showcase images, text, cards, or whatever you want.",
+      "tools": ["HTML", "CSS3", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-21",
+      "liveSite": "./project-21/index.html",
+      "image": "project-16.jpg",
+      "image-size": "100%"
+    },
+    {
+      "id": 17,
+      "title": "Project #17",
       "text": "Draft.",
       "tools": ["none"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-16",
       "liveSite": "./project-16/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #17",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-17",
-      "liveSite": "./project-17/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #18",
-      "date": "Finished: Friday August 25, 2023.",
-      "text": "Product sneaker e-commerce",
-      "tools": ["REACTJS", "CSS modules", "HTML5"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-18",
-      "liveSite": "./project-18/app/dist/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #19",
-      "date": "Finished: Friday August 11, 2023.",
-      "text": "overthink",
-      "tools": ["REACTJS", "SASS"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-19",
-      "liveSite": "https://overthink.vercel.app/",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #20",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #21",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #22",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #23",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #24",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-24",
-      "liveSite": "./project-24/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #25",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
-      "liveSite": "./project-20/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
-    },
-    {
-      "title": "Project #26",
-      "date": "- - -",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-26",
-      "liveSite": "./project-26/index.html",
       "image": "image.svg",
       "image-size": "100px"
     }

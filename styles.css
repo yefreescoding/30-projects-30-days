@@ -185,8 +185,8 @@ h1 {
   background-color: var(--clr-bg-body);
   border: 1px solid var(--clr-bg-card);
   & .article__img {
+    background-color: var(--clr-text-h);
     display: grid;
-    /* place-items: center; */
     position: absolute;
     overflow: hidden;
     bottom: 0;
@@ -195,7 +195,7 @@ h1 {
     border-radius: 0.9rem;
     transform: translateY(8rem);
     transition: transform 240ms ease-in-out;
-    background-color: var(--clr-bg-body);
+    /* background-color: var(--clr-bg-body); */
     object-fit: cover;
   }
 
