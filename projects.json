@@ -3,7 +3,7 @@
     {
       "title": "Hero Section",
       "text": "A basic hero section for a landing page.",
-      "tools": ["HTML5", "CSS3", "Vanilla Javascript"],
+      "tools": ["HTML5", "CSS3"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-01",
       "liveSite": "./project-01/index.html",
       "image": "project-1.jpg",
@@ -91,22 +91,24 @@
       "image-size": "100%"
     },
     {
+      "id": 11,
       "title": "Age Calculator App",
       "text": "Age Calculator App. Get to know the age of anybody and anything.",
       "tools": ["Vanilla JavaScript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-11",
       "liveSite": "./project-11/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "image": "project-11.jpg",
+      "image-size": "100%"
     },
     {
+      "id": 12,
       "title": "Expenses chart component",
       "text": "Expenses chart component, for a money application that shows your expenses in the last week.",
       "tools": ["Vanilla Javascript", "HTML5", "SCSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-12",
       "liveSite": "./project-12/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "image": "project-12.jpg",
+      "image-size": "100%"
     },
     {
       "id": 13,
@@ -125,14 +127,14 @@
       "tools": ["Vanilla JavaScript", "SASS", "HTML5"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-14",
       "liveSite": "./project-14/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "image": "project-14.jpg",
+      "image-size": "100%"
     },
     {
       "id": 15,
       "title": "Order Summary Card",
       "text": "Order Summary Card component to showcase all the details of a purchase.",
-      "tools": ["none"],
+      "tools": ["HTML", "CSS"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-15",
       "liveSite": "./project-15/index.html",
       "image": "project-15.jpg",
@@ -157,6 +159,16 @@
       "liveSite": "./project-16/index.html",
       "image": "image.svg",
       "image-size": "100px"
+    },
+    {
+      "id": 22,
+      "title": "Social Links Profile",
+      "text": "A new way to approach this challenge and give it a new 2024 look.",
+      "tools": ["HTML", "CSS", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-22",
+      "liveSite": "./project-22/index.html",
+      "image": "project-22.jpg",
+      "image-size": "100%"
     }
   ]
 }
