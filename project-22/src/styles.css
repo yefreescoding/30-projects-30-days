@@ -61,7 +61,8 @@ h3 {
 
 .card_wrapper {
   /* background-color: lightblue; */
-  width: min(100%, 380.23px);
+  width: min(100%, 387px);
+  /* width: fit-content; */
   /* height: 501.59px; */
   height: fit-content;
   margin: auto;
