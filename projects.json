@@ -161,6 +161,16 @@
       "image-size": "100px"
     },
     {
+      "id": 20,
+      "title": "Budget Planner",
+      "text": "A super simple budget planner made with react, for practices purposes.",
+      "tools": ["REACTJS", "CSS", "Vite JS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20",
+      "liveSite": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-20/README.md",
+      "image": "project-20.jpg",
+      "image-size": "100%"
+    },
+    {
       "id": 22,
       "title": "Social Links Profile",
       "text": "A new way to approach this challenge and give it a new 2024 look.",
