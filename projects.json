@@ -179,6 +179,16 @@
       "liveSite": "./project-22/index.html",
       "image": "project-22.jpg",
       "image-size": "100%"
+    },
+    {
+      "id": 23,
+      "title": "Blog preview card",
+      "text": "Description",
+      "tools": ["HTML", "CSS", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-23",
+      "liveSite": "./project-23/index.html",
+      "image": "project-23.jpg",
+      "image-size": "100%"
     }
   ]
 }

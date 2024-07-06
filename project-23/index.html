@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog preview card</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__section">
+        <article class="main__article article">
+          <header id="img-container" class="article__header">
+            <div class="article__content" data-loaded="false">
+              <img
+                class="article__img"
+                src="./assets/images/frame-1.webp"
+                alt=""
+              />
+              <video class="article__video" preload="none" loop muted>
+                <source
+                  src="./assets/images/video-music.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="article__info">
+              <a href="/index.html">HIP-HOP</a>
+              <p>Uploaded 26 March 2024</p>
+            </div>
+          </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="article__body">
+            <h2>Like That (Future, Metro Boomin and Kendrick Lamar)</h2>
+            <p>
+              Like That" is a song by American rapper Future and American record
+              producer Metro Boomin with fellow American rapper Kendrick Lamar.
+            </p>
+            <p class="more_text" aria-hidden="true">
+              It was sent to US rhythmic radio through Freebandz (under the
+              business name Wilburn Holding Co.), Boominati Worldwide, Epic
+              Records, and Republic as the third and final single from Future
+              and Metro's collaborative studio album, We Don't Trust You, on
+              March 26, 2024.
+            </p>
+            <button id="read-more-toggle" class="more_toggle" type="button">
+              Read More...
+            </button>
+          </div>
+          <footer class="article__footer">
+            <a
+              class="article_album__link"
+              href="https://youtu.be/N9bKBAA22Go?si=isN8FQfxiJ7_JhH4"
+              target="_blank"
+            >
+              <img src="./assets/images/album-cover-future.webp" alt="" />
+              <div>
+                <span>Album</span>
+                <h3>we don't trust you</h3>
+              </div>
+            </a>
+          </footer>
+        </article>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
