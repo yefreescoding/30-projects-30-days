@@ -150,15 +150,16 @@
       "image": "project-16.jpg",
       "image-size": "100%"
     },
+
     {
-      "id": 17,
-      "title": "Project #17",
-      "text": "Draft.",
-      "tools": ["none"],
-      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-16",
-      "liveSite": "./project-16/index.html",
-      "image": "image.svg",
-      "image-size": "100px"
+      "id": 18,
+      "title": "E-commerce",
+      "text": "Simple e-commerce website and product showcase with cart functionality.",
+      "tools": ["REACTJS", "Vite JS", "CSS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-18",
+      "liveSite": "./project-18/app/dist/index.html",
+      "image": "project-18.jpg",
+      "image-size": "100%"
     },
     {
       "id": 20,
