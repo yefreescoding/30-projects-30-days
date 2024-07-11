@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Interactive rating component</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <main class="main">
+        <div class="main__header">
+          <p>Ponyo</p>
+          <img src="./images/icon-star.svg" alt="" />
+        </div>
+        <div class="main__background">
+          <img src="./images/movie-2.jpeg" alt="" />
+        </div>
+        <div id="card-content" class="main__body">
+          <form id="form" class="rating_form" aria-hidden="false">
+            <h1>How was the movie?</h1>
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+            <div class="selection_div">
+              <label>
+                <input type="radio" name="rating" value="1" />
+                <span>1</span>
+              </label>
+              <label>
+                <input type="radio" name="rating" value="2" />
+                <span>2</span>
+              </label>
+              <label>
+                <input type="radio" name="rating" value="3" />
+                <span>3</span>
+              </label>
+              <label>
+                <input type="radio" name="rating" value="4" />
+                <span>4</span>
+              </label>
+              <label>
+                <input type="radio" name="rating" value="5" />
+                <span>5</span>
+              </label>
+            </div>
+            <button class="submit_btn" type="submit">Submit</button>
+          </form>
+          <article class="article" aria-hidden="true">
+            <img src="./images/cat.png" alt="" />
+            <h2 class="selection_bubble">
+              You selected <span id="user-selection">0</span> out of 5
+            </h2>
+            <h3>Thank you!</h3>
+            <p>
+              We appreciate you taking the time to give this movie a rating.
+              This helps us a lot keep our library curated and offer you the
+              best films for your taste.
+            </p>
+          </article>
+        </div>
+      </main>
+    </section>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    <script src="./src/script.js" defer></script>
+  </body>
+</html>
