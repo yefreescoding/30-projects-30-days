@@ -8,15 +8,13 @@ const articleHeight = article.offsetHeight;
 
 contentBody.style.setProperty("--_height", `${formHeight + 48}px`);
 
-console.log(formHeight);
-console.log("article height: " + articleHeight);
-
-// Set the content height when load
-
-// console.log(articleHeight);
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const checkedInput = form.querySelector("input[type='radio']:checked");
+
+  document.getElementById("user-selection").innerText = checkedInput.value;
+  console.log(checkedInput);
 
   form.setAttribute("aria-hidden", "true");
   article.setAttribute("aria-hidden", "false");
