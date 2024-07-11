@@ -189,6 +189,16 @@
       "liveSite": "./project-23/index.html",
       "image": "project-23.jpg",
       "image-size": "100%"
+    },
+    {
+      "id": 25,
+      "title": "Movie Rating Component",
+      "text": "A simple Movie rating component with a smooth animation.",
+      "tools": ["HTML", "CSS", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-25",
+      "liveSite": "./project-25/index.html",
+      "image": "project-25.png",
+      "image-size": "100%"
     }
   ]
 }

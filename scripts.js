@@ -2,12 +2,14 @@ const projectCountContainer = document.getElementById("project-count");
 
 window.addEventListener("load", async () => {
   const response = await fetch("./projects.json");
-  const projects = await response.json();
+  const data = await response.json();
+  const projects = data.projects;
+
   const projectsContainer = document.querySelector(".projects_container");
 
-  projectCountContainer.innerHTML = projects.projects.length;
+  projectCountContainer.innerHTML = projects.length;
 
-  let displayProjects = projects.projects.map((item, index) => {
+  let displayProjects = projects.reverse().map((item, index) => {
     let toolsList = item.tools
       .map((tool) => {
         return `<li class="tools">${tool}</li>`;
