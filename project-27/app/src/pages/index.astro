@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Cart from "../components/Cart.astro";
+import Header from "../components/Header.astro";
+
+import data from "../lib/data.json";
+
+const menuItems = data;
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Header />
+    <section class="section">
+      <ul role="list" class="section__left link-card-grid">
+        {
+          menuItems.map((item) => (
+            <Card
+              img={item.image.desktop}
+              id={item.id}
+              title={item.name}
+              price={item.price}
+              category={item.category}
+            />
+          ))
+        }
+      </ul>
+      <aside class="section__right relative">
+        <div class="sticky top-4 z-10">
+          <Cart cartTotalITems={0} />
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <style>
+    main {
+      overflow-x: hidden;
+
+      margin: auto;
+      padding: 5vh 1rem;
+      width: min(100%, 70em);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .section {
+      display: flex;
+      gap: 2rem;
+
+      flex-wrap: wrap;
+    }
+
+    .section__left {
+      flex: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 13em), 1fr));
+      gap: 0.5rem;
+      padding: 0;
+    }
+
+    .section__right {
+      flex: 1;
+    }
+  </style>
+</Layout>

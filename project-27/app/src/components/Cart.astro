@@ -1,0 +1,33 @@
+---
+interface Props {
+  cartTotalITems: number;
+}
+
+const { cartTotalITems } = Astro.props;
+---
+
+<div id="cart" class="cart bg-gray-200/80 rounded-2xl p-6 shadow-inner">
+  <h2 class="text-2xl font-bold text-orange-700 mb-4">
+    Your Cart ({cartTotalITems})
+  </h2>
+  <div class="cart flex flex-col items-center justify-center">
+    {
+      cartTotalITems === 0 ? (
+        <>
+          <img
+            class="w-[150px]"
+            src="/assets/images/illustration-empty-cart.svg"
+            alt=""
+          />
+          <p class="my-4 text-amber-800/50">
+            You added items will appear here.
+          </p>
+        </>
+      ) : (
+        <div>
+          <h2>Cosas en tu carito</h2>
+        </div>
+      )
+    }
+  </div>
+</div>
