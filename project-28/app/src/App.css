@@ -1,0 +1,257 @@
+body {
+  background-color: var(--clr-stone-100);
+}
+
+.page_wrap {
+  min-height: 100dvh;
+  width: min(100%, 80em);
+
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (width > 54em) {
+  .page_wrap {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.main {
+  & h2 {
+    font-family: var(--h-fonts);
+    margin-bottom: 1rem;
+
+    color: var(--brown-800);
+  }
+
+  p,
+  li {
+    font-family: var(--p-fonts);
+  }
+}
+
+.recipe_card {
+  --_b-radius: 2rem;
+  background-color: white;
+
+  overflow: hidden;
+
+  border-radius: var(--_b-radius);
+
+  /* & > *:not(.recipe_card__preview) {
+    padding: 1rem;
+  } */
+
+  padding: 1rem;
+}
+
+.recipe_card__header {
+  isolation: isolate;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.recipe_card__preview {
+  background-color: aqua;
+
+  position: relative;
+  z-index: -1;
+
+  height: 300px;
+  overflow: hidden;
+  border-radius: calc(var(--_b-radius) / 1.5);
+
+  & img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.rating_component {
+  background-color: hsla(0, 0%, 99%, 0.7);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 99;
+
+  padding: 0.3rem;
+  padding-right: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+
+  border-radius: 2rem;
+  border: 1px solid hsl(0, 0%, 85%);
+
+  & > div {
+    --_avatar-count: 3;
+    --_ele-size: 55px;
+    --_col-size: calc(var(--_ele-size) / 2);
+
+    display: grid;
+    grid-template-columns: repeat(var(--_avatar-count), var(--_col-size));
+  }
+
+  & img {
+    background-color: white;
+
+    border-radius: 100vh;
+    border: 0.2rem solid white;
+
+    box-shadow: 0 0 3px hsl(0, 0%, 60%);
+
+    width: var(--_ele-size);
+    max-width: none;
+    aspect-ratio: 1;
+  }
+
+  & p {
+    font-weight: 600;
+    color: hsl(0, 0%, 30%);
+  }
+}
+
+.recipe_card__presentation {
+  background-color: white;
+
+  margin-top: -2.5rem;
+  padding: 1rem;
+
+  border-radius: calc(var(--_b-radius) / 1.5);
+
+  & h1 {
+    font-family: var(--h-fonts);
+  }
+
+  & > p {
+    margin-block: 1.5rem;
+  }
+}
+
+.recipe_card__ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  & li {
+    flex: 1;
+    background-color: hsl(0, 0%, 94%);
+
+    text-transform: capitalize;
+
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  & h3 {
+    font-family: var(--p-fonts);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  & p {
+    color: hsl(0, 0%, 25%);
+
+    font-family: var(--h-fonts);
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+}
+
+.recipe_card__div {
+  padding: 1rem;
+  margin: 1rem;
+
+  border-radius: calc(var(--_b-radius) / 1.5);
+
+  &:not(:nth-child(2)) {
+    & ul,
+    & ol {
+      margin-left: 1.5rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+
+      li {
+        padding-left: 1.5rem;
+      }
+
+      li::marker {
+        color: var(--brown-800);
+        font-weight: 800;
+      }
+    }
+
+    & ul {
+      list-style-type: disc;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: var(--rose-50);
+
+    h2 {
+      color: var(--rose-800);
+    }
+  }
+
+  & table {
+    display: grid;
+    margin-block: 1rem;
+    /* grid-template-columns: repeat(2, 1fr); */
+
+    tr {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      font-family: var(--p-fonts);
+
+      border-bottom: 1px solid hsl(0, 0%, 90%);
+
+      td {
+        flex: 1;
+
+        text-align: left;
+        text-transform: capitalize;
+        padding: 0.5rem 1rem;
+
+        &:nth-child(2) {
+          font-weight: 800;
+          color: var(--brown-800);
+        }
+      }
+    }
+  }
+}
+
+.recipe_card__ul-prep {
+  & li {
+    background-color: var(--rose-800);
+  }
+
+  & h3 {
+    color: var(--rose-50);
+  }
+
+  & p {
+    color: var(--rose-50);
+  }
+}
+
+.aside {
+  background-color: lightgreen;
+}
