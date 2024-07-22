@@ -197,7 +197,17 @@
       "tools": ["HTML", "CSS", "Vanilla JavaScript"],
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-25",
       "liveSite": "./project-25/index.html",
-      "image": "project-25.png",
+      "image": "project-25.jpg",
+      "image-size": "100%"
+    },
+    {
+      "id": 28,
+      "title": "Recipe Component",
+      "text": "Cool recipe component simple but effective.",
+      "tools": ["HTML", "CSS", "REACTJS", "Vite JS"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-28",
+      "liveSite": "./project-28/app/dist/index.html",
+      "image": "project-28.jpg",
       "image-size": "100%"
     }
   ]
