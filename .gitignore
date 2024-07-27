@@ -19,6 +19,9 @@
 README-template.md
 
 # ignore .vscode settings
-/.vscode
-/project-1/Design
+.vscode/
+
+#ignore folders and dir
+project-01/Design/
+project-27/app/
 
