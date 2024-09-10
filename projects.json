@@ -191,6 +191,16 @@
       "image-size": "100%"
     },
     {
+      "id": 24,
+      "title": "Time tracking dashboard",
+      "text": "Time tracking dashboard to showcase the time you spent on different tasks.",
+      "tools": ["HTML", "CSS", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-24",
+      "liveSite": "./project-24/index.html",
+      "image": "project-24.jpg",
+      "image-size": "100%"
+    },
+    {
       "id": 25,
       "title": "Movie Rating Component",
       "text": "A simple Movie rating component with a smooth animation.",
