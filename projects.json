@@ -1,6 +1,7 @@
 {
   "projects": [
     {
+      "id": 1,
       "title": "Hero Section",
       "text": "A basic hero section for a landing page.",
       "tools": ["HTML5", "CSS3"],
@@ -10,6 +11,7 @@
       "image-size": "100%"
     },
     {
+      "id": 2,
       "title": "QR code component",
       "text": "A basic component to showcase a qr code.",
       "tools": ["HTML5", "CSS"],
@@ -19,6 +21,7 @@
       "image-size": "100%"
     },
     {
+      "id": 3,
       "title": "Stats card component",
       "text": "A component that showcase stats for a business.",
       "tools": ["HTML5", "CSS"],
@@ -28,6 +31,7 @@
       "image-size": "100%"
     },
     {
+      "id": 4,
       "title": "Room Landing Page",
       "text": "A landing page where user can change images",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
@@ -37,6 +41,7 @@
       "image-size": "100%"
     },
     {
+      "id": 5,
       "title": "Sign up card component",
       "text": "Sign up card component develop to showcase important info.",
       "tools": ["HTML5", "SASS", "Vite JS"],
@@ -46,6 +51,7 @@
       "image-size": "100%"
     },
     {
+      "id": 6,
       "title": "Calculator App.",
       "text": "Calculator App with theme switcher. Achieved with the use of css variables.",
       "tools": ["HTML5", "CSS", "Vanilla Javascript"],
@@ -55,6 +61,7 @@
       "image-size": "100%"
     },
     {
+      "id": 7,
       "title": "TIC TAC TOE",
       "text": "TIC TAC TOE classic game, in a game boy!",
       "tools": ["REACTJS", "VITE JS", "HTML5", "CSS"],
@@ -64,6 +71,7 @@
       "image-size": "100%"
     },
     {
+      "id": 8,
       "title": "Social Proof Section",
       "text": "Social Proof Section with seamless animations.",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
@@ -73,6 +81,7 @@
       "image-size": "100%"
     },
     {
+      "id": 9,
       "title": "Profile Card Component.",
       "text": "Profile Card Component for a social media platform.",
       "tools": ["VanillaJavaScript", "HTML5", "CSS"],
@@ -82,6 +91,7 @@
       "image-size": "100%"
     },
     {
+      "id": 10,
       "title": "Sass landing page",
       "text": "Sass landing page, with beautiful animations and simple design.",
       "tools": ["REACTJS", "HTML5", "SCSS"],
@@ -208,6 +218,16 @@
       "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-25",
       "liveSite": "./project-25/index.html",
       "image": "project-25.jpg",
+      "image-size": "100%"
+    },
+    {
+      "id": 27,
+      "title": "Super cool landing-hero",
+      "text": "A nice landing hero site.",
+      "tools": ["HTML", "CSS3", "Vanilla JavaScript"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-27",
+      "liveSite": "./project-27/dist/index.html",
+      "image": "project-27.jpg",
       "image-size": "100%"
     },
     {
