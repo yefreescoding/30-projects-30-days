@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* Set body defaults */
+@layer base {
+  body {
+    font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Ensure images and media do not overflow */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Reset table styles */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  /* Improve button accessibility */
+  button {
+    cursor: pointer;
+  }
+}
+
+@theme {
+  --color-text-base: hsl(0, 0%, 20%);
+  --color-text-light: hsl(0, 0%, 40%);
+  --color-bg-base: #fff;
+
+  --color-bgk-section-odd: hsl(0, 0%, 93%);
+  --color-bgk-section-even: hsl(0, 0%, 96%);
+
+  --color-btn-base: hsl(0, 0%, 90%);
+  --color-btn-text: hsl(0, 0%, 30%);
+  --color-btn-hover: hsl(0, 0%, 70%);
+}
+
+@layer components {
+  .section {
+    width: min(100%, 90rem);
+    margin: 0 auto;
+    padding: 5vh 1.5rem;
+
+    &.odd {
+      background-color: var(--color-bgk-section-odd);
+    }
+    &.even {
+      background-color: var(--color-bgk-section-even);
+    }
+  }
+
+  .btn {
+    padding: 5px 10px;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 120ms ease;
+    text-wrap: nowrap;
+  }
+  .request-btn {
+    background-color: var(--color-btn-base);
+    color: var(--color-btn-text);
+    box-shadow: 0 0 1px var(--color-btn-hover);
+    &:hover {
+      color: var(--color-btn-base);
+      background-color: var(--color-btn-text);
+    }
+    &.selected {
+      background-color: hsl(0, 100%, 90%);
+      color: hsl(0, 100%, 30%);
+      &:hover {
+        background-color: hsl(0, 100%, 80%);
+      }
+    }
+  }
+  .book-call-btn {
+    background-color: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 99%);
+    box-shadow: 0 0 1px var(--color-btn-hover);
+  }
+
+  .footer_links {
+    li {
+      display: flex;
+      width: 100%;
+      & a {
+        position: relative;
+        width: 100%;
+        padding-block: 0.5rem;
+        transition: all 120ms ease;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 1px;
+          background-color: hsl(0, 0%, 80%);
+          transition: width 120ms ease-in-out;
+        }
+        &:hover {
+          color: white;
+          scale: 1.05;
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Remove animations and transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

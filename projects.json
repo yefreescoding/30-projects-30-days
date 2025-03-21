@@ -221,6 +221,16 @@
       "image-size": "100%"
     },
     {
+      "id": 26,
+      "title": "Easybank landing page",
+      "text": "A new way to approach this challenge and give it a new 2025 look.",
+      "tools": ["REACTJS", "Tailwind", "TypeScript", "Framer Motion"],
+      "github": "https://github.com/yefreescoding/30-projects-30-days/tree/main/project-26",
+      "liveSite": "./project-26/dist/index.html",
+      "image": "project-26.jpg",
+      "image-size": "100%"
+    },
+    {
       "id": 27,
       "title": "Super cool landing-hero",
       "text": "A nice landing hero site.",
